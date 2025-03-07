@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link, useOutletContext } from 'react-router-dom';
 import { 
   Droplet, 
   Home, 
@@ -23,11 +24,18 @@ import {
   Moon,
   Sun
 } from 'lucide-react';
+import Navigation from './components/Navigation';
+
+interface LayoutContext {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
 const beforeImage = "/before.jpg";
 const afterImage = "/after.jpg";
 
-
 function App() {
+  const { darkMode, toggleDarkMode } = useOutletContext<LayoutContext>();
   const [selectedSurface, setSelectedSurface] = useState('driveway');
   const [squareFootage, setSquareFootage] = useState(500);
   const [quoteEstimate, setQuoteEstimate] = useState(150);
@@ -36,7 +44,6 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [darkMode, setDarkMode] = useState(false);
 
   // Calculate quote based on surface type and square footage
   useEffect(() => {
@@ -68,16 +75,6 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  // Check for user's preferred color scheme
-  useEffect(() => {
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setDarkMode(prefersDarkMode);
-  }, []);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -125,200 +122,7 @@ function App() {
 
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'} font-sans`}>
-      {/* Navigation Bar */}
-      <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? (darkMode ? 'bg-gray-900 shadow-lg' : 'bg-white shadow-lg') : (darkMode ? 'bg-gray-900/80 backdrop-blur-sm' : 'bg-white/80 backdrop-blur-sm')}`}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <div className="flex items-center">
-              <a href="#" className="flex items-center">
-                <Droplet className={`h-8 w-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'} mr-2`} />
-                <span className="text-xl font-bold">PressureProClean</span>
-              </a>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="#" className="nav-link flex items-center group">
-                <Home className="h-4 w-4 mr-1" />
-                <span>Home</span>
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
-              </a>
-              
-              <div className="relative group">
-                <button 
-                  className="nav-link flex items-center"
-                  onClick={() => toggleDropdown('about')}
-                >
-                  <Info className="h-4 w-4 mr-1" />
-                  <span>About Us</span>
-                  <ChevronDown className="h-4 w-4 ml-1" />
-                </button>
-                <div className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 ${darkMode ? 'bg-gray-800' : 'bg-white'} ring-1 ring-black ring-opacity-5 transition-all duration-200 ${activeDropdown === 'about' ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-                  <a href="#" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Our Story</a>
-                  <a href="#" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Meet the Team</a>
-                </div>
-              </div>
-              
-              <div className="relative group">
-                <button 
-                  className="nav-link flex items-center"
-                  onClick={() => toggleDropdown('services')}
-                >
-                  <Droplet className="h-4 w-4 mr-1" />
-                  <span>Services</span>
-                  <ChevronDown className="h-4 w-4 ml-1" />
-                </button>
-                <div className={`absolute left-0 mt-2 w-56 rounded-md shadow-lg py-1 ${darkMode ? 'bg-gray-800' : 'bg-white'} ring-1 ring-black ring-opacity-5 transition-all duration-200 ${activeDropdown === 'services' ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-                  <a href="#" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>House Washing</a>
-                  <a href="#" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Roof Cleaning</a>
-                  <a href="#" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Driveways & Sidewalks</a>
-                  <a href="#" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Commercial Power Washing</a>
-                  <a href="#" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Gutter Cleaning</a>
-                </div>
-              </div>
-              
-              <a href="#" className="nav-link flex items-center group">
-                <Image className="h-4 w-4 mr-1" />
-                <span>Gallery</span>
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
-              </a>
-              
-              <a href="#" className="nav-link flex items-center group">
-                <Star className="h-4 w-4 mr-1" />
-                <span>Reviews</span>
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
-              </a>
-              
-              <a href="#" className="nav-link flex items-center group">
-                <MessageSquare className="h-4 w-4 mr-1" />
-                <span>Contact</span>
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
-              </a>
-            </nav>
-
-            {/* Right Side - Phone, Social, CTA */}
-            <div className="hidden md:flex items-center space-x-6">
-              {/* Social Icons */}
-              <div className="flex items-center space-x-3">
-                <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'} transition-colors`}>
-                  <Facebook className="h-4 w-4" />
-                </a>
-                <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'} transition-colors`}>
-                  <Instagram className="h-4 w-4" />
-                </a>
-                <button onClick={toggleDarkMode} className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'} transition-colors`}>
-                  {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-                </button>
-              </div>
-              
-              {/* Phone */}
-              <a href="tel:5551234567" className="flex items-center text-sm font-medium">
-                <Phone className={`h-4 w-4 mr-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-                <span>(555) 123-4567</span>
-              </a>
-              
-              {/* CTA Button */}
-              <a href="#quote" className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-all transform hover:scale-105 shadow-md flex items-center">
-                <span>Get an Instant Quote</span>
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="flex items-center md:hidden space-x-4">
-              <a href="tel:5551234567" className="mr-2">
-                <Phone className={`h-5 w-5 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
-              </a>
-              <button onClick={toggleDarkMode} className="mr-2">
-                {darkMode ? <Sun className="h-5 w-5 text-gray-300" /> : <Moon className="h-5 w-5 text-gray-600" />}
-              </button>
-              <button 
-                onClick={toggleMobileMenu}
-                className={`${darkMode ? 'text-white' : 'text-gray-800'}`}
-              >
-                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible overflow-hidden'}`}>
-          <div className={`px-4 pt-2 pb-4 space-y-1 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
-            <a href="#" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
-              <Home className="h-5 w-5 mr-3" />
-              <span>Home</span>
-            </a>
-            
-            <div>
-              <button 
-                onClick={() => toggleDropdown('mobileAbout')}
-                className={`w-full text-left py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center justify-between`}
-              >
-                <div className="flex items-center">
-                  <Info className="h-5 w-5 mr-3" />
-                  <span>About Us</span>
-                </div>
-                <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'mobileAbout' ? 'rotate-180' : ''}`} />
-              </button>
-              <div className={`pl-12 transition-all duration-200 ${activeDropdown === 'mobileAbout' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                <a href="#" className="block py-2">Our Story</a>
-                <a href="#" className="block py-2">Meet the Team</a>
-              </div>
-            </div>
-            
-            <div>
-              <button 
-                onClick={() => toggleDropdown('mobileServices')}
-                className={`w-full text-left py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center justify-between`}
-              >
-                <div className="flex items-center">
-                  <Droplet className="h-5 w-5 mr-3" />
-                  <span>Services</span>
-                </div>
-                <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'mobileServices' ? 'rotate-180' : ''}`} />
-              </button>
-              <div className={`pl-12 transition-all duration-200 ${activeDropdown === 'mobileServices' ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-                <a href="#" className="block py-2">House Washing</a>
-                <a href="#" className="block py-2">Roof Cleaning</a>
-                <a href="#" className="block py-2">Driveways & Sidewalks</a>
-                <a href="#" className="block py-2">Commercial Power Washing</a>
-                <a href="#" className="block py-2">Gutter Cleaning</a>
-              </div>
-            </div>
-            
-            <a href="#" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
-              <Image className="h-5 w-5 mr-3" />
-              <span>Gallery</span>
-            </a>
-            
-            <a href="#" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
-              <Star className="h-5 w-5 mr-3" />
-              <span>Reviews</span>
-            </a>
-            
-            <a href="#" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
-              <MessageSquare className="h-5 w-5 mr-3" />
-              <span>Contact</span>
-            </a>
-            
-            <div className="pt-2">
-              <a href="#quote" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md text-center shadow-md">
-                Get an Instant Quote
-              </a>
-            </div>
-            
-            <div className="pt-4 flex justify-center space-x-6 border-t border-gray-200 dark:border-gray-700">
-              <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'}`}>
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'}`}>
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* Hero Section */}
       <div 
@@ -760,86 +564,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className={`${darkMode ? 'bg-gray-900' : 'bg-gray-100'} py-12`}>
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <Droplet className={`h-8 w-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'} mr-2`} />
-                <span className="text-xl font-bold">PressureProClean</span>
-              </div>
-              <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
-                Professional pressure washing services for residential and commercial properties.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'}`}>
-                  <Facebook className="h-5 w-5" />
-                </a>
-                <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'}`}>
-                  <Instagram className="h-5 w-5" />
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Services</h3>
-              <ul className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} space-y-2`}>
-                <li><a href="#" className="hover:underline">Residential Washing</a></li>
-                <li><a href="#" className="hover:underline">Commercial Washing</a></li>
-                <li><a href="#" className="hover:underline">Roof Cleaning</a></li>
-                <li><a href="#" className="hover:underline">Deck & Patio Cleaning</a></li>
-                <li><a href="#" className="hover:underline">Gutter Cleaning</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Company</h3>
-              <ul className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} space-y-2`}>
-                <li><a href="#" className="hover:underline">About Us</a></li>
-                <li><a href="#" className="hover:underline">Our Team</a></li>
-                <li><a href="#" className="hover:underline">Testimonials</a></li>
-                <li><a href="#" className="hover:underline">Blog</a></li>
-                <li><a href="#" className="hover:underline">Careers</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Contact</h3>
-              <ul className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} space-y-2`}>
-                <li className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2" />
-                  <span>(555) 123-4567</span>
-                </li>
-                <li className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span>123 Cleaning St, Washville, WA 98765</span>
-                </li>
-                <li className="flex items-center">
-                  <MessageSquare className="h-4 w-4 mr-2" />
-                  <span>info@pressurepro.example</span>
-                </li>
-                <li className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span>Mon-Fri: 8am-6pm, Sat: 9am-4pm</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} text-sm`}>
-              © {new Date().getFullYear()} PressureProClean. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-blue-600'} text-sm`}>Privacy Policy</a>
-              <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-blue-600'} text-sm`}>Terms of Service</a>
-              <a href="#" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-blue-600'} text-sm`}>Sitemap</a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
