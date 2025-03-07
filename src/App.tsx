@@ -402,7 +402,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service Card 1 */}
             <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105`}>
-              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1600607687644-c7f34b5063c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)' }}></div>
+              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: 'url(/residential.jpeg)' }}></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Residential Pressure Washing</h3>
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-4`}>Revitalize your home's exterior with our comprehensive residential pressure washing services.</p>
@@ -428,7 +428,7 @@ function App() {
             
             {/* Service Card 2 */}
             <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105`}>
-              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1582408921715-18e7806365c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)' }}></div>
+              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: 'url(/commercial.jpeg)' }}></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Commercial Pressure Washing</h3>
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-4`}>Maintain your business's professional appearance with our commercial cleaning services.</p>
@@ -454,7 +454,7 @@ function App() {
             
             {/* Service Card 3 */}
             <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105`}>
-              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1604754742629-3e0474078e5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)' }}></div>
+              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: 'url(/specialty.jpeg)' }}></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Specialty Cleaning</h3>
                 <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} mb-4`}>Our specialized cleaning services address unique surfaces and challenging cleaning needs.</p>
