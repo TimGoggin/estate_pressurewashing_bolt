@@ -65,13 +65,13 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
               <span>Home</span>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
-            
+
             <Link to="/about" className="nav-link flex items-center group">
               <Info className="h-4 w-4 mr-1" />
               <span>About Us</span>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
-            
+
             <div className="relative group">
               <button 
                 className="nav-link flex items-center"
@@ -89,19 +89,19 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
                 <Link to="/services/gutters" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Gutter Cleaning</Link>
               </div>
             </div>
-            
+
             <Link to="/gallery" className="nav-link flex items-center group">
               <Image className="h-4 w-4 mr-1" />
               <span>Gallery</span>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
-            
+
             <Link to="/reviews" className="nav-link flex items-center group">
               <Star className="h-4 w-4 mr-1" />
               <span>Reviews</span>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
-            
+
             <Link to="/contact" className="nav-link flex items-center group">
               <MessageSquare className="h-4 w-4 mr-1" />
               <span>Contact</span>
@@ -115,13 +115,13 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
             <button onClick={toggleDarkMode} className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'} transition-colors`}>
               {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
-            
+
             {/* Phone */}
             <a href="tel:5551234567" className="flex items-center text-sm font-medium">
               <Phone className={`h-4 w-4 mr-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
               <span>(555) 123-4567</span>
             </a>
-            
+
             {/* CTA Button */}
             <Link to="/#quote" className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-all transform hover:scale-105 shadow-md flex items-center">
               <span>Get an Instant Quote</span>
@@ -153,12 +153,12 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
             <Home className="h-5 w-5 mr-3" />
             <span>Home</span>
           </Link>
-          
+
           <Link to="/about" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
             <Info className="h-5 w-5 mr-3" />
             <span>About Us</span>
           </Link>
-          
+
           <div>
             <button 
               onClick={() => toggleDropdown('mobileServices')}
@@ -170,24 +170,24 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
               </div>
               <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'mobileServices' ? 'rotate-180' : ''}`} />
             </button>
-            <Link to="/services" className="block py-2">Our Services</Link>
+            <Link to="/services" className="block py-2 pl-12">Our Services</Link>
           </div>
-          
+
           <Link to="/gallery" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
             <Image className="h-5 w-5 mr-3" />
             <span>Gallery</span>
           </Link>
-          
+
           <Link to="/reviews" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
             <Star className="h-5 w-5 mr-3" />
             <span>Reviews</span>
           </Link>
-          
+
           <Link to="/contact" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
             <MessageSquare className="h-5 w-5 mr-3" />
             <span>Contact</span>
           </Link>
-          
+
           <div className="pt-2">
             <Link to="/#quote" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md text-center shadow-md">
               Get an Instant Quote
@@ -197,4 +197,4 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
       </div>
     </header>
   );
-} 
+}
