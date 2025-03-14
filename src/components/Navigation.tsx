@@ -170,13 +170,7 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
               </div>
               <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'mobileServices' ? 'rotate-180' : ''}`} />
             </button>
-            <div className={`pl-12 transition-all duration-200 ${activeDropdown === 'mobileServices' ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-              <Link to="/services/residential" className="block py-2">House Washing</Link>
-              <Link to="/services/roof" className="block py-2">Roof Cleaning</Link>
-              <Link to="/services/driveways" className="block py-2">Driveways & Sidewalks</Link>
-              <Link to="/services/commercial" className="block py-2">Commercial Power Washing</Link>
-              <Link to="/services/gutters" className="block py-2">Gutter Cleaning</Link>
-            </div>
+            <Link to="/services" className="block py-2">Our Services</Link>
           </div>
           
           <Link to="/gallery" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
