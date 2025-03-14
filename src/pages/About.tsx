@@ -24,9 +24,8 @@ export default function About() {
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
       {/* Hero Section */}
-      <div className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-blue-900/50"></div>
+      <div className="relative pt-32 pb-20 bg-cover bg-center" style={{ backgroundImage: "url('/AboutHero.jpeg')" }}>
+        <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/30"></div>
           {/* Animated water droplets background */}
           <div
@@ -36,7 +35,7 @@ export default function About() {
                 "radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 10%)",
             }}
           ></div>
-        </div>
+        
 
         <div className="relative container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
