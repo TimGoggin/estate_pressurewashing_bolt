@@ -83,7 +83,7 @@ export default function Services() {
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
       {/* Hero Section */}
-      <div 
+      <div
         className="relative pt-32 pb-20 bg-cover bg-center"
         style={{ backgroundImage: "url('/residential.jpeg')" }}
       >
@@ -97,7 +97,12 @@ export default function Services() {
             comprehensive cleaning solutions
           </p>
           <Link
-            to="/?section=quote#quote"
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              sessionStorage.setItem("scrollToQuote", "true");
+              window.location.href = "/";
+            }}
             className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-colors"
           >
             <Calculator className="mr-2 h-5 w-5" />
@@ -152,27 +157,48 @@ export default function Services() {
       {/* Service Area Section */}
       <section className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}>
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Service Area</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Our Service Area
+          </h2>
           <div className="max-w-3xl mx-auto text-center">
-            <p className={`text-lg mb-6 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+            <p
+              className={`text-lg mb-6 ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+            >
               We proudly serve residential and commercial properties throughout:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <div
+                className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}
+              >
                 <h3 className="text-xl font-semibold mb-3">Bucks County</h3>
-                <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                <p
+                  className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                >
                   Including Doylestown, Newtown, Yardley, and surrounding areas
                 </p>
               </div>
-              <div className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}>
-                <h3 className="text-xl font-semibold mb-3">Montgomery County</h3>
-                <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                  Including Blue Bell, King of Prussia, Lansdale, and surrounding areas
+              <div
+                className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}
+              >
+                <h3 className="text-xl font-semibold mb-3">
+                  Montgomery County
+                </h3>
+                <p
+                  className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                >
+                  Including Blue Bell, King of Prussia, Lansdale, and
+                  surrounding areas
                 </p>
               </div>
-              <div className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}>
-                <h3 className="text-xl font-semibold mb-3">Philadelphia County</h3>
-                <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+              <div
+                className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}
+              >
+                <h3 className="text-xl font-semibold mb-3">
+                  Philadelphia County
+                </h3>
+                <p
+                  className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                >
                   Serving all neighborhoods within Philadelphia proper
                 </p>
               </div>
