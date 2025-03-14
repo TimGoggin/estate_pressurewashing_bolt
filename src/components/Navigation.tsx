@@ -54,7 +54,7 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <Droplet className={`h-8 w-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'} mr-2`} />
-              <span className="text-xl font-bold">PressureProClean</span>
+              <span className="text-xl font-bold">Estates Pressure Washing</span>
             </Link>
           </div>
 
