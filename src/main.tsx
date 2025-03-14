@@ -5,6 +5,7 @@ import App from './App'
 import About from './pages/About'
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
 import Layout from './components/Layout'
 import './index.css'
 
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>
