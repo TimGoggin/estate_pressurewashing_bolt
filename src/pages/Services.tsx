@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { Phone, ArrowRight, CheckCircle } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle, Calculator } from "lucide-react";
 
 interface LayoutContext {
   darkMode: boolean;
