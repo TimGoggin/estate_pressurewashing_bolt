@@ -90,9 +90,9 @@ function App() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      location: "Oakwood Heights",
-      text: "My driveway looks brand new! The team was professional, on time, and did an amazing job. Highly recommend!",
+      name: "William Betz Jr.",
+      location: "",
+      text: "Allen and his team did a fantastic job on our patios. The pavers needed cleaning and re-grouting. They pressure washed and removed all the old grout, re-sanded and used a vibratory machine to compact. Finally sealed with microseal. They spent a lot of time on the project and made sure it was done right. I highly recommend them for their quality work, great communication and friendly service!",
       rating: 5,
       image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
     },
@@ -142,7 +142,7 @@ function App() {
             Restore Your Home's Beauty with <span className="text-blue-400">Professional Pressure Washing</span>
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-            Eco-friendly cleaning solutions with a 100% satisfaction guarantee. Serving local homeowners and businesses since 2010.
+            Eco-friendly cleaning solutions with a 100% satisfaction guarantee. Serving local homeowners and businesses since 2017.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center">
@@ -265,11 +265,11 @@ function App() {
                 <ul className="mb-4">
                   <li className="flex items-center mb-1">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Roof Cleaning</span>
+                    <span>Paver Sanding and Sealing</span>
                   </li>
                   <li className="flex items-center mb-1">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Fence Restoration</span>
+                    <span>Gutter Installation</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -491,7 +491,7 @@ function App() {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">Locally Owned</h3>
-                    <p className="text-blue-100">Proudly serving our local community since 2010.</p>
+                    <p className="text-blue-100">Proudly serving our local community since 2017.</p>
                   </div>
                 </div>
               </div>
