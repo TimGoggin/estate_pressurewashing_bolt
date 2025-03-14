@@ -23,6 +23,7 @@ import {
   ChevronDown,
   Moon,
   Sun,
+  Calculator,
 } from "lucide-react";
 import Navigation from "./components/Navigation";
 
