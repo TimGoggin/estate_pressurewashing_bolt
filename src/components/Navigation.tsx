@@ -126,7 +126,7 @@ export default function Navigation({
 
             {/* CTA Button */}
             <Link
-              to="/#quote"
+              to="/?section=quote#quote"
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-all transform hover:scale-105 shadow-md flex items-center"
             >
               <span>Get an Instant Quote</span>
@@ -218,7 +218,7 @@ export default function Navigation({
 
           <div className="pt-2">
             <Link
-              to="/#quote"
+              to="/?section=quote#quote"
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md text-center shadow-md"
             >
               Get an Instant Quote
