@@ -159,19 +159,10 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
             <span>About Us</span>
           </Link>
 
-          <div>
-            <button 
-              onClick={() => toggleDropdown('mobileServices')}
-              className={`w-full text-left py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center justify-between`}
-            >
-              <div className="flex items-center">
-                <Droplet className="h-5 w-5 mr-3" />
-                <span>Services</span>
-              </div>
-              <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'mobileServices' ? 'rotate-180' : ''}`} />
-            </button>
-            <Link to="/services" className="block py-2 pl-12">Our Services</Link>
-          </div>
+          <Link to="/services" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
+            <Droplet className="h-5 w-5 mr-3" />
+            <span>Services</span>
+          </Link>
 
           <Link to="/gallery" className={`block py-3 px-4 rounded-md ${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-100'} flex items-center`}>
             <Image className="h-5 w-5 mr-3" />
