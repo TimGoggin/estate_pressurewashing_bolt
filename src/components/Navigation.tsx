@@ -84,12 +84,6 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
 
-            <Link to="/reviews" className="nav-link flex items-center group">
-              <Star className="h-4 w-4 mr-1" />
-              <span>Reviews</span>
-              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
-            </Link>
-
             <Link to="/contact" className="nav-link flex items-center group">
               <MessageSquare className="h-4 w-4 mr-1" />
               <span>Contact</span>
