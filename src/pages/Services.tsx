@@ -114,3 +114,53 @@ export default function Services() {
     </div>
   );
 }
+import React from "react";
+import { useOutletContext } from "react-router-dom";
+
+interface LayoutContext {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+export default function Services() {
+  const { darkMode } = useOutletContext<LayoutContext>();
+
+  return (
+    <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
+      <div className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div className="container mx-auto px-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h1>
+          <p className="text-xl text-blue-100">Professional exterior cleaning solutions for your property</p>
+        </div>
+      </div>
+      
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-8 rounded-lg shadow-lg`}>
+              <h2 className="text-2xl font-bold mb-4">Residential Services</h2>
+              <ul className="space-y-2">
+                <li>House Washing</li>
+                <li>Roof Cleaning</li>
+                <li>Driveway & Sidewalk Cleaning</li>
+                <li>Deck & Patio Cleaning</li>
+                <li>Gutter Cleaning</li>
+              </ul>
+            </div>
+            
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-8 rounded-lg shadow-lg`}>
+              <h2 className="text-2xl font-bold mb-4">Commercial Services</h2>
+              <ul className="space-y-2">
+                <li>Building Exteriors</li>
+                <li>Parking Lots</li>
+                <li>Storefront Cleaning</li>
+                <li>Graffiti Removal</li>
+                <li>Commercial Roof Cleaning</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
