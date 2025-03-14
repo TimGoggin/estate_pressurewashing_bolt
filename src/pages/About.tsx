@@ -9,6 +9,9 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+import { Phone, Calculator } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 interface LayoutContext {
   darkMode: boolean;
   toggleDarkMode: () => void;
@@ -34,6 +37,16 @@ export default function About() {
             <p className="text-xl text-blue-100 mb-8">
               Delivering exceptional exterior cleaning services with professionalism and dedication since 2010
             </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link to="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Contact Us Today
+              </Link>
+              <Link to="/quote" className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center">
+                <Calculator className="mr-2 h-5 w-5" />
+                Get a Quote
+              </Link>
+            </div>
           </div>
         </div>
       </div>
