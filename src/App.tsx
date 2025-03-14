@@ -342,7 +342,7 @@ function App() {
       {/* Interactive Quote Calculator */}
       <section
         id="quote"
-        className={`py-16 ${darkMode ? "bg-gray-800" : "bg-blue-50"}`}
+        className={`py-16 ${darkMode ? "bg-gray-800" : "bg-blue-50"} scroll-mt-20`}
       >
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
