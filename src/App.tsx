@@ -68,13 +68,23 @@ function App() {
         const scrollPosition = window.scrollY;
         heroRef.current.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
       }
-
-      // Update navbar background on scroll
       setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (sessionStorage.getItem('scrollToQuote')) {
+      sessionStorage.removeItem('scrollToQuote');
+      const quoteElement = document.getElementById('quote');
+      if (quoteElement) {
+        setTimeout(() => {
+          quoteElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
   }, []);
 
   const toggleMobileMenu = () => {

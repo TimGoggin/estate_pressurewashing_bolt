@@ -60,14 +60,8 @@ export default function About() {
                 to="/"
                 onClick={(e) => {
                   e.preventDefault();
-                  const navigate = () => {
-                    window.location.href = '/#quote';
-                    const element = document.getElementById('quote');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                  };
-                  navigate();
+                  sessionStorage.setItem('scrollToQuote', 'true');
+                  window.location.href = '/';
                 }}
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
               >
