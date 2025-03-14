@@ -83,7 +83,10 @@ export default function Services() {
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
       {/* Hero Section */}
-      <div className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <div 
+        className="relative pt-32 pb-20 bg-cover bg-center"
+        style={{ backgroundImage: "url('/residential.jpeg')" }}
+      >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
