@@ -46,7 +46,7 @@ export default function About() {
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Delivering exceptional exterior cleaning services with
-              professionalism and dedication since 2010
+              professionalism and dedication since 2017
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
@@ -60,8 +60,8 @@ export default function About() {
                 to="/"
                 onClick={(e) => {
                   e.preventDefault();
-                  sessionStorage.setItem('scrollToQuote', 'true');
-                  window.location.href = '/';
+                  sessionStorage.setItem("scrollToQuote", "true");
+                  window.location.href = "/";
                 }}
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
               >
@@ -389,14 +389,8 @@ export default function About() {
             to="/"
             onClick={(e) => {
               e.preventDefault();
-              const navigate = () => {
-                window.location.href = '/#quote';
-                const element = document.getElementById('quote');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              };
-              navigate();
+              sessionStorage.setItem("scrollToQuote", "true");
+              window.location.href = "/";
             }}
             className="inline-flex items-center px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
           >
