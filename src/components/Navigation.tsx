@@ -72,9 +72,10 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
 
-            <Link to="/services" className="nav-link flex items-center">
+            <Link to="/services" className="nav-link flex items-center group">
               <Droplet className="h-4 w-4 mr-1" />
               <span>Services</span>
+              <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
 
             <Link to="/gallery" className="nav-link flex items-center group">
