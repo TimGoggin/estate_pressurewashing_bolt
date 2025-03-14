@@ -94,7 +94,7 @@ function App() {
       location: "",
       text: "Allen and his team did a fantastic job on our patios. The pavers needed cleaning and re-grouting. They pressure washed and removed all the old grout, re-sanded and used a vibratory machine to compact. Finally sealed with microseal. They spent a lot of time on the project and made sure it was done right. I highly recommend them for their quality work, great communication and friendly service!",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+      image: "/WilliamBetz.webp"
     },
     {
       name: "Michael Rodriguez",
