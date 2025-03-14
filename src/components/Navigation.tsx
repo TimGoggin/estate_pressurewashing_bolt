@@ -93,6 +93,11 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
 
           {/* Right Side - Phone, Social, CTA */}
           <div className="hidden md:flex items-center space-x-6">
+            {/* Phone Number */}
+            <a href="tel:+12676850530" className="flex items-center text-sm hover:text-blue-600 transition-colors">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>(267) 685-0530</span>
+            </a>
             {/* Dark Mode Toggle */}
             <button onClick={toggleDarkMode} className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-500 hover:text-blue-600'} transition-colors`}>
               {darkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}

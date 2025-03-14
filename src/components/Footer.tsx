@@ -22,7 +22,7 @@ export default function Footer({ darkMode }: FooterProps) {
           <div>
             <div className="flex items-center mb-4">
               <img src="/EstatesLogo.png" alt="Estates Logo" className="h-12 w-auto mr-2" />
-              <span className="text-xl font-bold">Estates Pressure Washing</span> {/* Updated company name */}
+              <span className="text-xl font-bold">Estates Pressure Washing</span> 
             </div>
             <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>
               Professional pressure washing services for residential and commercial properties.
@@ -64,7 +64,7 @@ export default function Footer({ darkMode }: FooterProps) {
             <ul className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} space-y-2`}>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                <span>(555) 123-4567</span>
+                <a href="tel:+12676850530" className="hover:underline">(267) 685-0530</a>
               </li>
               <li className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
@@ -84,7 +84,7 @@ export default function Footer({ darkMode }: FooterProps) {
 
         <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} text-sm`}>
-            © {new Date().getFullYear()} Estates Pressure Washing. All rights reserved. {/* Updated company name */}
+            © {new Date().getFullYear()} Estates Pressure Washing. All rights reserved. 
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className={`${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-blue-600'} text-sm`}>Privacy Policy</Link>
