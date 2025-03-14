@@ -5,17 +5,10 @@ modules = ["nodejs-20", "web"]
 [nix]
 channel = "stable-24_05"
 
-[deployment]
-run = ["sh", "-c", "npm run dev"]
-
-[[ports]]
-localPort = 443
-externalPort = 3000
-
 [[ports]]
 localPort = 5173
 externalPort = 80
 
 [[ports]]
-localPort = 5174
+localPort = 443
 externalPort = 443
