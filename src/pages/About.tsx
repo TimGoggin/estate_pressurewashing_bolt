@@ -60,7 +60,10 @@ export default function About() {
                 to="/"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.location.href = '/#quote';
+                  window.location.replace('/#quote');
+                  setTimeout(() => {
+                    document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
                 }}
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
               >
@@ -388,7 +391,10 @@ export default function About() {
             to="/"
             onClick={(e) => {
               e.preventDefault();
-              window.location.href = '/#quote';
+              window.location.replace('/#quote');
+              setTimeout(() => {
+                document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
             }}
             className="inline-flex items-center px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
           >
