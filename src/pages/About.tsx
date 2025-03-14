@@ -127,52 +127,6 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div
-                className={`${darkMode ? "bg-gray-800" : "bg-blue-50"} p-6 rounded-lg text-center`}
-              >
-                <div className="text-3xl font-bold text-blue-600 mb-2">
-                  1,000+
-                </div>
-                <div
-                  className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}
-                >
-                  Projects Completed
-                </div>
-              </div>
-              <div
-                className={`${darkMode ? "bg-gray-800" : "bg-blue-50"} p-6 rounded-lg text-center`}
-              >
-                <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
-                <div
-                  className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}
-                >
-                  Customer Satisfaction
-                </div>
-              </div>
-              <div
-                className={`${darkMode ? "bg-gray-800" : "bg-blue-50"} p-6 rounded-lg text-center`}
-              >
-                <div className="text-3xl font-bold text-blue-600 mb-2">13+</div>
-                <div
-                  className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}
-                >
-                  Years Experience
-                </div>
-              </div>
-              <div
-                className={`${darkMode ? "bg-gray-800" : "bg-blue-50"} p-6 rounded-lg text-center`}
-              >
-                <div className="text-3xl font-bold text-blue-600 mb-2">
-                  24/7
-                </div>
-                <div
-                  className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}
-                >
-                  Customer Support
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
