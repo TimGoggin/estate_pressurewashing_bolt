@@ -692,7 +692,7 @@ function App() {
                 <div>
                   <label
                     htmlFor="message"
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-1`}
+                    className={`block text-sm font-medium ${darkMode ?"text-gray-300" : "text-gray-700"} mb-1`}
                   >
                     Additional Information
                   </label>
