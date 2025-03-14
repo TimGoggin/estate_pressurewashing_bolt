@@ -57,7 +57,11 @@ export default function About() {
                 Contact Us Today
               </Link>
               <Link
-                to="/?section=quote#quote"
+                to="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = '/#quote';
+                }}
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
               >
                 <Calculator className="mr-2 h-5 w-5" />
@@ -381,7 +385,11 @@ export default function About() {
             Contact us today for a free quote.
           </p>
           <Link
-            to="/?section=quote#quote"
+            to="/"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/#quote';
+            }}
             className="inline-flex items-center px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
           >
             Get Your Free Quote
