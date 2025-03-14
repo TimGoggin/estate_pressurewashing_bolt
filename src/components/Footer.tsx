@@ -21,7 +21,7 @@ export default function Footer({ darkMode }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <Droplet className={`h-8 w-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'} mr-2`} />
+              <img src="/EstatesLogo.png" alt="Estates Logo" className="h-12 w-auto mr-2" />
               <span className="text-xl font-bold">Estates Pressure Washing</span> {/* Updated company name */}
             </div>
             <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-4`}>

@@ -53,7 +53,7 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Droplet className={`h-8 w-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'} mr-2`} />
+              <img src="/EstatesLogo.png" alt="Estates Logo" className="h-12 w-auto mr-2" />
               <span className="text-xl font-bold">Estates Pressure Washing</span>
             </Link>
           </div>
