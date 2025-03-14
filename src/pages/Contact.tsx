@@ -119,7 +119,7 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-blue-600 mt-1 mr-4" />
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className={darkMode ? "text-gray-300" : "text-gray-600"}>info@estatespowerwashing.com</p>
+                      <p className={darkMode ? "text-gray-300" : "text-gray-600"}>info@estatespressurewashing.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">

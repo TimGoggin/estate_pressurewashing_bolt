@@ -41,7 +41,7 @@ export default function About() {
         <div className="relative container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About Estates Powerwashing
+              About Estates Pressure Washing
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Delivering exceptional exterior cleaning services with
@@ -76,7 +76,7 @@ export default function About() {
               <p
                 className={`text-lg mb-8 ${darkMode ? "text-gray-300" : "text-gray-600"}`}
               >
-                At Estates Powerwashing, we're committed to restoring and
+                At Estates Pressure Washing, we're committed to restoring and
                 maintaining the beauty of your property through superior
                 cleaning services and unmatched customer care.
               </p>
@@ -135,7 +135,7 @@ export default function About() {
       <section className={`py-20 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}>
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why Choose Estates Powerwashing?
+            Why Choose Estates Pressure Washing?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
