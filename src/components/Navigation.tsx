@@ -125,12 +125,15 @@ export default function Navigation({
             </button>
 
             {/* CTA Button */}
-            <Link
-              to="/?section=quote#quote"
+            <button
+              onClick={() => {
+                const element = document.getElementById('quote');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-all transform hover:scale-105 shadow-md flex items-center"
             >
               <span>Get an Instant Quote</span>
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -217,12 +220,16 @@ export default function Navigation({
           </Link>
 
           <div className="pt-2">
-            <Link
-              to="/?section=quote#quote"
+            <button
+              onClick={() => {
+                const element = document.getElementById('quote');
+                element?.scrollIntoView({ behavior: 'smooth' });
+                setMobileMenuOpen(false);
+              }}
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md text-center shadow-md"
             >
               Get an Instant Quote
-            </Link>
+            </button>
           </div>
         </div>
       </div>

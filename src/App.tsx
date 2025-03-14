@@ -155,13 +155,16 @@ function App() {
             Serving local homeowners and businesses since 2017.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              to="/?section=quote#quote"
+            <button
+              onClick={() => {
+                const element = document.getElementById('quote');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
             >
               <Calculator className="mr-2 h-5 w-5" />
               Get a Free Quote
-            </Link>
+            </button>
             <button className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all">
               <Calendar className="mr-2 h-5 w-5 inline" />
               Schedule Service
