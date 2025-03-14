@@ -72,23 +72,10 @@ export default function Navigation({ darkMode, toggleDarkMode }: NavigationProps
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
 
-            <div className="relative group">
-              <button 
-                className="nav-link flex items-center"
-                onClick={() => toggleDropdown('services')}
-              >
-                <Droplet className="h-4 w-4 mr-1" />
-                <span>Services</span>
-                <ChevronDown className="h-4 w-4 ml-1" />
-              </button>
-              <div className={`absolute left-0 mt-2 w-56 rounded-md shadow-lg py-1 ${darkMode ? 'bg-gray-800' : 'bg-white'} ring-1 ring-black ring-opacity-5 transition-all duration-200 ${activeDropdown === 'services' ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-                <Link to="/services/residential" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>House Washing</Link>
-                <Link to="/services/roof" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Roof Cleaning</Link>
-                <Link to="/services/driveways" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Driveways & Sidewalks</Link>
-                <Link to="/services/commercial" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Commercial Power Washing</Link>
-                <Link to="/services/gutters" className={`block px-4 py-2 text-sm ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'}`}>Gutter Cleaning</Link>
-              </div>
-            </div>
+            <Link to="/services" className="nav-link flex items-center">
+              <Droplet className="h-4 w-4 mr-1" />
+              <span>Services</span>
+            </Link>
 
             <Link to="/gallery" className="nav-link flex items-center group">
               <Image className="h-4 w-4 mr-1" />
