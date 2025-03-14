@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import { Phone, ArrowRight, CheckCircle } from "lucide-react";
@@ -13,44 +12,76 @@ export default function Services() {
   const services = [
     {
       title: "House Washing",
-      description: "Restore your home's exterior to its original beauty with our gentle yet effective house washing service.",
-      features: ["Removes dirt, mold, and mildew", "Safe for all siding types", "Improves curb appeal"],
-      image: "/residential.jpeg"
+      description:
+        "Restore your home's exterior to its original beauty with our gentle yet effective house washing service.",
+      features: [
+        "Removes dirt, mold, and mildew",
+        "Safe for all siding types",
+        "Improves curb appeal",
+      ],
+      image: "/house.jpg",
     },
     {
       title: "Roof Cleaning",
-      description: "Protect and extend your roof's life while improving your home's appearance with our specialized roof cleaning.",
-      features: ["Removes black streaks and algae", "Extends roof lifespan", "Improves energy efficiency"],
-      image: "/specialty.jpeg"
+      description:
+        "Protect and extend your roof's life while improving your home's appearance with our specialized roof cleaning.",
+      features: [
+        "Removes black streaks and algae",
+        "Extends roof lifespan",
+        "Improves energy efficiency",
+      ],
+      image: "/residential.jpeg",
     },
     {
       title: "Walkways & Driveways",
-      description: "Transform your outdoor surfaces with our professional pressure washing services.",
-      features: ["Removes tough stains", "Prevents weed growth", "Enhances safety"],
-      image: "/commercial.jpeg"
+      description:
+        "Transform your outdoor surfaces with our professional pressure washing services.",
+      features: [
+        "Removes tough stains",
+        "Prevents weed growth",
+        "Enhances safety",
+      ],
+      image: "/commercial.jpeg",
     },
     {
       title: "Paver Cleaning & Sealing",
-      description: "Revitalize your pavers with our comprehensive cleaning and sealing service.",
-      features: ["Deep cleaning", "Joint sand stabilization", "Protective sealing"],
-      image: "/before.jpg"
+      description:
+        "Revitalize your pavers with our comprehensive cleaning and sealing service.",
+      features: [
+        "Deep cleaning",
+        "Joint sand stabilization",
+        "Protective sealing",
+      ],
+      image: "/before.jpg",
     },
     {
       title: "Gutter Cleaning",
-      description: "Keep your gutters functioning properly with our thorough cleaning service.",
-      features: ["Prevents water damage", "Removes debris", "Extends gutter life"],
-      image: "/after.jpg"
+      description:
+        "Keep your gutters functioning properly with our thorough cleaning service.",
+      features: [
+        "Prevents water damage",
+        "Removes debris",
+        "Extends gutter life",
+      ],
+      image: "/after.jpg",
     },
     {
       title: "Graffiti Removal",
-      description: "Professional removal of unwanted graffiti from various surfaces.",
-      features: ["Safe removal techniques", "Surface restoration", "Protective coating available"],
-      image: "/commercial.jpeg"
-    }
+      description:
+        "Professional removal of unwanted graffiti from various surfaces.",
+      features: [
+        "Safe removal techniques",
+        "Surface restoration",
+        "Protective coating available",
+      ],
+      image: "/commercial.jpeg",
+    },
   ];
 
   return (
-    <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
+    <div
+      className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
+    >
       {/* Hero Section */}
       <div className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="absolute inset-0 bg-black/50"></div>
@@ -59,7 +90,8 @@ export default function Services() {
             Professional Exterior Cleaning Services
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            From houses to driveways, we deliver exceptional results with our comprehensive cleaning solutions
+            From houses to driveways, we deliver exceptional results with our
+            comprehensive cleaning solutions
           </p>
           <Link
             to="/contact"
@@ -88,7 +120,9 @@ export default function Services() {
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
+                  <p
+                    className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}
+                  >
                     {service.description}
                   </p>
                   <ul className="mb-4">
@@ -108,56 +142,6 @@ export default function Services() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-import React from "react";
-import { useOutletContext } from "react-router-dom";
-
-interface LayoutContext {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-}
-
-export default function Services() {
-  const { darkMode } = useOutletContext<LayoutContext>();
-
-  return (
-    <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
-      <div className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h1>
-          <p className="text-xl text-blue-100">Professional exterior cleaning solutions for your property</p>
-        </div>
-      </div>
-      
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-8 rounded-lg shadow-lg`}>
-              <h2 className="text-2xl font-bold mb-4">Residential Services</h2>
-              <ul className="space-y-2">
-                <li>House Washing</li>
-                <li>Roof Cleaning</li>
-                <li>Driveway & Sidewalk Cleaning</li>
-                <li>Deck & Patio Cleaning</li>
-                <li>Gutter Cleaning</li>
-              </ul>
-            </div>
-            
-            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-8 rounded-lg shadow-lg`}>
-              <h2 className="text-2xl font-bold mb-4">Commercial Services</h2>
-              <ul className="space-y-2">
-                <li>Building Exteriors</li>
-                <li>Parking Lots</li>
-                <li>Storefront Cleaning</li>
-                <li>Graffiti Removal</li>
-                <li>Commercial Roof Cleaning</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
