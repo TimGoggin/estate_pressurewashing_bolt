@@ -272,6 +272,57 @@ export default function About() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">Do you only Pressure Wash?</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                We employ both soft wash and pressure wash processes for each job, depending on the material being cleaned.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">How much experience does your company have with pressure washing and soft washing?</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Our company is led by an individual with over 8 years of experience in the industry.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">How soon will I see the results from the cleaning?</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Results are typically visible the same day. Depending on the color of your shingles, you may notice a slight "soap-like" film from our detergents. This film will rinse away with the first rain.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">How long do the cleaning results last?</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Generally, roofing results can last anywhere from 5 to 7 years. However, results may vary depending upon landscaping and surrounding trees.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">Is soft wash better than a power wash?</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Soft wash surfaces utilize no pressure, preventing damage to your home or building. Soft washing is similar to using a garden hose. However, some surfaces require pressure to be properly cleaned, which is why we employ both methods when necessary.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">Is your company Licensed & Insured?</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                We are fully insured and registered with the State of Pennsylvania.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">Do I need to be home during the cleaning?</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                It is entirely up to you. We only ask that there be access to an outside water source and that all windows and doors are closed and locked.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className={`py-20 ${darkMode ? "bg-gray-800" : "bg-blue-50"}`}>
         <div className="container mx-auto px-6 text-center">
