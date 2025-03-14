@@ -165,10 +165,13 @@ function App() {
               <Calculator className="mr-2 h-5 w-5" />
               Get a Free Quote
             </button>
-            <button className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all">
-              <Calendar className="mr-2 h-5 w-5 inline" />
+            <Link
+              to="/contact"
+              className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all inline-flex items-center"
+            >
+              <Calendar className="mr-2 h-5 w-5" />
               Schedule Service
-            </button>
+            </Link>
           </div>
         </div>
       </div>
