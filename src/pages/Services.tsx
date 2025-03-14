@@ -41,7 +41,7 @@ export default function Services() {
         "Prevents weed growth",
         "Enhances safety",
       ],
-      image: "/commercial.jpeg",
+      image: "/driveways.jpeg",
     },
     {
       title: "Paver Cleaning & Sealing",
@@ -52,7 +52,7 @@ export default function Services() {
         "Joint sand stabilization",
         "Protective sealing",
       ],
-      image: "/before.jpg",
+      image: "/paver.png",
     },
     {
       title: "Gutter Cleaning",
@@ -63,7 +63,7 @@ export default function Services() {
         "Removes debris",
         "Extends gutter life",
       ],
-      image: "/after.jpg",
+      image: "/driveways.jpeg",
     },
     {
       title: "Graffiti Removal",
