@@ -6,6 +6,10 @@ modules = ["nodejs-20", "web"]
 channel = "stable-24_05"
 
 [[ports]]
+localPort = 3000
+externalPort = 3001
+
+[[ports]]
 localPort = 5173
 externalPort = 80
 
@@ -15,7 +19,7 @@ externalPort = 3000
 
 [deployment]
 deploymentTarget = "cloudrun"
-run = ["sh", "-c", "npx vite preview --host 0.0.0.0 --port 3000"]
+run = ["sh", "-c", "npx vite preview --host 0.0.0.0 --port 5173"]
 build = ["sh", "-c", "npm run build"]
 
 [workflows]
@@ -28,4 +32,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "npm run dev -- --host 0.0.0.0 --port 3000"
+args = "npm run dev -- --host 0.0.0.0 --port 5173"
