@@ -76,12 +76,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (sessionStorage.getItem('scrollToQuote')) {
-      sessionStorage.removeItem('scrollToQuote');
-      const quoteElement = document.getElementById('quote');
+    if (sessionStorage.getItem("scrollToQuote")) {
+      sessionStorage.removeItem("scrollToQuote");
+      const quoteElement = document.getElementById("quote");
       if (quoteElement) {
         setTimeout(() => {
-          quoteElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          quoteElement.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 100);
       }
     }
@@ -157,18 +157,18 @@ function App() {
 
         <div className="container mx-auto px-6 text-center relative z-10 mt-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Restore Your Home's Beauty with{" "}
+            Restore Your Property's Beauty with{" "}
             <span className="text-blue-400">Professional Pressure Washing</span>
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-            Eco-friendly cleaning solutions with a 100% satisfaction guarantee.
-            Serving local homeowners and businesses since 2017.
+            Serving the local community since 2017 with eco-friendly cleaning
+            solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={() => {
-                const element = document.getElementById('quote');
-                element?.scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById("quote");
+                element?.scrollIntoView({ behavior: "smooth" });
               }}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
             >
@@ -343,142 +343,6 @@ function App() {
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Quote Calculator */}
-      <section
-        id="quote"
-        className={`py-16 ${darkMode ? "bg-gray-800" : "bg-blue-50"} scroll-mt-20`}
-      >
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Get an Instant Quote
-          </h2>
-          <p
-            className={`text-xl text-center ${darkMode ? "text-gray-300" : "text-gray-600"} mb-12 max-w-3xl mx-auto`}
-          >
-            Select your surface type and enter the approximate square footage
-            for an estimate
-          </p>
-
-          <div
-            className={`max-w-4xl mx-auto ${darkMode ? "bg-gray-900" : "bg-white"} rounded-xl shadow-lg p-8`}
-          >
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4">
-                Select Surface Type
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-                <button
-                  className={`p-4 rounded-lg flex flex-col items-center justify-center transition-all ${selectedSurface === "driveway" ? (darkMode ? "bg-blue-900 border-2 border-blue-500" : "bg-blue-100 border-2 border-blue-500") : darkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-100 hover:bg-gray-200"}`}
-                  onClick={() => setSelectedSurface("driveway")}
-                >
-                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-2">
-                    <Home className="h-6 w-6 text-white" />
-                  </div>
-                  <span className="text-sm font-medium">Driveway</span>
-                </button>
-
-                <button
-                  className={`p-4 rounded-lg flex flex-col items-center justify-center transition-all ${selectedSurface === "deck" ? (darkMode ? "bg-blue-900 border-2 border-blue-500" : "bg-blue-100 border-2 border-blue-500") : darkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-100 hover:bg-gray-200"}`}
-                  onClick={() => setSelectedSurface("deck")}
-                >
-                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-2">
-                    <Home className="h-6 w-6 text-white" />
-                  </div>
-                  <span className="text-sm font-medium">Deck</span>
-                </button>
-
-                <button
-                  className={`p-4 rounded-lg flex flex-col items-center justify-center transition-all ${selectedSurface === "siding" ? (darkMode ? "bg-blue-900 border-2 border-blue-500" : "bg-blue-100 border-2 border-blue-500") : darkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-100 hover:bg-gray-200"}`}
-                  onClick={() => setSelectedSurface("siding")}
-                >
-                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-2">
-                    <Building2 className="h-6 w-6 text-white" />
-                  </div>
-                  <span className="text-sm font-medium">Siding</span>
-                </button>
-
-                <button
-                  className={`p-4 rounded-lg flex flex-col items-center justify-center transition-all ${selectedSurface === "roof" ? (darkMode ? "bg-blue-900 border-2 border-blue-500" : "bg-blue-100 border-2 border-blue-500") : darkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-100 hover:bg-gray-200"}`}
-                  onClick={() => setSelectedSurface("roof")}
-                >
-                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-2">
-                    <Home className="h-6 w-6 text-white" />
-                  </div>
-                  <span className="text-sm font-medium">Roof</span>
-                </button>
-
-                <button
-                  className={`p-4 rounded-lg flex flex-col items-center justify-center transition-all ${selectedSurface === "patio" ? (darkMode ? "bg-blue-900 border-2 border-blue-500" : "bg-blue-100 border-2 border-blue-500") : darkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-gray-100 hover:bg-gray-200"}`}
-                  onClick={() => setSelectedSurface("patio")}
-                >
-                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-2">
-                    <Home className="h-6 w-6 text-white" />
-                  </div>
-                  <span className="text-sm font-medium">Patio</span>
-                </button>
-              </div>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4">
-                Approximate Square Footage
-              </h3>
-              <input
-                type="range"
-                min="100"
-                max="2000"
-                step="50"
-                value={squareFootage}
-                onChange={(e) => setSquareFootage(parseInt(e.target.value))}
-                className={`w-full h-2 ${darkMode ? "bg-gray-700" : "bg-gray-200"} rounded-lg appearance-none cursor-pointer`}
-              />
-              <div className="flex justify-between mt-2 text-sm text-gray-600 dark:text-gray-300">
-                <span>100 sq ft</span>
-                <span className="font-semibold">{squareFootage} sq ft</span>
-                <span>2000 sq ft</span>
-              </div>
-            </div>
-
-            <div
-              className={`${darkMode ? "bg-blue-900" : "bg-blue-50"} p-6 rounded-lg`}
-            >
-              <div className="flex justify-between items-center">
-                <div>
-                  <h3 className="text-xl font-bold">Your Estimate</h3>
-                  <p
-                    className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}
-                  >
-                    Based on {squareFootage} sq ft of {selectedSurface}
-                  </p>
-                </div>
-                <div className="text-3xl font-bold text-blue-500">
-                  ${quoteEstimate}
-                </div>
-              </div>
-              <p
-                className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-500"} mt-2`}
-              >
-                *This is an estimate only. Final pricing may vary based on site
-                conditions and specific requirements.
-              </p>
-            </div>
-
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Request Exact Quote
-              </button>
-              <button
-                className={`bg-transparent ${darkMode ? "hover:bg-blue-900 text-blue-400 border-2 border-blue-400" : "hover:bg-blue-50 text-blue-600 border-2 border-blue-600"} font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center`}
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Schedule Consultation
-              </button>
             </div>
           </div>
         </div>
@@ -705,7 +569,7 @@ function App() {
                 <div>
                   <label
                     htmlFor="message"
-                    className={`block text-sm font-medium ${darkMode ?"text-gray-300" : "text-gray-700"} mb-1`}
+                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-1`}
                   >
                     Additional Information
                   </label>

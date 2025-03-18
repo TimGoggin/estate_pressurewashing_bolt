@@ -63,9 +63,6 @@ export default function Navigation({
                 alt="Estates Logo"
                 className="h-12 w-auto mr-2"
               />
-              <span className="text-xl font-bold">
-                Estates Pressure Washing
-              </span>
             </Link>
           </div>
 
@@ -127,8 +124,8 @@ export default function Navigation({
             {/* CTA Button */}
             <button
               onClick={() => {
-                const element = document.getElementById('quote');
-                element?.scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById("quote");
+                element?.scrollIntoView({ behavior: "smooth" });
               }}
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-all transform hover:scale-105 shadow-md flex items-center"
             >
@@ -222,8 +219,8 @@ export default function Navigation({
           <div className="pt-2">
             <button
               onClick={() => {
-                const element = document.getElementById('quote');
-                element?.scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById("quote");
+                element?.scrollIntoView({ behavior: "smooth" });
                 setMobileMenuOpen(false);
               }}
               className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-md text-center shadow-md"
