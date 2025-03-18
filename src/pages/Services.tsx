@@ -196,16 +196,6 @@ export default function Services() {
                   >
                     {service.description}
                   </p>
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <p className="text-sm font-semibold mb-2">Before</p>
-                      <img src="/before.jpg" alt="Before" className="rounded-lg w-full h-32 object-cover" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold mb-2">After</p>
-                      <img src="/after.jpg" alt="After" className="rounded-lg w-full h-32 object-cover" />
-                    </div>
-                  </div>
                   <ul className="mb-4">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center mb-2">
@@ -268,16 +258,6 @@ export default function Services() {
                   <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
                     {service.description}
                   </p>
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <p className="text-sm font-semibold mb-2">Before</p>
-                      <img src="/before.jpg" alt="Before" className="rounded-lg w-full h-32 object-cover" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold mb-2">After</p>
-                      <img src="/after.jpg" alt="After" className="rounded-lg w-full h-32 object-cover" />
-                    </div>
-                  </div>
                   <ul className="mb-4">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center mb-2">
@@ -322,16 +302,6 @@ export default function Services() {
                   <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
                     {service.description}
                   </p>
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <p className="text-sm font-semibold mb-2">Before</p>
-                      <img src="/before.jpg" alt="Before" className="rounded-lg w-full h-32 object-cover" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold mb-2">After</p>
-                      <img src="/after.jpg" alt="After" className="rounded-lg w-full h-32 object-cover" />
-                    </div>
-                  </div>
                   <ul className="mb-4">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center mb-2">
