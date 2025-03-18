@@ -80,6 +80,7 @@ export default function Services() {
 
   return (
     <div
+      id="services"
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
       {/* Hero Section */}
