@@ -9,7 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import { Phone, Calculator } from "lucide-react";
+import { Phone, MessageSquare } from "lucide-react";
 
 interface LayoutContext {
   darkMode: boolean;
@@ -53,7 +53,7 @@ export default function About() {
                 to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <MessageSquare className="mr-2 h-5 w-5" />
                 Contact Us Today
               </Link>
               <Link
@@ -65,7 +65,7 @@ export default function About() {
                 }}
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
               >
-                <Calculator className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-5 w-5" />
                 Get a Quote
               </Link>
             </div>
