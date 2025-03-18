@@ -390,24 +390,34 @@ export default function Services() {
             Before & After Gallery
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {Array.from({ length: 19 }, (_, index) => (
-              <div key={index} className="space-y-3">
-                <div className="relative">
-                  <img
-                    src="/before.jpg"
-                    alt={`Before cleaning example ${index + 1}`}
-                    className="w-full h-40 object-cover rounded-lg shadow-md"
-                  />
-                  <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Before
+            {Array.from({ length: 19 }, (_, index) => {
+              const imageSet = [
+                { before: "/before.jpg", after: "/after.jpg" },
+                { before: "/before2.png", after: "/after2.png" },
+                { before: "/residential.jpeg", after: "/commercial.jpeg" },
+                { before: "/driveways.jpeg", after: "/paver.png" },
+                { before: "/house.jpg", after: "/specialty.jpeg" }
+              ];
+              const currentSet = imageSet[index % imageSet.length];
+              
+              return (
+                <div key={index} className="space-y-3">
+                  <div className="relative">
+                    <img
+                      src={currentSet.before}
+                      alt={`Before cleaning example ${index + 1}`}
+                      className="w-full h-40 object-cover rounded-lg shadow-md"
+                    />
+                    <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Before
+                    </div>
                   </div>
-                </div>
-                <div className="relative">
-                  <img
-                    src="/after.jpg"
-                    alt={`After cleaning example ${index + 1}`}
-                    className="w-full h-40 object-cover rounded-lg shadow-md"
-                  />
+                  <div className="relative">
+                    <img
+                      src={currentSet.after}
+                      alt={`After cleaning example ${index + 1}`}
+                      className="w-full h-40 object-cover rounded-lg shadow-md"
+                    />
                   <div className="absolute top-4 right-4 bg-blue-600/80 text-white px-3 py-1 rounded-full text-sm font-medium">
                     After
                   </div>
