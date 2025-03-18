@@ -128,6 +128,15 @@ export default function About() {
                 </div>
               </div>
             </div>
+            <div className="order-1 md:order-2">
+              <div className="rounded-lg overflow-hidden shadow-xl">
+                <img
+                  src="/driveways.jpeg"
+                  alt="Professional Driveway Cleaning"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
