@@ -56,13 +56,13 @@ export default function About() {
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Contact Us Today
               </Link>
-              <Link
-                to="/contact"
+              <a
+                href="tel:+12676850530"
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Contact Us
-              </Link>
+                (267) 685-0530
+              </a>
             </div>
           </div>
         </div>
