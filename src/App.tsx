@@ -165,16 +165,13 @@ function App() {
             solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button
-              onClick={() => {
-                const element = document.getElementById("quote");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
+            <a
+              href="sms:+12679176994"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
             >
-              <Calculator className="mr-2 h-5 w-5" />
-              Get a Free Quote
-            </button>
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Text Us Now
+            </a>
             <Link
               to="/contact"
               className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all inline-flex items-center"
