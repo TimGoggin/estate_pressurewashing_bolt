@@ -17,7 +17,7 @@ export default function Footer({ darkMode }: FooterProps) {
               <img
                 src="/EstatesLogo.png"
                 alt="Estates Logo"
-                className="h-12 w-auto mr-2"
+                className="h-16 w-auto mr-2"
               />
               <span className="text-xl font-bold"></span>
             </div>

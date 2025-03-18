@@ -61,7 +61,7 @@ export default function Navigation({
               <img
                 src="/EstatesLogo.png"
                 alt="Estates Logo"
-                className="h-12 w-auto mr-2"
+                className="h-14 w-auto mr-2"
               />
             </Link>
           </div>
