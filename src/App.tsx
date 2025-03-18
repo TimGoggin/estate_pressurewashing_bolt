@@ -262,7 +262,10 @@ function App() {
                     <span>Decks & Patios</span>
                   </li>
                 </ul>
-                <Link to="/services#services" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
+                <Link
+                  to="/services#services"
+                  className="text-blue-500 font-semibold flex items-center hover:text-blue-400"
+                >
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </div>
@@ -300,7 +303,10 @@ function App() {
                     <span>Building Exteriors</span>
                   </li>
                 </ul>
-                <Link to="/services#services" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
+                <Link
+                  to="/services#services"
+                  className="text-blue-500 font-semibold flex items-center hover:text-blue-400"
+                >
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </div>
@@ -336,7 +342,10 @@ function App() {
                     <span>Graffiti Removal</span>
                   </li>
                 </ul>
-                <Link to="/services#services" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
+                <Link
+                  to="/services#services"
+                  className="text-blue-500 font-semibold flex items-center hover:text-blue-400"
+                >
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </div>
@@ -349,7 +358,7 @@ function App() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            What Our Customers Say
+            What Our Customers Are Saying
           </h2>
           <p
             className={`text-xl text-center ${darkMode ? "text-gray-300" : "text-gray-600"} mb-12 max-w-3xl mx-auto`}
