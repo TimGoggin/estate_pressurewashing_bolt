@@ -37,7 +37,7 @@ const afterImage = "/after.jpg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-const toggleDarkMode = () => setDarkMode(!darkMode);
+  const toggleDarkMode = () => setDarkMode(!darkMode);
   const [selectedSurface, setSelectedSurface] = useState("driveway");
   const [squareFootage, setSquareFootage] = useState(500);
   const [quoteEstimate, setQuoteEstimate] = useState(150);
@@ -148,7 +148,7 @@ const toggleDarkMode = () => setDarkMode(!darkMode);
         className="relative h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/residential.jpeg')",
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after15.jpg')",
         }}
       >
         {/* Animated water particles */}
@@ -237,7 +237,7 @@ const toggleDarkMode = () => setDarkMode(!darkMode);
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/residential.jpeg)" }}
+                style={{ backgroundImage: "url(/after3.png)" }}
               ></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">
@@ -278,7 +278,7 @@ const toggleDarkMode = () => setDarkMode(!darkMode);
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/commercial.jpeg)" }}
+                style={{ backgroundImage: "url(/after9.png)" }}
               ></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">
@@ -319,7 +319,7 @@ const toggleDarkMode = () => setDarkMode(!darkMode);
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/specialty.jpeg)" }}
+                style={{ backgroundImage: "url(/after14.jpg)" }}
               ></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Specialty Cleaning</h3>

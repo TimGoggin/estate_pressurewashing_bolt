@@ -131,8 +131,8 @@ export default function About() {
             <div className="order-1 md:order-2">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/driveways.jpeg"
-                  alt="Professional Driveway Cleaning"
+                  src="/after17.jpg"
+                  alt="Professional Pool Cleaning"
                   className="w-full h-full object-cover"
                 />
               </div>
