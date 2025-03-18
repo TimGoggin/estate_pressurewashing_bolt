@@ -147,7 +147,7 @@ function App() {
         className="relative h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1682687982167-d7fb3ed8541d)",
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/residential.jpeg')",
         }}
       >
         {/* Animated water particles */}
