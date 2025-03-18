@@ -36,7 +36,8 @@ const beforeImage = "/before.jpg";
 const afterImage = "/after.jpg";
 
 function App() {
-  const { darkMode, toggleDarkMode } = useOutletContext<LayoutContext>();
+  const [darkMode, setDarkMode] = useState(true);
+const toggleDarkMode = () => setDarkMode(!darkMode);
   const [selectedSurface, setSelectedSurface] = useState("driveway");
   const [squareFootage, setSquareFootage] = useState(500);
   const [quoteEstimate, setQuoteEstimate] = useState(150);
