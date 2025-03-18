@@ -110,16 +110,11 @@ export default function Services() {
             comprehensive cleaning solutions
           </p>
           <Link
-            to="/"
-            onClick={(e) => {
-              e.preventDefault();
-              sessionStorage.setItem("scrollToQuote", "true");
-              window.location.href = "/";
-            }}
+            to="/contact"
             className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-colors"
           >
-            <Calculator className="mr-2 h-5 w-5" />
-            Get a Free Quote
+            <MessageSquare className="mr-2 h-5 w-5" />
+            Contact Us Today
           </Link>
         </div>
       </div>
