@@ -262,9 +262,9 @@ function App() {
                     <span>Decks & Patios</span>
                   </li>
                 </ul>
-                <button className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
+                <Link to="/services#residential" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -300,9 +300,9 @@ function App() {
                     <span>Building Exteriors</span>
                   </li>
                 </ul>
-                <button className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
+                <Link to="/services#commercial" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -336,9 +336,9 @@ function App() {
                     <span>Graffiti Removal</span>
                   </li>
                 </ul>
-                <button className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
+                <Link to="/services#specialty" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>
