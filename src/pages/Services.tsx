@@ -112,55 +112,12 @@ export default function Services() {
       </div>
 
       {/* Services Section */}
-      <section className="py-20">
-        <div id="residential" className="mb-20">
-          <h2 className="text-2xl font-bold mb-8">Residential Services</h2>
-          {/* First two services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            {services.slice(0, 2).map((service, index) => (
-              <div
-                key={index}
-                className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
-              >
-                {/* Service content */}
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div id="commercial" className="mb-20">
-          <h2 className="text-2xl font-bold mb-8">Commercial Services</h2>
-          {/* Middle two services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            {services.slice(2, 4).map((service, index) => (
-              <div
-                key={index}
-                className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
-              >
-                {/* Service content */}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div id="specialty" className="mb-20">
-          <h2 className="text-2xl font-bold mb-8">Specialty Services</h2>
-          {/* Last two services */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.slice(4, 6).map((service, index) => (
-              <div
-                key={index}
-                className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
-              >
-                {/* Service content */}
-              </div>
-            ))}
-          </div>
-        </div>
+      <section id="residential" className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div
+                id={index === 0 ? "residential" : index === 1 ? "commercial" : "specialty"}
                 key={index}
                 className={`${
                   darkMode ? "bg-gray-800" : "bg-white"
