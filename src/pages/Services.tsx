@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import { Phone, ArrowRight, CheckCircle, Calculator } from "lucide-react";
 
@@ -8,7 +8,7 @@ interface LayoutContext {
 
 export default function Services() {
   const { darkMode } = useOutletContext<LayoutContext>();
-  
+
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
