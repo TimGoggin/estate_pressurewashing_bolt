@@ -61,7 +61,7 @@ export default function About() {
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                (267) 685-0530
+                Call Us Today!
               </a>
             </div>
           </div>
