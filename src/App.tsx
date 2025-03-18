@@ -300,7 +300,7 @@ function App() {
                     <span>Building Exteriors</span>
                   </li>
                 </ul>
-                <Link to="/services#commercial" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
+                <Link to="/services" className="text-blue-500 font-semibold flex items-center hover:text-blue-400">
                   Learn More <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </div>
