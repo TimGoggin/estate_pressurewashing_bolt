@@ -401,7 +401,6 @@ export default function Services() {
             View Gallery
           </Link>
         </div>
-        </div>
       </section>
 
       {/* Service Area Section */}
