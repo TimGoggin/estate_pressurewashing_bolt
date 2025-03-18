@@ -376,6 +376,41 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Before & After Gallery */}
+      <section className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}>
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Before & After Gallery
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map((index) => (
+              <div key={index} className="space-y-4">
+                <div className="relative">
+                  <img
+                    src="/before.jpg"
+                    alt="Before cleaning"
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                  <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Before
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="/after.jpg"
+                    alt="After cleaning"
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                  <div className="absolute top-4 right-4 bg-blue-600/80 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    After
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
