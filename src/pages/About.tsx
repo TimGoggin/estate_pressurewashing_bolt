@@ -172,6 +172,7 @@ export default function About() {
                 completion of projects.
               </p>
             </div>
+            <div
               className={`${darkMode ? "bg-gray-900" : "bg-white"} p-8 rounded-lg shadow-lg`}
             >
               <CheckCircle
