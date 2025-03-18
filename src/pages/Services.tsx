@@ -8,6 +8,7 @@ interface LayoutContext {
 
 export default function Services() {
   const { darkMode } = useOutletContext<LayoutContext>();
+  const [activeTab, setActiveTab] = useState('residential');
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -127,8 +128,57 @@ export default function Services() {
       {/* Services Section */}
       <section id="services" className="py-20">
         <div className="container mx-auto px-6">
+          <div className="flex justify-center mb-12">
+            <div className={`inline-flex rounded-lg p-1 ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}>
+              {['Residential', 'Commercial', 'Specialty'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab.toLowerCase())}
+                  className={`px-6 py-2 rounded-lg font-medium transition-colors ${
+                    activeTab === tab.toLowerCase()
+                      ? 'bg-blue-600 text-white'
+                      : `${darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {activeTab === 'residential' && [
+              {
+                title: "House Washing",
+                description: "Restore your home's exterior to its original beauty with our gentle yet effective house washing service.",
+                features: ["Removes dirt, mold, and mildew", "Safe for all siding types", "Improves curb appeal"],
+                image: "/house.jpg"
+              },
+              {
+                title: "Roof Cleaning",
+                description: "Protect and extend your roof's life while improving your home's appearance.",
+                features: ["Removes black streaks and algae", "Extends roof lifespan", "Improves energy efficiency"],
+                image: "/residential.jpeg"
+              },
+              {
+                title: "Walkways & Driveways",
+                description: "Transform your outdoor surfaces with our professional pressure washing services.",
+                features: ["Removes tough stains", "Prevents weed growth", "Enhances safety"],
+                image: "/driveways.jpeg"
+              },
+              {
+                title: "Decks & Patios",
+                description: "Restore and protect your outdoor living spaces.",
+                features: ["Deep cleaning", "Stain removal", "Sealing available"],
+                image: "/specialty.jpeg"
+              },
+              {
+                title: "Pool Areas",
+                description: "Keep your pool area clean and safe.",
+                features: ["Non-slip cleaning", "Algae removal", "Sanitization"],
+                image: "/residential.jpeg"
+              }
+            ].map((service, index) => (
               <div
                 key={index}
                 className={`${
@@ -144,6 +194,112 @@ export default function Services() {
                   <p
                     className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}
                   >
+                    {service.description}
+                  </p>
+                  <ul className="mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center mb-2">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700"
+                  >
+                    Request Service <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+            {activeTab === 'commercial' && [
+              {
+                title: "Commercial Roof Cleaning",
+                description: "Professional roof cleaning for commercial buildings.",
+                features: ["OSHA compliant", "Scheduled maintenance", "Large-scale capability"],
+                image: "/residential.jpeg"
+              },
+              {
+                title: "Commercial Walkways",
+                description: "Keep your business property clean and professional.",
+                features: ["High-traffic areas", "24/7 service", "Safety focused"],
+                image: "/driveways.jpeg"
+              },
+              {
+                title: "Commercial Gutters",
+                description: "Maintain your building's water management system.",
+                features: ["Preventive maintenance", "Debris removal", "Downspout cleaning"],
+                image: "/commercial.jpeg"
+              },
+              {
+                title: "Graffiti Removal",
+                description: "Quick and effective graffiti removal services.",
+                features: ["Surface-safe solutions", "Complete removal", "Protective coating"],
+                image: "/commercial.jpeg"
+              },
+              {
+                title: "Warehouse Cleaning",
+                description: "Comprehensive warehouse cleaning solutions.",
+                features: ["Large area cleaning", "Equipment safe", "OSHA compliant"],
+                image: "/commercial.jpeg"
+              }
+            ].map((service, index) => (
+              <div
+                key={index}
+                className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
+              >
+                <div
+                  className="h-48 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
+                    {service.description}
+                  </p>
+                  <ul className="mb-4">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center mb-2">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700"
+                  >
+                    Request Service <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+            {activeTab === 'specialty' && [
+              {
+                title: "Paver Cleaning & Sealing",
+                description: "Expert paver restoration and protection.",
+                features: ["Deep cleaning", "Joint sand stabilization", "Protective sealing"],
+                image: "/paver.png"
+              },
+              {
+                title: "Gutter Services",
+                description: "Complete gutter maintenance solutions.",
+                features: ["Cleaning", "Repairs", "Guard installation"],
+                image: "/residential.jpeg"
+              }
+            ].map((service, index) => (
+              <div
+                key={index}
+                className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
+              >
+                <div
+                  className="h-48 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${service.image})` }}
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
                     {service.description}
                   </p>
                   <ul className="mb-4">
