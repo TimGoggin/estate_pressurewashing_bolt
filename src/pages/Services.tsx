@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import { Phone, ArrowRight, CheckCircle, Calculator } from "lucide-react";
@@ -21,7 +20,6 @@ export default function Services() {
         "Improves curb appeal",
       ],
       image: "/house.jpg",
-      type: "residential"
     },
     {
       title: "Roof Cleaning",
@@ -33,7 +31,6 @@ export default function Services() {
         "Improves energy efficiency",
       ],
       image: "/residential.jpeg",
-      type: "residential"
     },
     {
       title: "Walkways & Driveways",
@@ -45,7 +42,6 @@ export default function Services() {
         "Enhances safety",
       ],
       image: "/driveways.jpeg",
-      type: "commercial"
     },
     {
       title: "Paver Cleaning & Sealing",
@@ -57,7 +53,6 @@ export default function Services() {
         "Protective sealing",
       ],
       image: "/paver.png",
-      type: "commercial"
     },
     {
       title: "Gutter Cleaning",
@@ -69,7 +64,6 @@ export default function Services() {
         "Extends gutter life",
       ],
       image: "/driveways.jpeg",
-      type: "specialty"
     },
     {
       title: "Graffiti Removal",
@@ -81,12 +75,13 @@ export default function Services() {
         "Protective coating available",
       ],
       image: "/commercial.jpeg",
-      type: "specialty"
     },
   ];
 
   return (
-    <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
+    <div
+      className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
+    >
       {/* Hero Section */}
       <div
         className="relative pt-32 pb-20 bg-cover bg-center"
@@ -117,39 +112,17 @@ export default function Services() {
       </div>
 
       {/* Services Section */}
-      <section className="py-20 container mx-auto px-6">
+      <section className="py-20">
         <div id="residential" className="mb-20">
           <h2 className="text-2xl font-bold mb-8">Residential Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.filter(service => service.type === "residential").map((service, index) => (
+          {/* First two services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            {services.slice(0, 2).map((service, index) => (
               <div
                 key={index}
                 className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
               >
-                <div
-                  className="h-48 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${service.image})` }}
-                ></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
-                    {service.description}
-                  </p>
-                  <ul className="mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center mb-2">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700"
-                  >
-                    Request Service <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
+                {/* Service content */}
               </div>
             ))}
           </div>
@@ -157,48 +130,41 @@ export default function Services() {
         
         <div id="commercial" className="mb-20">
           <h2 className="text-2xl font-bold mb-8">Commercial Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.filter(service => service.type === "commercial").map((service, index) => (
+          {/* Middle two services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            {services.slice(2, 4).map((service, index) => (
               <div
                 key={index}
                 className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
               >
-                <div
-                  className="h-48 bg-cover bg-center"
-                  style={{ backgroundImage: `url(${service.image})` }}
-                ></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
-                    {service.description}
-                  </p>
-                  <ul className="mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center mb-2">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700"
-                  >
-                    Request Service <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
+                {/* Service content */}
               </div>
             ))}
           </div>
         </div>
 
-        <div id="specialty">
+        <div id="specialty" className="mb-20">
           <h2 className="text-2xl font-bold mb-8">Specialty Services</h2>
+          {/* Last two services */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.filter(service => service.type === "specialty").map((service, index) => (
+            {services.slice(4, 6).map((service, index) => (
               <div
                 key={index}
                 className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
+              >
+                {/* Service content */}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`${
+                  darkMode ? "bg-gray-800" : "bg-white"
+                } rounded-lg shadow-lg overflow-hidden`}
               >
                 <div
                   className="h-48 bg-cover bg-center"
@@ -206,7 +172,9 @@ export default function Services() {
                 ></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>
+                  <p
+                    className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}
+                  >
                     {service.description}
                   </p>
                   <ul className="mb-4">
@@ -237,25 +205,44 @@ export default function Services() {
             Our Service Area
           </h2>
           <div className="max-w-3xl mx-auto text-center">
-            <p className={`text-lg mb-6 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+            <p
+              className={`text-lg mb-6 ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+            >
               We proudly serve residential and commercial properties throughout:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <div
+                className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}
+              >
                 <h3 className="text-xl font-semibold mb-3">Bucks County</h3>
-                <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                <p
+                  className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                >
                   Including Doylestown, Newtown, Yardley, and surrounding areas
                 </p>
               </div>
-              <div className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}>
-                <h3 className="text-xl font-semibold mb-3">Montgomery County</h3>
-                <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                  Including Blue Bell, King of Prussia, Lansdale, and surrounding areas
+              <div
+                className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}
+              >
+                <h3 className="text-xl font-semibold mb-3">
+                  Montgomery County
+                </h3>
+                <p
+                  className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                >
+                  Including Blue Bell, King of Prussia, Lansdale, and
+                  surrounding areas
                 </p>
               </div>
-              <div className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}>
-                <h3 className="text-xl font-semibold mb-3">Philadelphia County</h3>
-                <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+              <div
+                className={`${darkMode ? "bg-gray-900" : "bg-white"} p-6 rounded-lg shadow-lg`}
+              >
+                <h3 className="text-xl font-semibold mb-3">
+                  Philadelphia County
+                </h3>
+                <p
+                  className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}
+                >
                   Serving all neighborhoods within Philadelphia proper
                 </p>
               </div>
