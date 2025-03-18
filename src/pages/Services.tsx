@@ -219,6 +219,49 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">
+                What's the difference between pressure washing and soft washing?
+              </h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Pressure washing uses high-pressure water to remove dirt and debris, while soft washing uses low-pressure water combined with specialized cleaning solutions. We choose the appropriate method based on the surface being cleaned.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">
+                How often should I have my property pressure washed?
+              </h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Most properties benefit from annual cleaning, but this can vary based on your environment, climate, and surrounding vegetation. We can assess your specific situation and recommend an appropriate maintenance schedule.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">
+                Are your cleaning solutions environmentally friendly?
+              </h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Yes, we use eco-friendly cleaning solutions that are effective yet safe for your plants, pets, and the environment.
+              </p>
+            </div>
+            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+              <h3 className="text-xl font-semibold mb-3">
+                How long does a typical service take?
+              </h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Service duration varies depending on the size and condition of the area being cleaned. Most residential jobs are completed within a few hours, while larger commercial projects may take longer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
