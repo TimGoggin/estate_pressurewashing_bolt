@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { Phone, ArrowRight, CheckCircle, Calculator } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle, Calculator, Image } from "lucide-react";
 import { beforeAfterImages } from "../config/beforeAfterConfig";
 
 interface LayoutContext {
