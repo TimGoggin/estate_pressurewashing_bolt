@@ -15,7 +15,7 @@ export default function Services() {
       const element = document.querySelector(hash);
       if (element) {
         setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: "smooth" });
         }, 100);
       }
     }
@@ -227,36 +227,65 @@ export default function Services() {
             Frequently Asked Questions
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+            <div
+              className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}
+            >
               <h3 className="text-xl font-semibold mb-3">
-                What's the difference between pressure washing and soft washing?
+                Do you only Pressure Wash?
               </h3>
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Pressure washing uses high-pressure water to remove dirt and debris, while soft washing uses low-pressure water combined with specialized cleaning solutions. We choose the appropriate method based on the surface being cleaned.
+                We employ both soft wash and pressure wash processes for each
+                job, depending on the material being cleaned.
               </p>
             </div>
-            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+            <div
+              className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}
+            >
               <h3 className="text-xl font-semibold mb-3">
-                How often should I have my property pressure washed?
+                How soon will I see the results from the cleaning?
               </h3>
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Most properties benefit from annual cleaning, but this can vary based on your environment, climate, and surrounding vegetation. We can assess your specific situation and recommend an appropriate maintenance schedule.
+                Results are typically visible the same day. Depending on the
+                color of your shingles, you may notice a slight "soap-like" film
+                from our detergents. This film will rinse away with the first
+                rain.
               </p>
             </div>
-            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+            <div
+              className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}
+            >
               <h3 className="text-xl font-semibold mb-3">
-                Are your cleaning solutions environmentally friendly?
+                How long do the cleaning results last?
               </h3>
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Yes, we use eco-friendly cleaning solutions that are effective yet safe for your plants, pets, and the environment.
+                Generally, roofing results can last anywhere from 5 to 7 years.
+                However, results may vary depending upon landscaping and
+                surrounding trees.
               </p>
             </div>
-            <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+            <div
+              className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}
+            >
               <h3 className="text-xl font-semibold mb-3">
-                How long does a typical service take?
+                Is soft wash better than a power wash?
               </h3>
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Service duration varies depending on the size and condition of the area being cleaned. Most residential jobs are completed within a few hours, while larger commercial projects may take longer.
+                Soft wash surfaces utilize no pressure, preventing damage to
+                your home or building. Soft washing is similar to using a garden
+                hose. However, some surfaces require pressure to be properly
+                cleaned, which is why we employ both methods when necessary.
+              </p>
+            </div>
+            <div
+              className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}
+            >
+              <h3 className="text-xl font-semibold mb-3">
+                Do I need to be home during the cleaning?
+              </h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                It is entirely up to you. We only ask that there be access to an
+                outside water source and that all windows and doors are closed
+                and locked.
               </p>
             </div>
           </div>
