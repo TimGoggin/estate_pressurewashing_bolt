@@ -389,14 +389,14 @@ export default function Services() {
           <h2 className="text-3xl font-bold text-center mb-12">
             Before & After Gallery
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((index) => (
-              <div key={index} className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {Array.from({ length: 19 }, (_, index) => (
+              <div key={index} className="space-y-3">
                 <div className="relative">
                   <img
                     src="/before.jpg"
-                    alt="Before cleaning"
-                    className="w-full h-48 object-cover rounded-lg"
+                    alt={`Before cleaning example ${index + 1}`}
+                    className="w-full h-40 object-cover rounded-lg shadow-md"
                   />
                   <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Before
@@ -405,8 +405,8 @@ export default function Services() {
                 <div className="relative">
                   <img
                     src="/after.jpg"
-                    alt="After cleaning"
-                    className="w-full h-48 object-cover rounded-lg"
+                    alt={`After cleaning example ${index + 1}`}
+                    className="w-full h-40 object-cover rounded-lg shadow-md"
                   />
                   <div className="absolute top-4 right-4 bg-blue-600/80 text-white px-3 py-1 rounded-full text-sm font-medium">
                     After
