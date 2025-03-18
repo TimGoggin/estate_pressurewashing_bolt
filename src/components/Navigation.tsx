@@ -101,14 +101,6 @@ export default function Navigation({
 
           {/* Right Side - Phone, Social, CTA */}
           <div className="hidden md:flex items-center space-x-6">
-            {/* Phone Number */}
-            <a
-              href="tel:+12676850530"
-              className="flex items-center text-sm hover:text-blue-600 transition-colors"
-            >
-              <Phone className="h-4 w-4 mr-1" />
-              <span>(267) 685-0530</span>
-            </a>
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
@@ -120,17 +112,14 @@ export default function Navigation({
                 <Moon className="h-4 w-4" />
               )}
             </button>
-
-            {/* CTA Button */}
-            <button
-              onClick={() => {
-                const element = document.getElementById("quote");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
+            {/* Phone Number */}
+            <a
+              href="tel:+12676850530"
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full transition-all transform hover:scale-105 shadow-md flex items-center"
             >
-              <span>Get an Instant Quote</span>
-            </button>
+              <Phone className="h-4 w-4 mr-1" />
+              <span>(267) 685-0530</span>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
