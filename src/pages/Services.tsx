@@ -212,6 +212,16 @@ export default function Services() {
                   ],
                   image: "/after17.jpg",
                 },
+                {
+                  title: "Fence Cleaning",
+                  description: "Restore and protect your fencing investment.",
+                  features: [
+                    "Improved Fence Longevity",
+                    "Removes harmful substances like mold, algae, and dirt that can cause decay",
+                    "Preserve the fence's structure",
+                  ],
+                  image: "/residential.jpeg",
+                },
               ].map((service, index) => (
                 <div
                   key={index}
