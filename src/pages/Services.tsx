@@ -167,7 +167,7 @@ export default function Services() {
                     "Safe for all siding types",
                     "Improves curb appeal",
                   ],
-                  image: "/house.jpg",
+                  image: "/service_cards/houseCard.jpg",
                 },
                 {
                   title: "Roof Cleaning",
@@ -178,7 +178,7 @@ export default function Services() {
                     "Extends roof lifespan",
                     "Improves energy efficiency",
                   ],
-                  image: "/after2.png",
+                  image: "/service_cards/roofCard.jpg",
                 },
                 {
                   title: "Walkways & Driveways",
@@ -197,10 +197,10 @@ export default function Services() {
                     "Restore and protect your outdoor living spaces.",
                   features: [
                     "Deep cleaning",
-                    "Stain removal",
-                    "Sealing available",
+                    "Restore natural appearance",
+                    "Prolong lifespan",
                   ],
-                  image: "/after15.jpg",
+                  image: "/service_cards/patioCard.jpg",
                 },
                 {
                   title: "Pool Areas",
