@@ -32,8 +32,8 @@ interface LayoutContext {
   toggleDarkMode: () => void;
 }
 
-const beforeImage = "/before.jpg";
-const afterImage = "/after.jpg";
+const beforeImage = "/homeBefore.jpg";
+const afterImage = "/homeAfter.jpg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -159,7 +159,7 @@ function App() {
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after15.jpg')",
+              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero_images/home_hero_1.jpg')",
             opacity: currentSlide === 0 ? 1 : 0,
           }}
         />
@@ -167,7 +167,7 @@ function App() {
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after10.jpg')",
+              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero_images/home_hero_2.jpg')",
             opacity: currentSlide === 1 ? 1 : 0,
           }}
         />
@@ -175,7 +175,7 @@ function App() {
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after14.jpg')",
+              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero_images/home_hero_3.jpg')",
             opacity: currentSlide === 2 ? 1 : 0,
           }}
         />
@@ -280,7 +280,7 @@ function App() {
                 <ul className="mb-4">
                   <li className="flex items-center mb-1">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Driveways & Walkways</span>
+                    <span>Roofs</span>
                   </li>
                   <li className="flex items-center mb-1">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -325,7 +325,7 @@ function App() {
                   </li>
                   <li className="flex items-center mb-1">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Parking Lots & Garages</span>
+                    <span>Schools and Churches</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -364,7 +364,7 @@ function App() {
                   </li>
                   <li className="flex items-center mb-1">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    <span>Gutter Installation</span>
+                    <span>Gutter Brightening</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
