@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
-import { Phone, ArrowRight, CheckCircle, Calculator, Image } from "lucide-react";
+import {
+  Phone,
+  ArrowRight,
+  CheckCircle,
+  Calculator,
+  Image,
+} from "lucide-react";
 import { beforeAfterImages } from "../config/beforeAfterConfig";
 
 interface LayoutContext {
@@ -100,7 +106,7 @@ export default function Services() {
       {/* Hero Section */}
       <div
         className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/residential.jpeg')" }}
+        style={{ backgroundImage: "url('/after10.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative container mx-auto px-6 text-center">
@@ -172,7 +178,7 @@ export default function Services() {
                     "Extends roof lifespan",
                     "Improves energy efficiency",
                   ],
-                  image: "/residential.jpeg",
+                  image: "/after2.png",
                 },
                 {
                   title: "Walkways & Driveways",
@@ -183,7 +189,7 @@ export default function Services() {
                     "Prevents weed growth",
                     "Enhances safety",
                   ],
-                  image: "/driveways.jpeg",
+                  image: "/after13.jpg",
                 },
                 {
                   title: "Decks & Patios",
@@ -194,7 +200,7 @@ export default function Services() {
                     "Stain removal",
                     "Sealing available",
                   ],
-                  image: "/specialty.jpeg",
+                  image: "/after15.jpg",
                 },
                 {
                   title: "Pool Areas",
@@ -204,7 +210,7 @@ export default function Services() {
                     "Algae removal",
                     "Sanitization",
                   ],
-                  image: "/residential.jpeg",
+                  image: "/after17.jpg",
                 },
               ].map((service, index) => (
                 <div
@@ -387,13 +393,14 @@ export default function Services() {
       {/* Gallery CTA */}
       <section className={`py-16 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}>
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            View Our Complete Gallery
-          </h2>
-          <p className={`text-lg mb-8 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
-            Explore our full collection of before and after transformations in our dedicated gallery section.
+          <h2 className="text-3xl font-bold mb-6">View Our Complete Gallery</h2>
+          <p
+            className={`text-lg mb-8 ${darkMode ? "text-gray-300" : "text-gray-600"}`}
+          >
+            Explore our full collection of before and after transformations in
+            our dedicated gallery section.
           </p>
-          <Link 
+          <Link
             to="/gallery"
             className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-md"
           >
