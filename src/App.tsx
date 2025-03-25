@@ -37,7 +37,15 @@ const afterImage = "/after.jpg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === 2 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   const [selectedSurface, setSelectedSurface] = useState("driveway");
   const [squareFootage, setSquareFootage] = useState(500);
   const [quoteEstimate, setQuoteEstimate] = useState(150);
@@ -145,12 +153,32 @@ function App() {
       {/* Hero Section */}
       <div
         ref={heroRef}
-        className="relative h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after15.jpg')",
-        }}
+        className="relative h-screen flex items-center justify-center overflow-hidden"
       >
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after15.jpg')",
+            opacity: currentSlide === 0 ? 1 : 0,
+          }}
+        />
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after10.jpg')",
+            opacity: currentSlide === 1 ? 1 : 0,
+          }}
+        />
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/after14.jpg')",
+            opacity: currentSlide === 2 ? 1 : 0,
+          }}
+        />
         {/* Animated water particles */}
         <div className="absolute inset-0 opacity-30">
           <div className="water-animation"></div>
