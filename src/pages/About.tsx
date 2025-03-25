@@ -7,6 +7,8 @@ import {
   Clock,
   CheckCircle,
   ArrowRight,
+  Wrench,
+  Home,
 } from "lucide-react";
 
 import { Phone, MessageSquare } from "lucide-react";
@@ -170,6 +172,28 @@ export default function About() {
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
                 We respect your time with punctual arrivals and efficient
                 completion of projects.
+              </p>
+            </div>
+            <div
+              className={`${darkMode ? "bg-gray-900" : "bg-white"} p-8 rounded-lg shadow-lg`}
+            >
+              <Wrench
+                className={`h-12 w-12 ${darkMode ? "text-blue-400" : "text-blue-600"} mb-6`}
+              />
+              <h3 className="text-xl font-semibold mb-4">Industry Experts</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Our company is led by an individual with over 8 years of experience in the industry.
+              </p>
+            </div>
+            <div
+              className={`${darkMode ? "bg-gray-900" : "bg-white"} p-8 rounded-lg shadow-lg`}
+            >
+              <Home
+                className={`h-12 w-12 ${darkMode ? "text-blue-400" : "text-blue-600"} mb-6`}
+              />
+              <h3 className="text-xl font-semibold mb-4">Protect Your Investment</h3>
+              <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
+                Enhanced curb appeal, increased property value, prevention of damage, mold and mildew removal, and improved health and safety.
               </p>
             </div>
           </div>
