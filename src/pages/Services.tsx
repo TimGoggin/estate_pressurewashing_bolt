@@ -347,19 +347,20 @@ export default function Services() {
             {activeTab === "specialty" &&
               [
                 {
-                  title: "Paver Cleaning & Sealing",
-                  description: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. We extend the life span of your pavers while maintaining functionality and appearance.",
+                  title: "Paver Cleaning, Sanding & Sealing",
+                  description: "Professional paver restoration and maintenance services.",
                   features: [
-                    "Cleaning: Remove dirt, stains, moss, weeds, and algae",
-                    "Re-Sanding: High quality polymeric sand installation",
-                    "Sealing: Protect from weather damage and enhance color",
-                    "Complete joint sand removal and replacement",
-                    "Stabilize pavers to prevent shifting & cracking",
+                    "Cleaning - Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints",
+                    "Re-Sanding - Re-install high quality polymeric sand using soft impact vibrating compactor",
+                    "Sealing - Protect from weather damage, stains & moisture penetration",
+                    "Complete removal of old sand in joints before re-sanding",
+                    "Joint sand stabilizes pavers, prevents shifting & cracking",
                     "Deter weed growth & insect infestation",
-                    "Protect from stains & moisture penetration",
-                    "Professional maintenance for long-term durability"
+                    "Enhance color & reduce fading",
+                    "Expert maintenance to ensure long-lasting functionality and appearance"
                   ],
                   image: "/paver.png",
+                  goal: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. Many paver installers fail to emphasize the importance of paver maintenance with even fewer that provide this service. Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come."
                 },
                 {
                   title: "Gutter Services",
