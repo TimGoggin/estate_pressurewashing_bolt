@@ -348,7 +348,8 @@ export default function Services() {
               [
                 {
                   title: "Paver Cleaning & Sealing",
-                  description: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. We extend the life span of your pavers while maintaining functionality and appearance.",
+                  description:
+                    "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. We extend the life span of your pavers while maintaining functionality and appearance.",
                   features: [
                     "Cleaning: Remove dirt, stains, moss, weeds, and algae",
                     "Re-Sanding: High quality polymeric sand installation",
@@ -357,9 +358,9 @@ export default function Services() {
                     "Stabilize pavers to prevent shifting & cracking",
                     "Deter weed growth & insect infestation",
                     "Protect from stains & moisture penetration",
-                    "Professional maintenance for long-term durability"
+                    "Professional maintenance for long-term durability",
                   ],
-                  image: "/paver.png",
+                  image: "/paver2.jpg",
                 },
                 {
                   title: "Gutter Services",
