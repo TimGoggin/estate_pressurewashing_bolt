@@ -348,11 +348,16 @@ export default function Services() {
               [
                 {
                   title: "Paver Cleaning & Sealing",
-                  description: "Expert paver restoration and protection.",
+                  description: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. We extend the life span of your pavers while maintaining functionality and appearance.",
                   features: [
-                    "Deep cleaning",
-                    "Joint sand stabilization",
-                    "Protective sealing",
+                    "Cleaning: Remove dirt, stains, moss, weeds, and algae",
+                    "Re-Sanding: High quality polymeric sand installation",
+                    "Sealing: Protect from weather damage and enhance color",
+                    "Complete joint sand removal and replacement",
+                    "Stabilize pavers to prevent shifting & cracking",
+                    "Deter weed growth & insect infestation",
+                    "Protect from stains & moisture penetration",
+                    "Professional maintenance for long-term durability"
                   ],
                   image: "/paver.png",
                 },
