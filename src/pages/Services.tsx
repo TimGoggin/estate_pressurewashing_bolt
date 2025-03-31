@@ -29,74 +29,154 @@ export default function Services() {
     }
   }, []);
 
-  const services = [
-    {
-      title: "House Washing",
-      description:
-        "Restore your home's exterior to its original beauty with our gentle yet effective house washing service.",
-      features: [
-        "Removes dirt, mold, and mildew",
-        "Safe for all siding types",
-        "Improves curb appeal",
-      ],
-      image: "/house.jpg",
-    },
-    {
-      title: "Roof Cleaning",
-      description:
-        "Protect and extend your roof's life while improving your home's appearance with our specialized roof cleaning.",
-      features: [
-        "Removes black streaks and algae",
-        "Extends roof lifespan",
-        "Improves energy efficiency",
-      ],
-      image: "/residential.jpeg",
-    },
-    {
-      title: "Walkways & Driveways",
-      description:
-        "Transform your outdoor surfaces with our professional pressure washing services.",
-      features: [
-        "Removes tough stains",
-        "Prevents weed growth",
-        "Enhances safety",
-      ],
-      image: "/driveways.jpeg",
-    },
-    {
-      title: "Paver Cleaning & Sealing",
-      description:
-        "Revitalize your pavers with our comprehensive cleaning and sealing service.",
-      features: [
-        "Deep cleaning",
-        "Joint sand stabilization",
-        "Protective sealing",
-      ],
-      image: "/paver.png",
-    },
-    {
-      title: "Gutter Cleaning",
-      description:
-        "Keep your gutters functioning properly with our thorough cleaning service.",
-      features: [
-        "Prevents water damage",
-        "Removes debris",
-        "Extends gutter life",
-      ],
-      image: "/driveways.jpeg",
-    },
-    {
-      title: "Graffiti Removal",
-      description:
-        "Professional removal of unwanted graffiti from various surfaces.",
-      features: [
-        "Safe removal techniques",
-        "Surface restoration",
-        "Protective coating available",
-      ],
-      image: "/commercial.jpeg",
-    },
-  ];
+  const services = {
+    residential: [
+      {
+        title: "House Washing",
+        description:
+          "Restore your home's exterior to its original beauty with our gentle yet effective house washing service.",
+        features: [
+          "Removes dirt, mold, and mildew",
+          "Safe for all siding types",
+          "Improves curb appeal",
+        ],
+        image: "/service_cards/houseCard.jpg",
+      },
+      {
+        title: "Roof Cleaning",
+        description:
+          "Protect and extend your roof's life while improving your home's appearance.",
+        features: [
+          "Removes black streaks and algae",
+          "Extends roof lifespan",
+          "Improves energy efficiency",
+        ],
+        image: "/service_cards/roofCard.jpg",
+      },
+      {
+        title: "Walkways & Driveways",
+        description:
+          "Transform your outdoor surfaces with our professional pressure washing services.",
+        features: [
+          "Removes tough stains",
+          "Prevents weed growth",
+          "Enhances safety",
+        ],
+        image: "/after13.jpg",
+      },
+      {
+        title: "Decks & Patios",
+        description:
+          "Restore and protect your outdoor living spaces.",
+        features: [
+          "Deep cleaning",
+          "Restore natural appearance",
+          "Prolong lifespan",
+        ],
+        image: "/service_cards/patioCard.jpg",
+      },
+      {
+        title: "Pool Areas",
+        description: "Keep your pool area clean and safe.",
+        features: [
+          "Rejuvenate surface material",
+          "Algae removal to maintain slip free surface",
+          "Brighten & improve your summer getaway",
+        ],
+        image: "/after17.jpg",
+      },
+      {
+        title: "Fence Cleaning",
+        description: "Restore and protect your fencing investment.",
+        features: [
+          "Improved Fence Longevity",
+          "Removes harmful substances like mold, algae, and dirt",
+          "Preserve the fence's structure",
+        ],
+        image: "/service_cards/fenceCard.jpg",
+      },
+    ],
+    commercial: [
+      {
+        title: "Commercial Roof Cleaning",
+        description:
+          "Professional roof cleaning for commercial buildings.",
+        features: [
+          "Prevents damage & extends roofs lifespan",
+          "Improve Energy Efficiency",
+          "Maintain property value & appearance ",
+        ],
+        image: "/residential.jpeg",
+      },
+      {
+        title: "Commercial Entrances and Walkways",
+        description:
+          "Keep your business property clean and professional.",
+        features: [
+          "Maintain high-traffic areas",
+          "Clean & professional first impression",
+          "Extend lifespan & reduce maintenance costs",
+        ],
+        image: "/driveways.jpeg",
+      },
+      {
+        title: "Commercial Building Cleaning",
+        description: "Maintain your business's building.",
+        features: [
+          "Enchance curb appeal",
+          "Promote health & safety",
+          "Large-scale capabilities",
+        ],
+        image: "/commercial.jpeg",
+      },
+      {
+        title: "Graffiti Removal",
+        description: "Quick and effective graffiti removal services.",
+        features: [
+          "Surface-safe solutions",
+          "Complete removal",
+          "Protective coating",
+        ],
+        image: "/grafitti.jpg",
+      },
+      {
+        title: "Warehouse Cleaning",
+        description: "Comprehensive warehouse cleaning solutions.",
+        features: [
+          "Large area cleaning ( Interior & Exterior )",
+          "Grease & Oil Stains",
+          "Maintain clean working environment",
+        ],
+        image: "/warehouse.jpg",
+      },
+    ],
+    specialty: [
+      {
+        title: "Paver Cleaning, Sanding & Sealing",
+        description: "Professional paver restoration and maintenance services.",
+        features: [
+          "Cleaning",
+          "    Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints",
+          "    When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand",
+          "Re-Sanding",
+          "    Re-install high quality polymeric sand using soft impact vibrating compactor",
+          "    Joint sand stabilizes pavers, prevents shifting & cracking",
+          "    Deter weed growth & insect infestation",
+          "Sealing",
+          "    Protect from weather damage, stains & moisture penetration",
+          "    Enhance color & reduce fading"
+        ],
+        image: "/paver.png",
+        goal: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. Many paver installers fail to emphasize the importance of paver maintenance with even fewer that provide this service. Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come."
+      },
+      {
+        title: "Gutter Services",
+        description: "Complete gutter maintenance solutions.",
+        features: ["Cleaning", "Repairs", "Guard installation"],
+        image: "/residential.jpeg",
+      },
+    ],
+  };
 
   return (
     <div
@@ -156,252 +236,12 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {activeTab === "residential" &&
-              [
-                {
-                  title: "House Washing",
-                  description:
-                    "Restore your home's exterior to its original beauty with our gentle yet effective house washing service.",
-                  features: [
-                    "Removes dirt, mold, and mildew",
-                    "Safe for all siding types",
-                    "Improves curb appeal",
-                  ],
-                  image: "/service_cards/houseCard.jpg",
-                },
-                {
-                  title: "Roof Cleaning",
-                  description:
-                    "Protect and extend your roof's life while improving your home's appearance.",
-                  features: [
-                    "Removes black streaks and algae",
-                    "Extends roof lifespan",
-                    "Improves energy efficiency",
-                  ],
-                  image: "/service_cards/roofCard.jpg",
-                },
-                {
-                  title: "Walkways & Driveways",
-                  description:
-                    "Transform your outdoor surfaces with our professional pressure washing services.",
-                  features: [
-                    "Removes tough stains",
-                    "Prevents weed growth",
-                    "Enhances safety",
-                  ],
-                  image: "/after13.jpg",
-                },
-                {
-                  title: "Decks & Patios",
-                  description:
-                    "Restore and protect your outdoor living spaces.",
-                  features: [
-                    "Deep cleaning",
-                    "Restore natural appearance",
-                    "Prolong lifespan",
-                  ],
-                  image: "/service_cards/patioCard.jpg",
-                },
-                {
-                  title: "Pool Areas",
-                  description: "Keep your pool area clean and safe.",
-                  features: [
-                    "Rejuvenate surface material",
-                    "Algae removal to maintain slip free surface",
-                    "Brighten & improve your summer getaway",
-                  ],
-                  image: "/after17.jpg",
-                },
-                {
-                  title: "Fence Cleaning",
-                  description: "Restore and protect your fencing investment.",
-                  features: [
-                    "Improved Fence Longevity",
-                    "Removes harmful substances like mold, algae, and dirt",
-                    "Preserve the fence's structure",
-                  ],
-                  image: "/service_cards/fenceCard.jpg",
-                },
-              ].map((service, index) => (
+            {services[activeTab] && services[activeTab].map((service, index) => (
                 <div
                   key={index}
                   className={`${
                     darkMode ? "bg-gray-800" : "bg-white"
                   } rounded-lg shadow-lg overflow-hidden`}
-                >
-                  <div
-                    className="h-48 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  ></div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p
-                      className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}
-                    >
-                      {service.description}
-                    </p>
-                    <div className="mb-4">
-                      {Array.isArray(service.features[0]) ? (
-                        <ul>
-                          {service.features.map((feature, idx) => (
-                            <li key={idx}>{feature}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <div>
-                          {service.features.map((section, idx) => (
-                            <div key={idx} className="mb-4">
-                              <h4 className="font-semibold mb-2">{section.heading}</h4>
-                              <ul className="pl-4">
-                                {section.subpoints.map((subpoint, subIdx) => (
-                                  <li key={subIdx}>{subpoint}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700"
-                    >
-                      Request Service <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            {activeTab === "commercial" &&
-              [
-                {
-                  title: "Commercial Roof Cleaning",
-                  description:
-                    "Professional roof cleaning for commercial buildings.",
-                  features: [
-                    "Prevents damage & extends roofs lifespan",
-                    "Improve Energy Efficiency",
-                    "Maintain property value & appearance ",
-                  ],
-                  image: "/residential.jpeg",
-                },
-                {
-                  title: "Commercial Entrances and Walkways",
-                  description:
-                    "Keep your business property clean and professional.",
-                  features: [
-                    "Maintain high-traffic areas",
-                    "Clean & professional first impression",
-                    "Extend lifespan & reduce maintenance costs",
-                  ],
-                  image: "/driveways.jpeg",
-                },
-                {
-                  title: "Commercial Building Cleaning",
-                  description: "Maintain your business's building.",
-                  features: [
-                    "Enchance curb appeal",
-                    "Promote health & safety",
-                    "Large-scale capabilities",
-                  ],
-                  image: "/commercial.jpeg",
-                },
-                {
-                  title: "Graffiti Removal",
-                  description: "Quick and effective graffiti removal services.",
-                  features: [
-                    "Surface-safe solutions",
-                    "Complete removal",
-                    "Protective coating",
-                  ],
-                  image: "/grafitti.jpg",
-                },
-                {
-                  title: "Warehouse Cleaning",
-                  description: "Comprehensive warehouse cleaning solutions.",
-                  features: [
-                    "Large area cleaning ( Interior & Exterior )",
-                    "Grease & Oil Stains",
-                    "Maintain clean working environment",
-                  ],
-                  image: "/warehouse.jpg",
-                },
-              ].map((service, index) => (
-                <div
-                  key={index}
-                  className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
-                >
-                  <div
-                    className="h-48 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  ></div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                    <p
-                      className={`${darkMode ? "text-gray-300" : "text-gray-600"} mb-4`}
-                    >
-                      {service.description}
-                    </p>
-                    <div className="mb-4">
-                      {Array.isArray(service.features[0]) ? (
-                        <ul>
-                          {service.features.map((feature, idx) => (
-                            <li key={idx}>{feature}</li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <div>
-                          {service.features.map((section, idx) => (
-                            <div key={idx} className="mb-4">
-                              <h4 className="font-semibold mb-2">{section.heading}</h4>
-                              <ul className="pl-4">
-                                {section.subpoints.map((subpoint, subIdx) => (
-                                  <li key={subIdx}>{subpoint}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700"
-                    >
-                      Request Service <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            {activeTab === "specialty" &&
-              [
-                {
-                  title: "Paver Cleaning, Sanding & Sealing",
-                  description: "Professional paver restoration and maintenance services.",
-                  features: [
-                    "Cleaning",
-                    "    Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints",
-                    "    When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand",
-                    "Re-Sanding",
-                    "    Re-install high quality polymeric sand using soft impact vibrating compactor",
-                    "    Joint sand stabilizes pavers, prevents shifting & cracking",
-                    "    Deter weed growth & insect infestation",
-                    "Sealing",
-                    "    Protect from weather damage, stains & moisture penetration",
-                    "    Enhance color & reduce fading"
-                  ],
-                  image: "/paver.png",
-                  goal: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. Many paver installers fail to emphasize the importance of paver maintenance with even fewer that provide this service. Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come."
-                },
-                {
-                  title: "Gutter Services",
-                  description: "Complete gutter maintenance solutions.",
-                  features: ["Cleaning", "Repairs", "Guard installation"],
-                  image: "/residential.jpeg",
-                },
-              ].map((service, index) => (
-                <div
-                  key={index}
-                  className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
                 >
                   <div
                     className="h-48 bg-cover bg-center"
