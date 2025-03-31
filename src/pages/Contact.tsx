@@ -132,7 +132,7 @@ export default function Contact() {
                       <p
                         className={darkMode ? "text-gray-300" : "text-gray-600"}
                       >
-                        +1 (215) 555-0123
+                        267-917-6994
                       </p>
                     </div>
                   </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                       <p
                         className={darkMode ? "text-gray-300" : "text-gray-600"}
                       >
-                        info@estatespressurewashing.com
+                        epw@estatesfireplace.com
                       </p>
                     </div>
                   </div>
@@ -165,9 +165,11 @@ export default function Contact() {
                       <p
                         className={darkMode ? "text-gray-300" : "text-gray-600"}
                       >
-                        Monday - Saturday: 8:00 AM - 8:00 PM
+                        Monday, Tuesday, Wednesday, Friday : 9am-4pm
                         <br />
-                        Saturday: 9:00 AM - 4:00 PM
+                        Thursday: 9am-7pm
+                        <br />
+                        Saturday: 9am-3pm
                         <br />
                         Sunday: Closed
                       </p>
