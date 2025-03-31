@@ -240,14 +240,28 @@ export default function Services() {
                     >
                       {service.description}
                     </p>
-                    <ul className="mb-4">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center mb-2">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="mb-4">
+                      {Array.isArray(service.features[0]) ? (
+                        <ul>
+                          {service.features.map((feature, idx) => (
+                            <li key={idx}>{feature}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <div>
+                          {service.features.map((section, idx) => (
+                            <div key={idx} className="mb-4">
+                              <h4 className="font-semibold mb-2">{section.heading}</h4>
+                              <ul className="pl-4">
+                                {section.subpoints.map((subpoint, subIdx) => (
+                                  <li key={subIdx}>{subpoint}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700"
@@ -327,14 +341,28 @@ export default function Services() {
                     >
                       {service.description}
                     </p>
-                    <ul className="mb-4">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center mb-2">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="mb-4">
+                      {Array.isArray(service.features[0]) ? (
+                        <ul>
+                          {service.features.map((feature, idx) => (
+                            <li key={idx}>{feature}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <div>
+                          {service.features.map((section, idx) => (
+                            <div key={idx} className="mb-4">
+                              <h4 className="font-semibold mb-2">{section.heading}</h4>
+                              <ul className="pl-4">
+                                {section.subpoints.map((subpoint, subIdx) => (
+                                  <li key={subIdx}>{subpoint}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700"
@@ -350,16 +378,18 @@ export default function Services() {
                   title: "Paver Cleaning, Sanding & Sealing",
                   description: "Professional paver restoration and maintenance services.",
                   features: [
-                    "Cleaning",
-                    "• Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints",
-                    "• When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand",
-                    "Re-Sanding",
-                    "• Re-install high quality polymeric sand using soft impact vibrating compactor",
-                    "• Joint sand stabilizes pavers, prevents shifting & cracking",
-                    "• Deter weed growth & insect infestation",
-                    "Sealing",
-                    "• Protect from weather damage, stains & moisture penetration",
-                    "• Enhance color & reduce fading"
+                    { heading: "Cleaning", subpoints: [
+                      "Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints"
+                    ]},
+                    { heading: "Re-Sanding", subpoints: [
+                      "Re-install high quality polymeric sand using soft impact vibrating compactor",
+                      "Joint sand stabilizes pavers, prevents shifting & cracking",
+                      "Deter weed growth & insect infestation"
+                    ]},
+                    { heading: "Sealing", subpoints: [
+                      "Protect from weather damage, stains & moisture penetration",
+                      "Enhance color & reduce fading"
+                    ]}
                   ],
                   image: "/paver.png",
                   goal: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. Many paver installers fail to emphasize the importance of paver maintenance with even fewer that provide this service. Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come."
@@ -386,14 +416,28 @@ export default function Services() {
                     >
                       {service.description}
                     </p>
-                    <ul className="mb-4">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center mb-2">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="mb-4">
+                      {Array.isArray(service.features[0]) ? (
+                        <ul>
+                          {service.features.map((feature, idx) => (
+                            <li key={idx}>{feature}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <div>
+                          {service.features.map((section, idx) => (
+                            <div key={idx} className="mb-4">
+                              <h4 className="font-semibold mb-2">{section.heading}</h4>
+                              <ul className="pl-4">
+                                {section.subpoints.map((subpoint, subIdx) => (
+                                  <li key={subIdx}>{subpoint}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-blue-600 hover:text-blue-700"
