@@ -378,18 +378,16 @@ export default function Services() {
                   title: "Paver Cleaning, Sanding & Sealing",
                   description: "Professional paver restoration and maintenance services.",
                   features: [
-                    { heading: "Cleaning", subpoints: [
-                      "Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints"
-                    ]},
-                    { heading: "Re-Sanding", subpoints: [
-                      "Re-install high quality polymeric sand using soft impact vibrating compactor",
-                      "Joint sand stabilizes pavers, prevents shifting & cracking",
-                      "Deter weed growth & insect infestation"
-                    ]},
-                    { heading: "Sealing", subpoints: [
-                      "Protect from weather damage, stains & moisture penetration",
-                      "Enhance color & reduce fading"
-                    ]}
+                    "Cleaning",
+                    "    Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints",
+                    "    When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand",
+                    "Re-Sanding",
+                    "    Re-install high quality polymeric sand using soft impact vibrating compactor",
+                    "    Joint sand stabilizes pavers, prevents shifting & cracking",
+                    "    Deter weed growth & insect infestation",
+                    "Sealing",
+                    "    Protect from weather damage, stains & moisture penetration",
+                    "    Enhance color & reduce fading"
                   ],
                   image: "/paver.png",
                   goal: "Our goal is to bring exceptional and experienced service to restore your expensive hardscape. Many paver installers fail to emphasize the importance of paver maintenance with even fewer that provide this service. Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come."
