@@ -364,9 +364,24 @@ export default function Services() {
                 },
                 {
                   title: "Gutter Services",
-                  description: "Complete gutter maintenance solutions.",
-                  features: ["Cleaning", "Repairs", "Guard installation"],
-                  image: "/residential.jpeg",
+                  description: "Complete gutter maintenance and cleaning solutions.",
+                  features: [
+                    "Gutter clean out & flush",
+                    "Debris removal",
+                    "Gutter Brightening",
+                    "Removal of black streaks caused by oxidation"
+                  ],
+                  image: "/after15.jpg",
+                },
+                {
+                  title: "Preparation for Painting/Staining",
+                  description: "A clean surface is crucial for material adhesion",
+                  features: [
+                    "Removes dirt, grime, and old coatings",
+                    "Prepare surfaces for a fresh coat of paint or stain",
+                    "Ensure better adhesion and a longer-lasting finish"
+                  ],
+                  image: "/after17.jpg",
                 },
               ].map((service, index) => (
                 <div
