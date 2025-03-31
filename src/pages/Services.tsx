@@ -206,9 +206,9 @@ export default function Services() {
                   title: "Pool Areas",
                   description: "Keep your pool area clean and safe.",
                   features: [
-                    "Non-slip cleaning",
-                    "Algae removal",
-                    "Sanitization",
+                    "Rejuvenate surface material",
+                    "Algae removal to maintain slip free surface",
+                    "Brighten & improve your summer getaway",
                   ],
                   image: "/after17.jpg",
                 },
@@ -217,10 +217,10 @@ export default function Services() {
                   description: "Restore and protect your fencing investment.",
                   features: [
                     "Improved Fence Longevity",
-                    "Removes harmful substances like mold, algae, and dirt that can cause decay",
+                    "Removes harmful substances like mold, algae, and dirt",
                     "Preserve the fence's structure",
                   ],
-                  image: "/residential.jpeg",
+                  image: "/service_cards/fenceCard.jpg",
                 },
               ].map((service, index) => (
                 <div
@@ -264,31 +264,30 @@ export default function Services() {
                   description:
                     "Professional roof cleaning for commercial buildings.",
                   features: [
-                    "OSHA compliant",
-                    "Scheduled maintenance",
-                    "Large-scale capability",
+                    "Prevents damage & extends roofs lifespan",
+                    "Improve Energy Efficiency",
+                    "Maintain property value & appearance ",
                   ],
                   image: "/residential.jpeg",
                 },
                 {
-                  title: "Commercial Walkways",
+                  title: "Commercial Entrances and Walkways",
                   description:
                     "Keep your business property clean and professional.",
                   features: [
-                    "High-traffic areas",
-                    "24/7 service",
-                    "Safety focused",
+                    "Maintain high-traffic areas",
+                    "Clean & professional first impression",
+                    "Extend lifespan & reduce maintenance costs",
                   ],
                   image: "/driveways.jpeg",
                 },
                 {
-                  title: "Commercial Gutters",
-                  description:
-                    "Maintain your building's water management system.",
+                  title: "Commercial Building Cleaning",
+                  description: "Maintain your business's building.",
                   features: [
-                    "Preventive maintenance",
-                    "Debris removal",
-                    "Downspout cleaning",
+                    "Enchance curb appeal",
+                    "Promote health & safety",
+                    "Large-scale capabilities",
                   ],
                   image: "/commercial.jpeg",
                 },
@@ -300,17 +299,17 @@ export default function Services() {
                     "Complete removal",
                     "Protective coating",
                   ],
-                  image: "/commercial.jpeg",
+                  image: "/grafitti.jpg",
                 },
                 {
                   title: "Warehouse Cleaning",
                   description: "Comprehensive warehouse cleaning solutions.",
                   features: [
-                    "Large area cleaning",
-                    "Equipment safe",
-                    "OSHA compliant",
+                    "Large area cleaning ( Interior & Exterior )",
+                    "Grease & Oil Stains",
+                    "Maintain clean working environment",
                   ],
-                  image: "/commercial.jpeg",
+                  image: "/warehouse.jpg",
                 },
               ].map((service, index) => (
                 <div
