@@ -1,3 +1,5 @@
+import { GalleryImage } from './galleryConfig';
+
 export interface BeforeAfterImage {
   id: number;
   before: {
@@ -9,6 +11,7 @@ export interface BeforeAfterImage {
     alt: string;
   };
   description?: string;
+  category: string;
 }
 
 export const beforeAfterImages: BeforeAfterImage[] = [
@@ -23,6 +26,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Business after cleaning",
     },
     description: "Charter School Power Washing",
+    category: "commercial"
   },
   {
     id: 2,
@@ -35,6 +39,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "House after cleaning",
     },
     description: "House deep cleaning",
+    category: "houses"
   },
   {
     id: 3,
@@ -47,6 +52,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "House after cleaning",
     },
     description: "House deep cleaning",
+    category: "houses"
   },
   {
     id: 4,
@@ -59,6 +65,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "House after cleaning",
     },
     description: "House deep cleaning",
+    category: "houses"
   },
   {
     id: 5,
@@ -71,6 +78,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "House after cleaning",
     },
     description: "House deep cleaning",
+    category: "houses"
   },
   {
     id: 6,
@@ -83,6 +91,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Shed after cleaning",
     },
     description: "Shed deep cleaning",
+    category: "equipment"
   },
   {
     id: 7,
@@ -95,6 +104,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Fence after cleaning",
     },
     description: "Fence deep cleaning",
+    category: "fencing"
   },
   {
     id: 8,
@@ -107,6 +117,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Stairs after cleaning",
     },
     description: "Stairs deep cleaning",
+    category: "houses"
   },
   {
     id: 9,
@@ -119,6 +130,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Office after cleaning",
     },
     description: "Office deep cleaning",
+    category: "commercial"
   },
   {
     id: 10,
@@ -131,6 +143,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Fountain after cleaning",
     },
     description: "Fountain deep cleaning",
+    category: "commercial"
   },
   {
     id: 11,
@@ -143,6 +156,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Wall after cleaning",
     },
     description: "Wall deep cleaning",
+    category: "houses"
   },
   {
     id: 12,
@@ -155,6 +169,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Walkway after cleaning",
     },
     description: "Walkway deep cleaning",
+    category: "walkways"
   },
   {
     id: 13,
@@ -167,6 +182,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Driveway after cleaning",
     },
     description: "Driveway deep cleaning",
+    category: "walkways"
   },
   {
     id: 14,
@@ -179,6 +195,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Bricks after cleaning",
     },
     description: "Brick deep cleaning",
+    category: "pavers"
   },
   {
     id: 15,
@@ -191,6 +208,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Patio after cleaning",
     },
     description: "Patio deep cleaning",
+    category: "patios"
   },
   {
     id: 16,
@@ -203,6 +221,7 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Walkway after cleaning",
     },
     description: "Walkway deep cleaning",
+    category: "walkways"
   },
   {
     id: 17,
@@ -215,6 +234,22 @@ export const beforeAfterImages: BeforeAfterImage[] = [
       alt: "Pool after cleaning",
     },
     description: "WPool deep cleaning",
+    category: "pool aprons"
   },
   // Add more image pairs here following the same structure
+];
+
+export const categories = [
+  "commercial",
+  "decks",
+  "equipment",
+  "fencing",
+  "grafitti",
+  "gutters",
+  "houses",
+  "patios",
+  "pavers",
+  "pool aprons",
+  "roofs",
+  "walkways"
 ];
