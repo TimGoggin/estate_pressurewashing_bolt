@@ -112,12 +112,22 @@ export default function Footer({ darkMode }: FooterProps) {
 
         {/* Copyright */}
         <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 text-center">
-          <p
-            className={`${darkMode ? "text-gray-400" : "text-gray-600"} text-sm`}
-          >
-            © {new Date().getFullYear()} Estates Pressure Washing. All rights
-            reserved.
-          </p>
+          <div className="space-y-2">
+            <p
+              className={`${darkMode ? "text-gray-400" : "text-gray-600"} text-sm`}
+            >
+              © {new Date().getFullYear()} Estates Pressure Washing. All rights
+              reserved.
+            </p>
+            <p>
+              <a 
+                href="/sitemap.xml"
+                className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} text-sm`}
+              >
+                Sitemap
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
