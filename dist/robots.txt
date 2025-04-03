@@ -1,0 +1,23 @@
+Sitemap: https://estatespresswash.com/sitemap.xml
+
+User-agent: *
+Allow: /
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Disallow: /reviews
+
+User-agent: Bingbot
+Allow: /
+Disallow: /reviews
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /reviews
+
+User-agent: Slurp
+Allow: /
+Disallow: /reviews
