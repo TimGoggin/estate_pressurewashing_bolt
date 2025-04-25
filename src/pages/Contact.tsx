@@ -14,12 +14,12 @@ export default function Contact() {
     <div
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
-      <div className="relative pt-32 pb-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <div className="relative pt-32 pb-20">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Contact Us
           </h1>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl">
             We're here to help with all your exterior cleaning needs
           </p>
         </div>
