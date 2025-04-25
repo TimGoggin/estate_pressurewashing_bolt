@@ -189,13 +189,7 @@ export default function Navigation({
             <span>Gallery</span>
           </Link>
 
-          <Link
-            to="/reviews"
-            className={`block py-3 px-4 rounded-md ${darkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"} flex items-center`}
-          >
-            <Star className="h-5 w-5 mr-3" />
-            <span>Reviews</span>
-          </Link>
+          
 
           <Link
             to="/contact"
