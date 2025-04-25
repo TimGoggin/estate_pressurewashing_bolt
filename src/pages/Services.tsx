@@ -94,7 +94,7 @@ export default function Services() {
         "Surface restoration",
         "Protective coating available",
       ],
-      image: "/commercial.jpeg",
+      image: "/newGraffiti.jpeg",
     },
   ];
 
@@ -299,7 +299,7 @@ export default function Services() {
                     "Complete removal",
                     "Protective coating",
                   ],
-                  image: "/grafitti.jpg",
+                  image: "/newGraffiti.jpeg",
                 },
                 {
                   title: "Warehouse Cleaning",
