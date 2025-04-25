@@ -7,7 +7,6 @@ import {
   Calculator,
   Image,
 } from "lucide-react";
-import { beforeAfterImages } from "../config/beforeAfterConfig";
 
 interface LayoutContext {
   darkMode: boolean;
@@ -28,79 +27,6 @@ export default function Services() {
       }
     }
   }, []);
-
-  const services = [
-    {
-      title: "House Washing",
-      description:
-        "Restore your home's exterior to its original beauty with our gentle yet effective house washing service.",
-      features: [
-        "Removes dirt, mold, and mildew",
-        "Safe for all siding types",
-        "Improves curb appeal",
-      ],
-      image: "/house.jpg",
-    },
-    {
-      title: "Roof Cleaning",
-      description:
-        "Protect and extend your roof's life while improving your home's appearance with our specialized roof cleaning.",
-      features: [
-        "Removes black streaks and algae",
-        "Extends roof lifespan",
-        "Improves energy efficiency",
-      ],
-      image: "/residential.jpeg",
-    },
-    {
-      title: "Walkways & Driveways",
-      description:
-        "Transform your outdoor surfaces with our professional pressure washing services.",
-      features: [
-        "Removes tough stains",
-        "Prevents weed growth",
-        "Enhances safety",
-      ],
-      image: "/driveways.jpeg",
-    },
-    {
-      title: "Paver Cleaning & Sealing",
-      description:
-        "• Cleaning\n- Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints\n- When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand\n\n• Re-Sanding\n- Re-install high quality polymeric sand using soft impact vibrating compactor\n- Joint sand stabilizes pavers, prevents shifting & cracking\n- Deter weed growth & insect infestation\n\n• Sealing\n- Protect from weather damage, stains & moisture penetration\n- Enhance color & reduce fading\n\n• The Goal:\n- Our goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service.\n- Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
-      features: [
-        "Remove dirt, stains, moss, weeds, and algae",
-        "Full removal of old joint sand",
-        "High quality polymeric sand installation",
-        "Stabilize pavers to prevent shifting",
-        "Protection from weather damage",
-        "Color enhancement and fade reduction",
-        "Complete maintenance solution"
-      ],
-      image: "/paver2.jpg",
-    },
-    {
-      title: "Gutter Cleaning",
-      description:
-        "Keep your gutters functioning properly with our thorough cleaning service.",
-      features: [
-        "Prevents water damage",
-        "Removes debris",
-        "Extends gutter life",
-      ],
-      image: "/driveways.jpeg",
-    },
-    {
-      title: "Graffiti Removal",
-      description:
-        "Professional removal of unwanted graffiti from various surfaces.",
-      features: [
-        "Safe removal techniques",
-        "Surface restoration",
-        "Protective coating available",
-      ],
-      image: "/newGraffiti.jpeg",
-    },
-  ];
 
   return (
     <div
@@ -352,16 +278,17 @@ export default function Services() {
               [
                 {
                   title: "Paver Cleaning & Sealing",
-                  description:
-                    "• Cleaning\n- Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints\n- When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand\n\n• Re-Sanding\n- Re-install high quality polymeric sand using soft impact vibrating compactor\n- Joint sand stabilizes pavers, prevents shifting & cracking\n- Deter weed growth & insect infestation\n\n• Sealing\n- Protect from weather damage, stains & moisture penetration\n- Enhance color & reduce fading\n\n• The Goal:\n- Our goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service.\n- Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
+                  description: "Remove dirt, stains, and algae",
                   features: [
-                    "Remove dirt, stains, moss, weeds, and algae",
-                    "Full removal of old joint sand",
-                    "High quality polymeric sand installation",
-                    "Stabilize pavers to prevent shifting",
-                    "Protection from weather damage",
-                    "Color enhancement and fade reduction",
-                    "Complete maintenance solution"
+                    "Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints",
+                    "When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand",
+                    "Re-install high quality polymeric sand using soft impact vibrating compactor",
+                    "Joint sand stabilizes pavers, prevents shifting & cracking",
+                    "Deter weed growth & insect infestation",
+                    "Protect from weather damage, stains & moisture penetration",
+                    "Enhance color & reduce fading",
+                    "Our goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service.",
+                    "Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
                   ],
                   image: "/paver2.jpg",
                 },
