@@ -29,95 +29,12 @@ export default function Contact() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div
-              className={`${darkMode ? "bg-gray-800" : "bg-white"} p-8 rounded-lg shadow-lg`}
-            >
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-2`}
-                    >
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      className={`w-full px-4 py-2 rounded-md ${
-                        darkMode
-                          ? "bg-gray-700 border-gray-600 focus:border-blue-500"
-                          : "bg-gray-50 border-gray-300 focus:border-blue-500"
-                      } focus:ring-1 focus:ring-blue-500`}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-2`}
-                    >
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      className={`w-full px-4 py-2 rounded-md ${
-                        darkMode
-                          ? "bg-gray-700 border-gray-600 focus:border-blue-500"
-                          : "bg-gray-50 border-gray-300 focus:border-blue-500"
-                      } focus:ring-1 focus:ring-blue-500`}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-2`}
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className={`w-full px-4 py-2 rounded-md ${
-                      darkMode
-                        ? "bg-gray-700 border-gray-600 focus:border-blue-500"
-                        : "bg-gray-50 border-gray-300 focus:border-blue-500"
-                    } focus:ring-1 focus:ring-blue-500`}
-                  />
-                </div>
-                <div>
-                  <label
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-2`}
-                  >
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    className={`w-full px-4 py-2 rounded-md ${
-                      darkMode
-                        ? "bg-gray-700 border-gray-600 focus:border-blue-500"
-                        : "bg-gray-50 border-gray-300 focus:border-blue-500"
-                    } focus:ring-1 focus:ring-blue-500`}
-                  />
-                </div>
-                <div>
-                  <label
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-2`}
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    rows={4}
-                    className={`w-full px-4 py-2 rounded-md ${
-                      darkMode
-                        ? "bg-gray-700 border-gray-600 focus:border-blue-500"
-                        : "bg-gray-50 border-gray-300 focus:border-blue-500"
-                    } focus:ring-1 focus:ring-blue-500`}
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition-all"
-                >
-                  Send Message
-                </button>
-              </form>
+            <div className="w-full h-[600px]">
+              <iframe
+                src="https://bv6w3pwoi5y.typeform.com/to/lMePPdwo"
+                style={{ width: "100%", height: "100%", border: "0" }}
+                allow="camera; microphone; autoplay; encrypted-media;"
+              />
             </div>
 
             {/* Contact Information */}

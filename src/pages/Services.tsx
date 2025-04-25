@@ -302,7 +302,7 @@ export default function Services() {
                     "Gutter Brightening",
                     "Removal of black streaks caused by oxidation",
                   ],
-                  image: "/gutter.jpeg",
+                  image: "/newGutter.jpeg",
                 },
                 {
                   title: "Preparation for Painting/Staining",
