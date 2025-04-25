@@ -66,13 +66,17 @@ export default function Services() {
     {
       title: "Paver Cleaning & Sealing",
       description:
-        "Revitalize your pavers with our comprehensive cleaning and sealing service.",
+        "• Cleaning\n- Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints\n- When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand\n\n• Re-Sanding\n- Re-install high quality polymeric sand using soft impact vibrating compactor\n- Joint sand stabilizes pavers, prevents shifting & cracking\n- Deter weed growth & insect infestation\n\n• Sealing\n- Protect from weather damage, stains & moisture penetration\n- Enhance color & reduce fading\n\n• The Goal:\n- Our goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service.\n- Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
       features: [
-        "Deep cleaning",
-        "Joint sand stabilization",
-        "Protective sealing",
+        "Remove dirt, stains, moss, weeds, and algae",
+        "Full removal of old joint sand",
+        "High quality polymeric sand installation",
+        "Stabilize pavers to prevent shifting",
+        "Protection from weather damage",
+        "Color enhancement and fade reduction",
+        "Complete maintenance solution"
       ],
-      image: "/paver.png",
+      image: "/paver2.jpg",
     },
     {
       title: "Gutter Cleaning",
@@ -349,7 +353,7 @@ export default function Services() {
                 {
                   title: "Paver Cleaning & Sealing",
                   description:
-                    "• Cleaning\n- Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints\n- When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand\n\n• Re-Sanding\n- Re-install high quality polymeric sand using soft impact vibrating compactor\n- Joint sand stabilizes pavers, prevents shifting & cracking\n- Deter weed growth & insect infestation\n\n• Sealing\n- Protect from weather damage, stains & moisture penetration\n- Enhance color & reduce fading\n\n• The Goal:\nOur goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service. Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
+                    "• Cleaning\n- Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints\n- When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand\n\n• Re-Sanding\n- Re-install high quality polymeric sand using soft impact vibrating compactor\n- Joint sand stabilizes pavers, prevents shifting & cracking\n- Deter weed growth & insect infestation\n\n• Sealing\n- Protect from weather damage, stains & moisture penetration\n- Enhance color & reduce fading\n\n• The Goal:\n- Our goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service.\n- Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
                   features: [
                     "Remove dirt, stains, moss, weeds, and algae",
                     "Full removal of old joint sand",
