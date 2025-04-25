@@ -32,8 +32,8 @@ interface LayoutContext {
   toggleDarkMode: () => void;
 }
 
-const beforeImage = "/homeBefore.jpg";
-const afterImage = "/homeAfter.jpg";
+const beforeImage = "/before17.jpg";
+const afterImage = "/after17.jpg";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -347,7 +347,7 @@ function App() {
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/after14.jpg)" }}
+                style={{ backgroundImage: "url(/after20.jpg)" }}
               ></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Specialty Cleaning</h3>
