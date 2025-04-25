@@ -536,93 +536,17 @@ function App() {
                 Fill out the form below for a free, no-obligation quote.
               </p>
 
-              <form className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-1`}
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className={`w-full px-4 py-2 ${darkMode ? "bg-gray-800 border-gray-700 focus:ring-blue-500 focus:border-blue-500" : "bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500"} rounded-md shadow-sm`}
-                    placeholder="John Doe"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-1`}
-                  >
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className={`w-full px-4 py-2 ${darkMode ? "bg-gray-800 border-gray-700 focus:ring-blue-500 focus:border-blue-500" : "bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500"} rounded-md shadow-sm`}
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-1`}
-                  >
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className={`w-full px-4 py-2 ${darkMode ? "bg-gray-800 border-gray-700 focus:ring-blue-500 focus:border-blue-500" : "bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500"} rounded-md shadow-sm`}
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-1`}
-                  >
-                    Service Needed
-                  </label>
-                  <select
-                    id="service"
-                    className={`w-full px-4 py-2 ${darkMode ? "bg-gray-800 border-gray-700 focus:ring-blue-500 focus:border-blue-500" : "bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500"} rounded-md shadow-sm`}
-                  >
-                    <option>Residential Pressure Washing</option>
-                    <option>Commercial Pressure Washing</option>
-                    <option>Roof Cleaning</option>
-                    <option>Deck & Patio Cleaning</option>
-                    <option>Other (Please specify)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className={`block text-sm font-medium ${darkMode ? "text-gray-300" : "text-gray-700"} mb-1`}
-                  >
-                    Additional Information
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className={`w-full px-4 py-2 ${darkMode ? "bg-gray-800 border-gray-700 focus:ring-blue-500 focus:border-blue-500" : "bg-white border-gray-300 focus:ring-blue-500 focus:border-blue-500"} rounded-md shadow-sm`}
-                    placeholder="Tell us more about your needs..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-all shadow-md"
-                >
-                  Submit Request
-                </button>
-              </form>
+              <div className="w-full h-[600px]">
+                <iframe
+                  src={
+                    darkMode
+                      ? "https://bv6w3pwoi5y.typeform.com/to/HNxNwJKc"
+                      : "https://bv6w3pwoi5y.typeform.com/to/ChJZphDN"
+                  }
+                  style={{ width: "100%", height: "100%", border: "0" }}
+                  allow="camera; microphone; autoplay; encrypted-media;"
+                />
+              </div>
             </div>
           </div>
         </div>
