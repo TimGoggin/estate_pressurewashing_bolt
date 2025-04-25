@@ -31,7 +31,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="w-full h-[600px]">
               <iframe
-                src="https://bv6w3pwoi5y.typeform.com/to/lMePPdwo"
+                src={darkMode ? "https://bv6w3pwoi5y.typeform.com/to/HNxNwJKc" : "https://bv6w3pwoi5y.typeform.com/to/ChJZphDN"}
                 style={{ width: "100%", height: "100%", border: "0" }}
                 allow="camera; microphone; autoplay; encrypted-media;"
               />
