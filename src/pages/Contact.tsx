@@ -15,6 +15,10 @@ export default function Contact() {
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
       <div className="pt-32"></div>
+      
+      <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold">Contact Us</h1>
+      </div>
 
       <section className="py-16">
         <div className="container mx-auto px-6">

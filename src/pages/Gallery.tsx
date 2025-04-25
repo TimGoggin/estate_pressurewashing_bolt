@@ -19,6 +19,10 @@ export default function Gallery() {
   return (
     <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
       <div className="pt-32"></div>
+      
+      <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold">Gallery</h1>
+      </div>
 
       {/* Category Filter */}
       <div className="container mx-auto px-6 py-8">
