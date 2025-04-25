@@ -349,15 +349,15 @@ export default function Services() {
                 {
                   title: "Paver Cleaning & Sealing",
                   description:
-                    "Our goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service. We extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
+                    "• Cleaning\n- Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints\n- When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand\n\n• Re-Sanding\n- Re-install high quality polymeric sand using soft impact vibrating compactor\n- Joint sand stabilizes pavers, prevents shifting & cracking\n- Deter weed growth & insect infestation\n\n• Sealing\n- Protect from weather damage, stains & moisture penetration\n- Enhance color & reduce fading\n\n• The Goal:\nOur goal is to bring expectational and experienced service to restore your expensive hardscape. Many paver installers fail to emphasis the importance of paver maintenance with even fewer that provide this service. Extend the life span of your pavers while maintaining functionality and appearance. This maintenance ensures your pavers stay strong, attractive and functional for years to come.",
                   features: [
-                    "Cleaning: Remove dirt, stains, moss, weeds, and algae that degrade both the pavers and sand joints",
-                    "Cleaning: When re-sanding, all previous sand in joints will be fully removed to prepare for fresh polymer sand",
-                    "Re-Sanding: Re-install high quality polymeric sand using soft impact vibrating compactor",
-                    "Re-Sanding: Joint sand stabilizes pavers, prevents shifting & cracking",
-                    "Re-Sanding: Deter weed growth & insect infestation",
-                    "Sealing: Protect from weather damage, stains & moisture penetration",
-                    "Sealing: Enhance color & reduce fading",
+                    "Remove dirt, stains, moss, weeds, and algae",
+                    "Full removal of old joint sand",
+                    "High quality polymeric sand installation",
+                    "Stabilize pavers to prevent shifting",
+                    "Protection from weather damage",
+                    "Color enhancement and fade reduction",
+                    "Complete maintenance solution"
                   ],
                   image: "/paver2.jpg",
                 },
