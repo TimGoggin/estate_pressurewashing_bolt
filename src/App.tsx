@@ -190,7 +190,7 @@ function App() {
             <span className="text-blue-400">Professional Pressure Washing</span>
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-            Serving the local community since 2017 with eco-friendly cleaning
+            Serving the local community since 2016 with eco-friendly cleaning
             solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
