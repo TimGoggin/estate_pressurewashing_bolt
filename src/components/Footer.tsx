@@ -119,13 +119,19 @@ export default function Footer({ darkMode }: FooterProps) {
               © {new Date().getFullYear()} Estates Pressure Washing. All rights
               reserved.
             </p>
-            <p>
+            <p className="space-x-4">
               <a 
                 href="/sitemap.xml"
                 className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} text-sm`}
               >
                 Sitemap
               </a>
+              <Link
+                to="/accessibility"
+                className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} text-sm`}
+              >
+                Accessibility
+              </Link>
             </p>
           </div>
         </div>
