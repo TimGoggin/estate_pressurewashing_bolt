@@ -138,6 +138,12 @@ export default function Footer({ darkMode }: FooterProps) {
               >
                 Privacy Policy
               </Link>
+              <Link
+                to="/terms"
+                className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} text-sm ml-4`}
+              >
+                Terms & Conditions
+              </Link>
             </p>
           </div>
         </div>

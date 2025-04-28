@@ -23,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/accessibility-statement" element={<Accessibility />} />
           <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Route>
       </Routes>
     </Router>
