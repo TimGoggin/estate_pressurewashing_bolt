@@ -190,7 +190,7 @@ function App() {
             <span className="text-blue-400">Professional Pressure Washing</span>
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
-            Serving the local community since 2017 with eco-friendly cleaning
+            Serving the local community since 2018 with eco-friendly cleaning
             solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -199,7 +199,7 @@ function App() {
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
             >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Text Us Now!!!!!!!!!!!!
+              Text Us Now
             </a>
             <Link
               to="/contact"
