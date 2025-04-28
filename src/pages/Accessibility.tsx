@@ -14,7 +14,7 @@ export default function Accessibility() {
     <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>
       <div className="pt-32"></div>
       <div className="container mx-auto px-6 py-12">
-        <article className={`prose ${darkMode ? "prose-invert" : ""} max-w-4xl mx-auto`}>
+        <article className={`prose ${darkMode ? "prose-invert" : ""} max-w-4xl mx-auto [&>ul]:list-disc [&>ul]:list-inside`}>
           <h1>Declaration of Accessibility Introduction</h1>
           <p>The Internet constitutes the largest resource supporting freedom of information today for the user community in general and for users with disabilities in particular. For that reason we place emphasis on:</p>
           <ul>
