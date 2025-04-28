@@ -16,11 +16,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<App />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/accessibility" element={<Accessibility />} /> {/* Added route for Accessibility page */}
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/accessibility-statement" element={<Accessibility />} /> {/* Added route for Accessibility page */}
         </Route>
       </Routes>
     </Router>

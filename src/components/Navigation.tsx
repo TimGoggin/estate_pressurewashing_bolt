@@ -166,7 +166,7 @@ export default function Navigation({
           </Link>
 
           <Link
-            to="/about"
+            to="/about-us"
             className={`block py-3 px-4 rounded-md ${darkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"} flex items-center`}
           >
             <Info className="h-5 w-5 mr-3" />
@@ -189,10 +189,10 @@ export default function Navigation({
             <span>Gallery</span>
           </Link>
 
-          
+
 
           <Link
-            to="/contact"
+            to="/contact-us"
             className={`block py-3 px-4 rounded-md ${darkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"} flex items-center`}
           >
             <MessageSquare className="h-5 w-5 mr-3" />

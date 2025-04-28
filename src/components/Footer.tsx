@@ -48,7 +48,7 @@ export default function Footer({ darkMode }: FooterProps) {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  to="/about-us"
                   className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"}`}
                 >
                   About Us
@@ -64,7 +64,7 @@ export default function Footer({ darkMode }: FooterProps) {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/contact-us"
                   className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"}`}
                 >
                   Contact
@@ -127,7 +127,7 @@ export default function Footer({ darkMode }: FooterProps) {
                 Sitemap
               </a>
               <Link
-                to="/accessibility"
+                to="/accessibility-statement"
                 className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} text-sm`}
               >
                 Accessibility
