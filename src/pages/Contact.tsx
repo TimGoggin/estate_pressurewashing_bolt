@@ -1,6 +1,7 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 interface LayoutContext {
   darkMode: boolean;
@@ -14,6 +15,71 @@ export default function Contact() {
     <div
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
+      <Helmet>
+        <link rel="canonical" href="https://www.estatespresswash.com/contact" />
+        <title>Contact Estates Pressure Washing | Get a Free Quote Today</title>
+        <meta
+          name="description"
+          content="Get in touch with Estates Pressure Washing for professional residential, commercial, and specialty cleaning services across Bucks, Montgomery, and Philadelphia Counties. Call 1-267-685-0530 or fill out our contact form today!"
+        />
+        <meta
+          name="keywords"
+          content="contact Estates Pressure Washing, free quote, pressure washing estimate, exterior cleaning contact, residential cleaning contact, commercial cleaning contact, Bucks County, Montgomery County, Philadelphia"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Estates Pressure Washing",
+            url: "https://www.estatespresswash.com/contact",
+            image: "https://www.estatespresswash.com/AboutHero.jpeg",
+            logo: "https://www.estatespresswash.com/logo.png",
+            description:
+              "Contact Estates Pressure Washing for expert residential, commercial, and specialty exterior cleaning services across Bucks, Montgomery, and Philadelphia Counties.",
+            telephone: "+1-267-685-0530",
+            email: "epw@estatesfireplace.com",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Friday"],
+                opens: "09:00",
+                closes: "16:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Thursday",
+                opens: "09:00",
+                closes: "19:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Saturday",
+                opens: "09:00",
+                closes: "15:00",
+              },
+            ],
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Newtown",
+                "Yardley",
+                "Blue Bell",
+                "King of Prussia",
+                "Philadelphia",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <div className="relative pt-32 pb-20 ">
         <div className="container mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
