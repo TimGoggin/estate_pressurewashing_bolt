@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async'; // Added import
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -17,12 +18,14 @@ export default function Layout() {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'} font-sans`}>
-      <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <main className="flex-grow">
-        <Outlet context={{ darkMode, toggleDarkMode }} />
-      </main>
-      <Footer darkMode={darkMode} />
-    </div>
+    <HelmetProvider> {/* Added HelmetProvider */}
+      <div className={`min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'} font-sans`}>
+        <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <main className="flex-grow">
+          <Outlet context={{ darkMode, toggleDarkMode }} />
+        </main>
+        <Footer darkMode={darkMode} />
+      </div>
+    </HelmetProvider> {/* Added HelmetProvider */}
   );
-} 
+}
