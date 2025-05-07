@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Phone,
   ArrowRight,
@@ -33,6 +34,90 @@ export default function Services() {
       id="services"
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
+      <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.estatespresswash.com/services"
+        />
+        <title>
+          Estates Pressure Washing Services | Residential, Commercial &
+          Specialty Cleaning
+        </title>
+        <meta
+          name="description"
+          content="Discover Estates Pressure Washing's full range of eco-friendly services: house washing, roof cleaning, paver sealing, gutter cleaning, graffiti removal, and more across Bucks, Montgomery, and Philadelphia Counties."
+        />
+        <meta
+          name="keywords"
+          content="pressure washing services, house washing, roof cleaning, commercial cleaning, paver sealing, gutter services, graffiti removal, residential pressure washing, commercial pressure washing, Bucks County, Montgomery County, Philadelphia"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Estates Pressure Washing",
+            url: "https://www.estatespresswash.com/services",
+            image: "https://www.estatespresswash.com/after10.jpg",
+            logo: "https://www.estatespresswash.com/logo.png",
+            description:
+              "Estates Pressure Washing provides professional, eco-friendly cleaning services including residential house washing, commercial roof cleaning, paver sealing, and more across Pennsylvania counties.",
+            telephone: "+1-267-685-0530",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            openingHours: "Mo-Sa 08:00-18:00",
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Newtown",
+                "Yardley",
+                "Blue Bell",
+                "King of Prussia",
+                "Philadelphia",
+              ],
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Estates Pressure Washing Service Menu",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Residential Services",
+                    description:
+                      "House washing, roof cleaning, decks, patios, fences, pool areas.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Commercial Services",
+                    description:
+                      "Commercial roof cleaning, entrances, walkways, graffiti removal, warehouse cleaning.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Specialty Services",
+                    description:
+                      "Paver cleaning & sealing, gutter cleaning, surface prep for painting and staining.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <div
         className="relative pt-32 pb-20 bg-cover bg-center"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Shield,
   ThumbsUp,
@@ -25,6 +26,87 @@ export default function About() {
     <div
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
+      <Helmet>
+        <link rel="canonical" href="https://www.estatespresswash.com/about" />
+        <title>
+          About Estates Pressure Washing | Trusted Exterior Cleaning Experts in
+          PA
+        </title>
+        <meta
+          name="description"
+          content="Learn about Estates Pressure Washing, a licensed and insured company delivering expert residential and commercial exterior cleaning services since 2017 across Bucks, Montgomery, and Philadelphia Counties."
+        />
+        <meta
+          name="keywords"
+          content="about Estates Pressure Washing, exterior cleaning, professional pressure washing, soft washing, residential cleaning, commercial cleaning, licensed, insured, Bucks County, Montgomery County, Philadelphia"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Estates Pressure Washing",
+            url: "https://www.estatespresswash.com/about",
+            image: "https://www.estatespresswash.com/AboutHero.jpeg",
+            logo: "https://www.estatespresswash.com/logo.png",
+            description:
+              "Estates Pressure Washing has provided expert residential and commercial cleaning services since 2017, with a focus on quality, customer satisfaction, and eco-friendly practices.",
+            telephone: "+1-267-685-0530",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            openingHours: "Mo-Sa 08:00-18:00",
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Newtown",
+                "Yardley",
+                "Blue Bell",
+                "King of Prussia",
+                "Philadelphia",
+              ],
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Estates Pressure Washing Expertise",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Licensed & Insured Cleaning",
+                    description:
+                      "Full coverage and peace of mind for all residential and commercial cleaning projects.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Timely and Professional Service",
+                    description:
+                      "Punctual, efficient, and customer-focused exterior cleaning services.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Expert Team",
+                    description:
+                      "Highly skilled professionals with over 8 years of experience in the pressure washing industry.",
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <div
         className="relative pt-32 pb-20 bg-cover bg-center"
@@ -182,7 +264,8 @@ export default function About() {
               />
               <h3 className="text-xl font-semibold mb-4">Industry Experts</h3>
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Our company is led by an individual with over 8 years of experience in the industry.
+                Our company is led by an individual with over 8 years of
+                experience in the industry.
               </p>
             </div>
             <div
@@ -191,9 +274,12 @@ export default function About() {
               <Home
                 className={`h-12 w-12 ${darkMode ? "text-blue-400" : "text-blue-600"} mb-6`}
               />
-              <h3 className="text-xl font-semibold mb-4">Protect Your Investment</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Protect Your Investment
+              </h3>
               <p className={`${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Enhanced curb appeal, increased property value, prevention of damage, mold and mildew removal, and improved health and safety.
+                Enhanced curb appeal, increased property value, prevention of
+                damage, mold and mildew removal, and improved health and safety.
               </p>
             </div>
           </div>
