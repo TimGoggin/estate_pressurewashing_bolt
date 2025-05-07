@@ -16,9 +16,7 @@ export default function Contact() {
     >
       <div className="relative pt-32 pb-20 ">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Contact Us
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl">
             We're here to help with all your exterior cleaning needs
           </p>
@@ -31,7 +29,11 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="w-full h-[600px]">
               <iframe
-                src={darkMode ? "https://bv6w3pwoi5y.typeform.com/to/HNxNwJKc" : "https://bv6w3pwoi5y.typeform.com/to/ChJZphDN"}
+                src={
+                  darkMode
+                    ? "https://bv6w3pwoi5y.typeform.com/to/HNxNwJKc"
+                    : "https://bv6w3pwoi5y.typeform.com/to/ChJZphDN"
+                }
                 style={{ width: "100%", height: "100%", border: "0" }}
                 allow="camera; microphone; autoplay; encrypted-media;"
               />

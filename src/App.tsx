@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import Navigation from "./components/Navigation";
 
+
 interface LayoutContext {
   darkMode: boolean;
   toggleDarkMode: () => void;
