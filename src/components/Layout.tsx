@@ -26,6 +26,6 @@ export default function Layout() {
         </main>
         <Footer darkMode={darkMode} />
       </div>
-    </HelmetProvider> {/* Added HelmetProvider */}
+    </HelmetProvider>
   );
 }
