@@ -18,9 +18,9 @@ export default function Footer({ darkMode }: FooterProps) {
               <OptimizedImage
                 src="/EstatesLogo.png"
                 alt="Estates Logo"
-                className="h-8 w-auto mr-2"
-                width={64}
-                height={32}
+                className="h-12 w-auto mr-2"
+                width={100}
+                height={48}
                 quality={90}
               />
               <span className="text-xl font-bold"></span>
