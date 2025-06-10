@@ -24,6 +24,22 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   fit = 'cover',
   position = 'centre',
 }) => {
+  // Detect if we're running on Netlify deployment
+  const isNetlifyDeployment = () => {
+    // Check for Netlify environment variables or URL patterns
+    if (typeof window !== 'undefined') {
+      const hostname = window.location.hostname;
+      return hostname.includes('.netlify.app') || 
+             hostname.includes('.netlify.com') ||
+             // Check for custom domains on Netlify
+             (hostname !== 'localhost' && 
+              hostname !== '127.0.0.1' && 
+              !hostname.includes('replit.') &&
+              !hostname.includes('repl.co'));
+    }
+    return false;
+  };
+
   // Build Netlify Image CDN URL
   const buildNetlifyImageUrl = (imageSrc: string, options: {
     width?: number;
@@ -56,17 +72,26 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return `/.netlify/images?url=${encodeURIComponent(`/${cleanSrc}`)}${queryString ? `&${queryString}` : ''}`;
   };
 
-  const optimizedSrc = buildNetlifyImageUrl(src, {
-    width,
-    height,
-    quality,
-    fit,
-    position,
-  });
+  // Determine the image source based on environment
+  const getImageSrc = () => {
+    if (isNetlifyDeployment()) {
+      // Use Netlify Image CDN on deployment
+      return buildNetlifyImageUrl(src, {
+        width,
+        height,
+        quality,
+        fit,
+        position,
+      });
+    } else {
+      // Use original image path for development (Replit)
+      return src;
+    }
+  };
 
-  // Generate srcSet for responsive images
+  // Generate srcSet for responsive images (only on Netlify)
   const generateSrcSet = () => {
-    if (!width) return undefined;
+    if (!width || !isNetlifyDeployment()) return undefined;
     
     const sizes = [1, 1.5, 2]; // 1x, 1.5x, 2x
     return sizes
@@ -86,6 +111,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       })
       .join(', ');
   };
+
+  const optimizedSrc = getImageSrc();
 
   return (
     <img
