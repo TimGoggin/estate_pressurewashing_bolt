@@ -71,6 +71,7 @@ export default function Privacy() {
       </Helmet>
 
       <div className="pt-32"></div>
+      <h1>Privacy Policy</h1>
       <div className="container mx-auto px-6 py-12">
         <div
           id="policy"
