@@ -26,6 +26,7 @@ import {
   Calculator,
 } from "lucide-react";
 import Navigation from "./components/Navigation";
+import ContactForm from "./components/ContactForm";
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from "./components/OptimizedImage";
 
@@ -656,17 +657,7 @@ function App() {
                 Fill out the form below for a free, no-obligation quote.
               </p>
 
-              <div className="w-full h-[600px]">
-                <iframe
-                  src={
-                    darkMode
-                      ? "https://bv6w3pwoi5y.typeform.com/to/HNxNwJKc"
-                      : "https://bv6w3pwoi5y.typeform.com/to/ChJZphDN"
-                  }
-                  style={{ width: "100%", height: "100%", border: "0" }}
-                  allow="camera; microphone; autoplay; encrypted-media;"
-                />
-              </div>
+              <ContactForm darkMode={darkMode} />
             </div>
           </div>
         </div>
