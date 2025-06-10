@@ -115,7 +115,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
   }
 
   return (
-    <div className="w-full min-h-[600px]">
+    <div className="w-full min-h-[600px] contact-form-container">
       <form
         name="contact"
         method="POST"

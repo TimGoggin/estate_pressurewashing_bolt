@@ -134,4 +134,14 @@ form[name="contact"] {
   flex-direction: column !important;
   visibility: visible !important;
   opacity: 1 !important;
+  min-height: 600px !important;
+}
+
+/* Force ContactForm component to display */
+.contact-form-container {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  min-height: 600px !important;
 }

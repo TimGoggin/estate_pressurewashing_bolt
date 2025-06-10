@@ -604,7 +604,9 @@ export default function Home() {
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
-            <ContactForm darkMode={darkMode} />
+            <div className="w-full min-h-[600px] flex items-center justify-center">
+              <ContactForm darkMode={darkMode} />
+            </div>
           </div>
         </div>
       </section>
