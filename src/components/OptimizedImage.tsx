@@ -26,18 +26,19 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   // Detect if we're running on Netlify deployment
   const isNetlifyDeployment = () => {
-    // Check for Netlify environment variables or URL patterns
     if (typeof window !== 'undefined') {
       const hostname = window.location.hostname;
       return hostname.includes('.netlify.app') || 
              hostname.includes('.netlify.com') ||
-             // Check for custom domains on Netlify
+             // Check for custom domains on Netlify (exclude local development)
              (hostname !== 'localhost' && 
               hostname !== '127.0.0.1' && 
               !hostname.includes('replit.') &&
-              !hostname.includes('repl.co'));
+              !hostname.includes('repl.co') &&
+              !hostname.includes('.local'));
     }
-    return false;
+    // Server-side: check for Netlify environment variables
+    return process.env.NETLIFY === 'true' || process.env.CONTEXT === 'production';
   };
 
   // Build Netlify Image CDN URL
@@ -48,16 +49,17 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     fit?: string;
     position?: string;
   }) => {
-    // If it's already an external URL or doesn't start with /, return as is
+    // If it's already an external URL, return as is
     if (imageSrc.startsWith('http') || imageSrc.startsWith('//')) {
       return imageSrc;
     }
 
-    // Remove leading slash if present
-    const cleanSrc = imageSrc.startsWith('/') ? imageSrc.slice(1) : imageSrc;
+    // Ensure the source starts with a slash for absolute path
+    const cleanSrc = imageSrc.startsWith('/') ? imageSrc : `/${imageSrc}`;
     
-    // Build query parameters
+    // Build query parameters for Netlify Image CDN
     const params = new URLSearchParams();
+    params.append('url', cleanSrc);
     
     if (options.width) params.append('w', options.width.toString());
     if (options.height) params.append('h', options.height.toString());
@@ -68,8 +70,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     // Force modern formats
     params.append('f', 'auto');
     
-    const queryString = params.toString();
-    return `/.netlify/images?url=${encodeURIComponent(`/${cleanSrc}`)}${queryString ? `&${queryString}` : ''}`;
+    return `/.netlify/images?${params.toString()}`;
   };
 
   // Determine the image source based on environment
