@@ -14,6 +14,7 @@ import {
   Moon,
   Sun,
 } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 interface NavigationProps {
   darkMode: boolean;
@@ -58,10 +59,14 @@ export default function Navigation({
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img
+              <OptimizedImage
                 src="/EstatesLogo.png"
                 alt="Estates Logo"
                 className="h-14 w-auto mr-2"
+                width={120}
+                height={56}
+                quality={90}
+                loading="eager"
               />
             </Link>
           </div>

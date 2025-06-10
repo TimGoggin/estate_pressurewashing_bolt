@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import OptimizedImage from "./OptimizedImage";
 
 interface FooterProps {
   darkMode: boolean;
@@ -14,10 +15,13 @@ export default function Footer({ darkMode }: FooterProps) {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
-              <img
+              <OptimizedImage
                 src="/EstatesLogo.png"
                 alt="Estates Logo"
                 className="h-16 w-auto mr-2"
+                width={140}
+                height={64}
+                quality={90}
               />
               <span className="text-xl font-bold"></span>
             </div>

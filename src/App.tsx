@@ -239,30 +239,39 @@ function App() {
         ref={heroRef}
         className="relative h-screen flex items-center justify-center overflow-hidden"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero_images/home_hero_1.jpg')",
-            opacity: currentSlide === 0 ? 1 : 0,
-          }}
-        />
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero_images/home_hero_2.jpg')",
-            opacity: currentSlide === 1 ? 1 : 0,
-          }}
-        />
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero_images/home_hero_3.jpg')",
-            opacity: currentSlide === 2 ? 1 : 0,
-          }}
-        />
+        <div className="absolute inset-0">
+          <OptimizedImage
+            src="/hero_images/home_hero_1.jpg"
+            alt="Professional pressure washing services hero image 1"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${currentSlide === 0 ? 'opacity-100' : 'opacity-0'}`}
+            width={1920}
+            height={1080}
+            quality={90}
+            fit="cover"
+            loading="eager"
+          />
+          <OptimizedImage
+            src="/hero_images/home_hero_2.jpg"
+            alt="Professional pressure washing services hero image 2"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${currentSlide === 1 ? 'opacity-100' : 'opacity-0'}`}
+            width={1920}
+            height={1080}
+            quality={90}
+            fit="cover"
+            loading="eager"
+          />
+          <OptimizedImage
+            src="/hero_images/home_hero_3.jpg"
+            alt="Professional pressure washing services hero image 3"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${currentSlide === 2 ? 'opacity-100' : 'opacity-0'}`}
+            width={1920}
+            height={1080}
+            quality={90}
+            fit="cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
         {/* Animated water particles */}
         <div className="absolute inset-0 opacity-30">
           <div className="water-animation"></div>
