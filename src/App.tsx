@@ -305,10 +305,14 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={beforeImage}
                 alt="Before pressure washing"
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                width={600}
+                height={400}
+                quality={85}
+                fit="cover"
               />
               <div className="absolute top-4 left-4 bg-black/50 text-white px-4 py-2 rounded-full text-sm font-bold">
                 Before
@@ -316,10 +320,14 @@ function App() {
             </div>
 
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={afterImage}
                 alt="After pressure washing"
                 className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                width={600}
+                height={400}
+                quality={85}
+                fit="cover"
               />
               <div className="absolute top-4 right-4 bg-blue-600/80 text-white px-4 py-2 rounded-full text-sm font-bold">
                 After
@@ -347,10 +355,15 @@ function App() {
             <div
               className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105`}
             >
-              <div
+              <OptimizedImage
+                src="/after3.png"
+                alt="Residential pressure washing"
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/after3.png)" }}
-              ></div>
+                width={400}
+                height={192}
+                quality={85}
+                fit="cover"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">
                   Residential Pressure Washing
@@ -388,10 +401,15 @@ function App() {
             <div
               className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105`}
             >
-              <div
+              <OptimizedImage
+                src="/after9.png"
+                alt="Commercial pressure washing"
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/after9.png)" }}
-              ></div>
+                width={400}
+                height={192}
+                quality={85}
+                fit="cover"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">
                   Commercial Pressure Washing
@@ -429,10 +447,15 @@ function App() {
             <div
               className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105`}
             >
-              <div
+              <OptimizedImage
+                src="/after20.jpg"
+                alt="Specialty cleaning services"
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/after20.jpg)" }}
-              ></div>
+                width={400}
+                height={192}
+                quality={85}
+                fit="cover"
+              />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Specialty Cleaning</h3>
                 <p
@@ -487,10 +510,14 @@ function App() {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="md:w-1/3">
                   <div className="aspect-square rounded-xl overflow-hidden">
-                    <img
+                    <OptimizedImage
                       src={testimonials[currentTestimonial].image}
                       alt={`${testimonials[currentTestimonial].name}'s property after pressure washing`}
                       className="w-full h-full object-cover"
+                      width={400}
+                      height={400}
+                      quality={90}
+                      fit="cover"
                     />
                   </div>
                 </div>
