@@ -21,7 +21,7 @@ export default function Accessibility() {
         <title>Accessibility Statement | Estates Pressure Washing</title>
         <meta
           name="description"
-          content="Learn about the accessibility practices and commitment of Estates Pressure Washing. We strive to provide an inclusive digital experience for all users, including people with disabilities."
+          content="Estates Pressure Washing is committed to digital accessibility and inclusive web experiences. Our website features comprehensive accessibility tools including keyboard navigation, screen reader compatibility, font enlargement, color contrast adjustments, and WCAG 2.1 AA compliance to serve all users effectively."
         />
         <meta
           name="keywords"

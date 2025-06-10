@@ -30,7 +30,7 @@ export default function Privacy() {
         <title>Privacy Policy | Estates Pressure Washing</title>
         <meta
           name="description"
-          content="Read the Privacy Policy of Estates Pressure Washing to learn how we collect, use, and protect your personal information when you visit our website or use our services."
+          content="Our comprehensive privacy policy details how Estates Pressure Washing collects, processes, and protects your personal information. We prioritize data security, transparent communication practices, and compliance with privacy regulations to ensure your information remains safe and confidential."
         />
         <meta
           name="keywords"
