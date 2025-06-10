@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 import OptimizedImage from "./OptimizedImage";
@@ -8,6 +8,48 @@ interface FooterProps {
 }
 
 export default function Footer({ darkMode }: FooterProps) {
+  const loadAccessibilityTools = () => {
+    // Define the EqualWeb configuration
+    (window as any).interdeal = {
+      "sitekey": "20757c8cfaf6da895f46c68088047322",
+      "Position": "left",
+      "domains": {
+        "js": "https://cdn.equalweb.com/",
+        "acc": "https://access.equalweb.com/"
+      },
+      "Menulang": "EN",
+      "btnStyle": {
+        "vPosition": [
+          "90%",
+          "10%"
+        ],
+        "scale": [
+          "0.5",
+          "0.5"
+        ],
+        "color": {
+          "main": "#1C4ED8",
+          "second": "#FFFFFF"
+        },
+        "icon": {
+          "outline": false,
+          "type": 1,
+          "shape": "circle"
+        }
+      }
+    };
+
+    // Load the accessibility script
+    const coreCall = document.createElement('script');
+    coreCall.src = 'https://cdn.equalweb.com/core/5.1.0/accessibility.js';
+    coreCall.defer = true;
+    coreCall.integrity = 'sha512-TcsprTlCCE0u/G5TN3zikzkynCEIRcfd96+RejMcyd2HFPnTpVUDxumXmFb/rSJ3ogQM+b/yvYWLwV6duAuJQg==';
+    coreCall.crossOrigin = 'anonymous';
+    coreCall.setAttribute('data-cfasync', 'true');
+    
+    document.body.appendChild(coreCall);
+  };
+
   return (
     <footer className={`${darkMode ? "bg-gray-900" : "bg-gray-100"} py-12`}>
       <div className="container mx-auto px-6">
@@ -136,6 +178,12 @@ export default function Footer({ darkMode }: FooterProps) {
               >
                 Accessibility
               </Link>
+              <button
+                onClick={loadAccessibilityTools}
+                className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} text-sm ml-4 underline cursor-pointer`}
+              >
+                Accessibility Tools
+              </button>
               <Link
                 to="/privacy-policy"
                 className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} text-sm ml-4`}
