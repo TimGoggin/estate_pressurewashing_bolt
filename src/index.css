@@ -127,11 +127,3 @@ div[data-testid*="typeform"],
 iframe[src*="typeform"] {
   display: none !important;
 }
-
-/* Ensure ContactForm displays properly */
-form[name="contact"] {
-  display: flex !important;
-  flex-direction: column !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}

@@ -594,16 +594,17 @@ export default function Home() {
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Ready to Restore Your Property?</h2>
+            <h2 className="text-3xl font-bold mb-4">Get Your Free Quote</h2>
             <p
               className={`text-lg max-w-2xl mx-auto ${
                 darkMode ? "text-gray-300" : "text-gray-600"
               }`}
             >
-              Fill out the form below for a free, no-obligation quote.
+              Ready to transform your property? Fill out our quick form below
+              and we'll provide you with a personalized quote.
             </p>
           </div>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <ContactForm darkMode={darkMode} />
           </div>
         </div>
