@@ -245,10 +245,17 @@ export default function Services() {
                     darkMode ? "bg-gray-800" : "bg-white"
                   } rounded-lg shadow-lg overflow-hidden`}
                 >
-                  <div
-                    className="h-48 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  ></div>
+                  <div className="h-48 relative overflow-hidden">
+                    <OptimizedImage
+                      src={service.image}
+                      alt={`${service.title} service`}
+                      className="w-full h-full object-cover"
+                      width={400}
+                      height={192}
+                      quality={85}
+                      fit="cover"
+                    />
+                  </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p
@@ -332,10 +339,17 @@ export default function Services() {
                   key={index}
                   className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
                 >
-                  <div
-                    className="h-48 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  ></div>
+                  <div className="h-48 relative overflow-hidden">
+                    <OptimizedImage
+                      src={service.image}
+                      alt={`${service.title} service`}
+                      className="w-full h-full object-cover"
+                      width={400}
+                      height={192}
+                      quality={85}
+                      fit="cover"
+                    />
+                  </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p
@@ -406,10 +420,17 @@ export default function Services() {
                   key={index}
                   className={`${darkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}
                 >
-                  <div
-                    className="h-48 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${service.image})` }}
-                  ></div>
+                  <div className="h-48 relative overflow-hidden">
+                    <OptimizedImage
+                      src={service.image}
+                      alt={`${service.title} service`}
+                      className="w-full h-full object-cover"
+                      width={400}
+                      height={192}
+                      quality={85}
+                      fit="cover"
+                    />
+                  </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p
