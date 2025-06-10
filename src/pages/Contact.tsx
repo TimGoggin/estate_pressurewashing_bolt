@@ -2,6 +2,7 @@ import React from "react";
 import { useOutletContext } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import ContactForm from "../components/ContactForm";
 
 interface LayoutContext {
   darkMode: boolean;
@@ -93,17 +94,7 @@ export default function Contact() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="w-full h-[600px]">
-              <iframe
-                src={
-                  darkMode
-                    ? "https://bv6w3pwoi5y.typeform.com/to/HNxNwJKc"
-                    : "https://bv6w3pwoi5y.typeform.com/to/ChJZphDN"
-                }
-                style={{ width: "100%", height: "100%", border: "0" }}
-                allow="camera; microphone; autoplay; encrypted-media;"
-              />
-            </div>
+            <ContactForm darkMode={darkMode} />
 
             {/* Contact Information */}
             <div>
