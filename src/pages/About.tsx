@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import { Phone, MessageSquare } from "lucide-react";
+import OptimizedImage from "../components/OptimizedImage";
 
 interface LayoutContext {
   darkMode: boolean;
@@ -214,7 +215,7 @@ export default function About() {
             </div>
             <div className="order-1 md:order-2">
               <div className="rounded-lg overflow-hidden shadow-xl">
-                <img
+                <OptimizedImage
                   src="/after17.jpg"
                   alt="Professional Pool Cleaning"
                   className="w-full h-full object-cover"

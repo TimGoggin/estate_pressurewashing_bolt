@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { beforeAfterImages, categories } from "../config/beforeAfterConfig";
 import { Helmet } from "react-helmet-async";
+import OptimizedImage from "../components/OptimizedImage";
 interface LayoutContext {
   darkMode: boolean;
   toggleDarkMode: () => void;
@@ -119,20 +120,28 @@ export default function Gallery() {
             {filteredImages.map((image) => (
               <div key={image.id} className="space-y-3">
                 <div className="relative">
-                  <img
+                  <OptimizedImage
                     src={image.before.src}
                     alt={image.before.alt}
+                    width={400}
+                    height={160}
+                    quality={85}
                     className="w-full h-40 object-cover rounded-lg shadow-md"
+                    fit="cover"
                   />
                   <div className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Before
                   </div>
                 </div>
                 <div className="relative">
-                  <img
+                  <OptimizedImage
                     src={image.after.src}
                     alt={image.after.alt}
+                    width={400}
+                    height={160}
+                    quality={85}
                     className="w-full h-40 object-cover rounded-lg shadow-md"
+                    fit="cover"
                   />
                   <div className="absolute top-4 right-4 bg-blue-600/80 text-white px-3 py-1 rounded-full text-sm font-medium">
                     After

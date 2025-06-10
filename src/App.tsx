@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import Navigation from "./components/Navigation";
 import { Helmet } from "react-helmet-async";
+import OptimizedImage from "./components/OptimizedImage";
 
 interface LayoutContext {
   darkMode: boolean;
