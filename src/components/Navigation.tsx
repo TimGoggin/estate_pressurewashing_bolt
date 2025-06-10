@@ -63,8 +63,8 @@ export default function Navigation({
                 src="/EstatesLogo.png"
                 alt="Estates Logo"
                 className="h-6 w-auto mr-2"
-                width={48}
-                height={24}
+                width={12}
+                height={6}
                 quality={90}
                 loading="eager"
               />
@@ -193,8 +193,6 @@ export default function Navigation({
             <Image className="h-5 w-5 mr-3" />
             <span>Gallery</span>
           </Link>
-
-
 
           <Link
             to="/contact"
