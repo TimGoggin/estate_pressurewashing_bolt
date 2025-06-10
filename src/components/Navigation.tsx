@@ -62,9 +62,9 @@ export default function Navigation({
               <OptimizedImage
                 src="/EstatesLogo.png"
                 alt="Estates Logo"
-                className="h-6 w-auto mr-2"
-                width={12}
-                height={6}
+                className="h-4 w-auto mr-2"
+                width={32}
+                height={16}
                 quality={90}
                 loading="eager"
               />
