@@ -28,7 +28,7 @@ export default function About() {
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
       <Helmet>
-        <link rel="canonical" href="https://www.estatespresswash.com/about" />
+        <link rel="canonical" href="https://www.estatespresswash.com/about-us" />
         <title>
           About Estates Pressure Washing | Trusted Exterior Cleaning Experts in
           PA
@@ -46,7 +46,7 @@ export default function About() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Estates Pressure Washing",
-            url: "https://www.estatespresswash.com/about",
+            url: "https://www.estatespresswash.com/about-us",
             image: "https://www.estatespresswash.com/AboutHero.jpeg",
             logo: "https://www.estatespresswash.com/logo.png",
             description:
@@ -142,7 +142,7 @@ export default function About() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to="/contact"
+                to="/contact-us"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
               >
                 <MessageSquare className="mr-2 h-5 w-5" />
@@ -346,7 +346,7 @@ export default function About() {
             Contact us today for a free quote.
           </p>
           <Link
-            to="/contact"
+            to="/contact-us"
             className="inline-flex items-center px-6 py-3 rounded-full bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors"
           >
             Contact Us

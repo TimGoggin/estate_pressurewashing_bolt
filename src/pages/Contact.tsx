@@ -16,7 +16,7 @@ export default function Contact() {
       className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}
     >
       <Helmet>
-        <link rel="canonical" href="https://www.estatespresswash.com/contact" />
+        <link rel="canonical" href="https://www.estatespresswash.com/contact-us" />
         <title>Contact Estates Pressure Washing | Get a Free Quote Today</title>
         <meta
           name="description"
@@ -31,7 +31,7 @@ export default function Contact() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Estates Pressure Washing",
-            url: "https://www.estatespresswash.com/contact",
+            url: "https://www.estatespresswash.com/contact-us",
             image: "https://www.estatespresswash.com/AboutHero.jpeg",
             logo: "https://www.estatespresswash.com/logo.png",
             description:

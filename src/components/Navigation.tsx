@@ -79,7 +79,7 @@ export default function Navigation({
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
 
-            <Link to="/about" className="nav-link flex items-center group">
+            <Link to="/about-us" className="nav-link flex items-center group">
               <Info className="h-4 w-4 mr-1" />
               <span>About Us</span>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
@@ -97,7 +97,7 @@ export default function Navigation({
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
             </Link>
 
-            <Link to="/contact" className="nav-link flex items-center group">
+            <Link to="/contact-us" className="nav-link flex items-center group">
               <MessageSquare className="h-4 w-4 mr-1" />
               <span>Contact</span>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-blue-600 mt-0.5"></span>
@@ -171,7 +171,7 @@ export default function Navigation({
           </Link>
 
           <Link
-            to="/about"
+            to="/about-us"
             className={`block py-3 px-4 rounded-md ${darkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"} flex items-center`}
           >
             <Info className="h-5 w-5 mr-3" />
@@ -195,7 +195,7 @@ export default function Navigation({
           </Link>
 
           <Link
-            to="/contact"
+            to="/contact-us"
             className={`block py-3 px-4 rounded-md ${darkMode ? "hover:bg-gray-800" : "hover:bg-gray-100"} flex items-center`}
           >
             <MessageSquare className="h-5 w-5 mr-3" />

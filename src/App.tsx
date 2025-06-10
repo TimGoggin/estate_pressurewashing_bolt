@@ -295,7 +295,7 @@ function App() {
               Text Us Now
             </a>
             <Link
-              to="/contact"
+              to="/contact-us"
               className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all inline-flex items-center"
             >
               <Calendar className="mr-2 h-5 w-5" />
