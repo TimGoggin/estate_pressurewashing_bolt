@@ -4,6 +4,7 @@ modules = ["nodejs-20", "web"]
 
 [nix]
 channel = "stable-24_05"
+packages = ["lsof"]
 
 [[ports]]
 localPort = 5001
