@@ -122,7 +122,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
-        className={`h-full flex flex-col space-y-6 p-6 rounded-lg shadow-lg ${
+        className={`h-full flex flex-col space-y-4 p-6 rounded-lg shadow-lg ${
           darkMode ? "bg-gray-800" : "bg-white"
         }`}
       >
@@ -133,12 +133,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
           <input name="bot-field" />
         </div>
 
-        <h2 className={`text-2xl font-bold mb-4 ${
+        <h2 className={`text-2xl font-bold mb-2 ${
           darkMode ? "text-white" : "text-gray-900"
         }`}>Get Your Free Quote</h2>
 
         {/* Name Field */}
-        <div className="space-y-2">
+        <div className="space-y-1">
           <label htmlFor="name" className={`flex items-center text-sm font-medium ${
             darkMode ? "text-white" : "text-gray-700"
           }`}>
@@ -162,7 +162,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
         </div>
 
         {/* Email Field */}
-        <div className="space-y-2">
+        <div className="space-y-1">
           <label htmlFor="email" className={`flex items-center text-sm font-medium ${
             darkMode ? "text-white" : "text-gray-700"
           }`}>
@@ -186,7 +186,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
         </div>
 
         {/* Phone Field */}
-        <div className="space-y-2">
+        <div className="space-y-1">
           <label htmlFor="phone" className={`flex items-center text-sm font-medium ${
             darkMode ? "text-white" : "text-gray-700"
           }`}>
@@ -210,7 +210,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
         </div>
 
         {/* Message Field */}
-        <div className="space-y-2 flex-1">
+        <div className="space-y-1 flex-1 min-h-0">
           <label htmlFor="message" className={`flex items-center text-sm font-medium ${
             darkMode ? "text-white" : "text-gray-700"
           }`}>
@@ -222,8 +222,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            rows={6}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none placeholder-gray-400 ${
+            className={`w-full h-full min-h-[120px] px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none placeholder-gray-400 ${
               darkMode
                 ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400"
                 : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
