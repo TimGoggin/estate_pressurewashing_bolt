@@ -109,10 +109,17 @@ export default function About() {
       </Helmet>
 
       {/* Hero Section */}
-      <div
-        className="relative pt-32 pb-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/AboutHero.jpeg')" }}
-      >
+      <div className="relative pt-32 pb-20 overflow-hidden">
+        <OptimizedImage
+          src="/AboutHero.jpeg"
+          alt="About Estates Pressure Washing hero background"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          quality={90}
+          fit="cover"
+          loading="eager"
+        />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/30"></div>
         {/* Animated water droplets background */}
@@ -219,6 +226,10 @@ export default function About() {
                   src="/after17.jpg"
                   alt="Professional Pool Cleaning"
                   className="w-full h-full object-cover"
+                  width={600}
+                  height={400}
+                  quality={85}
+                  fit="cover"
                 />
               </div>
             </div>
