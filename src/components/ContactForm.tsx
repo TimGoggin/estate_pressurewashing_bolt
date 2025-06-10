@@ -115,14 +115,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
   }
 
   return (
-    <div className="w-full h-[600px]">
+    <div className="w-full min-h-[600px]">
       <form
         name="contact"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
-        className={`h-full flex flex-col space-y-4 p-6 rounded-lg shadow-lg ${
+        className={`flex flex-col space-y-4 p-6 rounded-lg shadow-lg ${
           darkMode ? "bg-gray-800" : "bg-white"
         }`}
       >
@@ -210,7 +210,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
         </div>
 
         {/* Message Field */}
-        <div className="space-y-1 flex-1 min-h-0">
+        <div className="space-y-1">
           <label htmlFor="message" className={`flex items-center text-sm font-medium ${
             darkMode ? "text-white" : "text-gray-700"
           }`}>
@@ -222,7 +222,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ darkMode }) => {
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            className={`w-full h-full min-h-[120px] px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none placeholder-gray-400 ${
+            rows={6}
+            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none placeholder-gray-400 ${
               darkMode
                 ? "bg-gray-700 border-gray-600 text-white placeholder-gray-400"
                 : "bg-white border-gray-300 text-gray-900 placeholder-gray-500"
