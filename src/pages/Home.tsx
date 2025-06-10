@@ -483,36 +483,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section
-        className={`py-20 ${darkMode ? "bg-blue-900" : "bg-blue-600"} text-white`}
-      >
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Property?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join hundreds of satisfied customers who trust Estates Pressure
-            Washing for their exterior cleaning needs.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              to="/contact-us"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
-            >
-              <MessageSquare className="mr-2 h-5 w-5" />
-              Contact Us Today
-            </Link>
-            <a
-              href="tel:+12676850530"
-              className="bg-transparent hover:bg-white/10 text-white border-2 border-white font-bold py-3 px-8 rounded-full transition-all flex items-center justify-center"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call Us Today!
-            </a>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Our Mission */}
       <section className="py-20">
