@@ -29,6 +29,17 @@ import Navigation from "./components/Navigation";
 import ContactForm from "./components/ContactForm";
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from "./components/OptimizedImage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Accessibility from "./pages/Accessibility";
+import CityPage from "./components/CityPage";
 
 interface LayoutContext {
   darkMode: boolean;
