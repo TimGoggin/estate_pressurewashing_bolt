@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import {
   Droplet,
-  Home,
+  Home as HomeIcon,
   Building2,
   CheckCircle,
   Star,
