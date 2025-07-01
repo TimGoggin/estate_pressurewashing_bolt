@@ -1,15 +1,15 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ["lucide-react"],
-  },
-  server: {
-    host: "0.0.0.0",
-    port: 5000,
-    allowedHosts: true,
-  },
-});
+  publicDir: 'public',
+  build: {
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
+  }
+})
