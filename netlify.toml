@@ -7,10 +7,7 @@
   NODE_VERSION = "18"
 
 # Disable plugins that conflict with our custom sitemap
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-  [plugins.inputs]
-    disable = true
+
 
 [[redirects]]
   from = "/*"
