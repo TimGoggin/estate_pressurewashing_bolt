@@ -1,0 +1,188 @@
+5:33:11 PM: build-image version: 9d5e089ad8ecaafb0161bb0f3dc3590dda973c71 (noble)
+5:33:11 PM: buildbot version: c5127b7ed30083b5c3949537dc2c6164a9d943b6
+5:33:11 PM: Building without cache
+5:33:11 PM: Starting to prepare the repo for build
+5:33:11 PM: No cached dependencies found. Cloning fresh repo
+5:33:11 PM: git clone --filter=blob:none https://github.com/websitewannabe/estate_pressurewashing_bolt
+5:33:12 PM: Preparing Git Reference refs/heads/main
+5:33:22 PM: Starting to install dependencies
+5:33:22 PM: Using PHP version
+5:33:23 PM: Downloading and installing node v18.20.8...
+5:33:23 PM: Downloading https://nodejs.org/dist/v18.20.8/node-v18.20.8-linux-x64.tar.xz...
+5:33:23 PM: Computing checksum with sha256sum
+5:33:23 PM: Checksums matched!
+5:33:26 PM: Now using node v18.20.8 (npm v10.8.2)
+5:33:26 PM: Enabling Node.js Corepack
+5:33:26 PM: Started restoring cached build plugins
+5:33:26 PM: Finished restoring cached build plugins
+5:33:26 PM: Started restoring cached corepack dependencies
+5:33:26 PM: Finished restoring cached corepack dependencies
+5:33:26 PM: No pnpm workspaces detected
+5:33:26 PM: Started restoring cached node modules
+5:33:26 PM: Finished restoring cached node modules
+5:33:27 PM: Installing npm packages using pnpm version 10.12.3
+5:33:27 PM: Lockfile is up to date, resolution step is skipped
+5:33:27 PM: Progress: resolved 1, reused 0, downloaded 0, added 0
+5:33:27 PM: Packages: +261
+5:33:27 PM: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+5:33:28 PM: Progress: resolved 261, reused 0, downloaded 168, added 154
+5:33:29 PM: Progress: resolved 261, reused 0, downloaded 260, added 260
+5:33:29 PM: Progress: resolved 261, reused 0, downloaded 261, added 261, done
+5:33:30 PM: dependencies:
+5:33:30 PM: + lucide-react 0.344.0
+5:33:30 PM: + react 18.3.1
+5:33:30 PM: + react-dom 18.3.1
+5:33:30 PM: + react-helmet-async 2.0.5
+5:33:30 PM: + react-router-dom 7.3.0
+5:33:30 PM: devDependencies:
+5:33:30 PM: + @eslint/js 9.21.0
+5:33:30 PM: + @types/react 18.3.18
+5:33:30 PM: + @types/react-dom 18.3.5
+5:33:30 PM: + @vitejs/plugin-react 4.3.4
+5:33:30 PM: + autoprefixer 10.4.20
+5:33:30 PM: + eslint 9.21.0
+5:33:30 PM: + eslint-plugin-react-hooks 5.2.0
+5:33:30 PM: + eslint-plugin-react-refresh 0.4.19
+5:33:30 PM: + globals 15.15.0
+5:33:30 PM: + postcss 8.5.3
+5:33:30 PM: + tailwindcss 3.4.17
+5:33:30 PM: + typescript 5.8.2
+5:33:30 PM: + typescript-eslint 8.26.0
+5:33:30 PM: + vite 5.4.14
+5:33:30 PM: ╭ Warning ─────────────────────────────────────────────────────────────────────╮
+5:33:30 PM: │                                                                              │
+5:33:30 PM: │   Ignored build scripts: esbuild.                                            │
+5:33:30 PM: │   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+5:33:30 PM: │   to run scripts.                                                            │
+5:33:30 PM: │                                                                              │
+5:33:30 PM: ╰──────────────────────────────────────────────────────────────────────────────╯
+5:33:30 PM: Done in 3s using pnpm v10.12.3
+5:33:30 PM: npm packages installed using pnpm
+5:33:30 PM: Successfully installed dependencies
+5:33:30 PM: Starting build script
+5:33:31 PM: Detected 1 framework(s)
+5:33:31 PM: "vite" at version "5.4.14"
+5:33:31 PM: Section completed: initializing
+5:33:32 PM: ​
+5:33:32 PM: Netlify Build                                                 
+5:33:32 PM: ────────────────────────────────────────────────────────────────
+5:33:32 PM: ​
+5:33:32 PM: ❯ Version
+5:33:32 PM:   @netlify/build 33.5.0
+5:33:32 PM: ​
+5:33:32 PM: ❯ Flags
+5:33:32 PM:   accountId: 681bb12fbf287a90cce648e4
+5:33:32 PM:   baseRelDir: true
+5:33:32 PM:   buildId: 686453eee54179cff3706799
+5:33:32 PM:   deployId: 686453eee54179cff370679b
+5:33:32 PM: ​
+5:33:32 PM: ❯ Current directory
+5:33:32 PM:   /opt/build/repo
+5:33:32 PM: ​
+5:33:32 PM: ❯ Config file
+5:33:32 PM:   /opt/build/repo/netlify.toml
+5:33:32 PM: ​
+5:33:32 PM: ❯ Context
+5:33:32 PM:   production
+5:33:32 PM: ​
+5:33:32 PM: ❯ Installing plugins
+5:33:32 PM:    - @netlify/plugin-lighthouse@6.0.1
+5:33:51 PM: Post processing - Forms
+5:33:43 PM: ​
+5:33:43 PM: ❯ Loading plugins
+5:33:43 PM:    - @netlify/plugin-lighthouse@6.0.1 from Netlify app
+5:33:45 PM: ​
+5:33:45 PM: build.command from netlify.toml                               
+5:33:45 PM: ────────────────────────────────────────────────────────────────
+5:33:45 PM: ​
+5:33:45 PM: $ npm run build
+5:33:45 PM: > vite-react-typescript-starter@0.0.0 build
+5:33:45 PM: > node scripts/updateSitemap.js && vite build && cp public/sitemap.xml dist/sitemap.xml
+5:33:45 PM: Sitemap updated successfully!
+5:33:45 PM: Updated: /opt/build/repo/public/sitemap.xml
+5:33:45 PM: vite v5.4.14 building for production...
+5:33:45 PM: transforming...
+5:33:47 PM: ✓ 1498 modules transformed.
+5:33:47 PM: rendering chunks...
+5:33:47 PM: computing gzip size...
+5:33:47 PM: dist/index.html                   2.10 kB │ gzip:   1.01 kB
+5:33:47 PM: dist/assets/index-CtY3u0tn.css   22.95 kB │ gzip:   5.01 kB
+5:33:47 PM: dist/assets/index-8HUbatVd.js   347.89 kB │ gzip: 100.29 kB
+5:33:47 PM: ✓ built in 2.20s
+5:33:47 PM: ​
+5:33:47 PM: (build.command completed in 2.6s)
+5:33:51 PM: ​
+5:33:51 PM: Scanning for secrets in code and build output.                
+5:33:51 PM: ────────────────────────────────────────────────────────────────
+5:33:51 PM: ​
+5:33:51 PM: Secrets scanning complete. 210 file(s) scanned. No secrets detected in build output or repo code!
+5:33:51 PM: ​
+5:33:51 PM: (Secrets scanning completed in 3.9s)
+5:33:51 PM: ​
+5:33:51 PM: Deploy site                                                   
+5:33:51 PM: ────────────────────────────────────────────────────────────────
+5:33:51 PM: ​
+5:33:51 PM: Starting to deploy site from 'dist'
+5:33:51 PM: Calculating files to upload
+5:33:51 PM: 0 new file(s) to upload
+5:33:51 PM: 0 new function(s) to upload
+5:33:51 PM: Section completed: deploying
+5:33:53 PM: Finished waiting for live deploy in 2.039s
+5:33:53 PM: Site deploy was successfully initiated
+5:33:53 PM: ​
+5:33:53 PM: (Deploy site completed in 2.2s)
+5:33:53 PM: Generating Lighthouse report. This may take a minute…
+5:33:53 PM: Running Lighthouse on /
+5:33:52 PM: Site is live ✨
+5:33:51 PM: Starting post processing
+5:33:51 PM: Processing form - contact
+5:33:51 PM: Detected form fields:
+ - name
+ - email
+ - phone
+ - message
+5:33:51 PM: Post processing - header rules
+5:33:51 PM: Post processing - redirect rules
+5:33:51 PM: Post processing done
+5:33:51 PM: Section completed: postprocessing
+5:34:12 PM: Lighthouse scores for /
+5:34:12 PM: - Performance: 62
+5:34:12 PM: - Accessibility: 81
+5:34:12 PM: - Best Practices: 92
+5:34:12 PM: - SEO: 85
+5:34:12 PM: - PWA: 30
+5:34:12 PM: ​
+5:34:12 PM: Netlify Build Complete                                        
+5:34:12 PM: ────────────────────────────────────────────────────────────────
+5:34:12 PM: ​
+5:34:12 PM: (Netlify Build completed in 39.6s)
+5:34:12 PM: Caching artifacts
+5:34:12 PM: Started saving node modules
+5:34:12 PM: Finished saving node modules
+5:34:12 PM: Started saving build plugins
+5:34:12 PM: Finished saving build plugins
+5:34:12 PM: Started saving bun cache
+5:34:12 PM: Finished saving bun cache
+5:34:12 PM: Started saving go cache
+5:34:13 PM: Finished saving go cache
+5:34:13 PM: Started saving python cache
+5:34:13 PM: Finished saving python cache
+5:34:14 PM: Started saving ruby cache
+5:34:15 PM: Finished saving ruby cache
+5:34:15 PM: Started saving corepack cache
+5:34:15 PM: Finished saving corepack cache
+5:34:15 PM: Started saving pnpm cache
+5:34:15 PM: Finished saving pnpm cache
+5:34:15 PM: Started saving emacs cask dependencies
+5:34:15 PM: Finished saving emacs cask dependencies
+5:34:15 PM: Started saving maven dependencies
+5:34:15 PM: Finished saving maven dependencies
+5:34:15 PM: Started saving boot dependencies
+5:34:15 PM: Finished saving boot dependencies
+5:34:15 PM: Started saving rust rustup cache
+5:34:15 PM: Finished saving rust rustup cache
+5:34:15 PM: Build script success
+5:34:15 PM: Section completed: building
+5:34:18 PM: Uploading Cache of size 689.7MB
+5:34:19 PM: Section completed: cleanup
+5:34:19 PM: Finished processing build request in 1m8.24s
