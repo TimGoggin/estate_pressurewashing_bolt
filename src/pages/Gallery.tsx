@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { beforeAfterImages, categories } from "../config/beforeAfterConfig";
 import { Helmet } from "react-helmet-async";

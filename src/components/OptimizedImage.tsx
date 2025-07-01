@@ -10,7 +10,6 @@ interface OptimizedImageProps {
   className?: string;
   loading?: "lazy" | "eager";
   sizes?: string;
-  fit?: string;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -23,7 +22,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className,
   loading = "lazy",
   sizes,
-  fit,
 }) => {
   // Check if we're in development mode
   const isDevelopment = import.meta.env.DEV;

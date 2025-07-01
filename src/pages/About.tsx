@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
@@ -5,6 +6,7 @@ import {
   ThumbsUp,
   Users,
   Clock,
+  CheckCircle,
   ArrowRight,
   Wrench,
   Home,

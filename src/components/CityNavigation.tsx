@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
 import { cities } from "../config/cityConfig";

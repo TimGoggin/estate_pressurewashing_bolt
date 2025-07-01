@@ -1,6 +1,8 @@
+import React, { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
+  Phone,
   ArrowRight,
   CheckCircle,
   Calculator,
@@ -251,6 +253,7 @@ export default function Services() {
                       width={400}
                       height={192}
                       quality={85}
+                      fit="cover"
                     />
                   </div>
                   <div className="p-6">
@@ -344,6 +347,7 @@ export default function Services() {
                       width={400}
                       height={192}
                       quality={85}
+                      fit="cover"
                     />
                   </div>
                   <div className="p-6">
@@ -424,6 +428,7 @@ export default function Services() {
                       width={400}
                       height={192}
                       quality={85}
+                      fit="cover"
                     />
                   </div>
                   <div className="p-6">

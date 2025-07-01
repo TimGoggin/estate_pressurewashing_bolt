@@ -1,3 +1,4 @@
+
 run = "npm run dev"
 modules = ["nodejs-20", "web"]
 
@@ -14,16 +15,9 @@ localPort = 5000
 externalPort = 3000
 
 [deployment]
-run = ["sh", "-c", "npm run build"]
-
-[[deployment.responseHeaders]]
-path = "/sitemap.xml"
-name = "Content-Type"
-value = "application/xml"
-
-[[deployment.rewrites]]
-from = "/sitemap.xml"
-to = "/sitemap.xml"
+deploymentTarget = "cloudrun"
+run = ["sh", "-c", "npx vite preview --host 0.0.0.0 --port 5173"]
+build = ["sh", "-c", "npm run build"]
 
 [workflows]
 runButton = "Run"
