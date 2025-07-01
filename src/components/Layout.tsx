@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async'; // Added import
 import Navigation from './Navigation';

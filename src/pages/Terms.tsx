@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
@@ -30,7 +30,7 @@ export default function Terms() {
         <title>Terms of Service | Estates Pressure Washing</title>
         <meta
           name="description"
-          content="Read the Terms of Service for Estates Pressure Washing. Our comprehensive terms outline service agreements, liability, payment terms, and customer responsibilities for all pressure washing services."
+          content="Read the Terms of Service for Estates Pressure Washing. Our comprehensive terms outline service agreements, liability terms, payment terms, and customer responsibilities for all pressure washing services."
         />
         <meta
           name="keywords"
@@ -43,8 +43,6 @@ export default function Terms() {
       <div className="container mx-auto px-6 py-12">
         <div
           id="policy"
-          width="640"
-          height="480"
           data-policy-key="YkVwSFprMXJNbkJqT1dkR1QyYzlQUT09"
         >
           Please wait while the terms are loaded. If they do not load, please{" "}

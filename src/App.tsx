@@ -1,40 +1,22 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
-  Droplet,
-  Home as HomeIcon,
-  Building2,
-  CheckCircle,
-  Star,
-  Phone,
   Calendar,
-  MapPin,
-  Shield,
-  ThumbsUp,
+  Users,
+  Trophy,
+  ShieldCheck,
+  Star,
+  ArrowRight,
   ChevronRight,
-  ChevronLeft,
-  Menu,
-  X,
-  Info,
-  Image,
   MessageSquare,
-  Facebook,
-  Instagram,
-  ChevronDown,
-  Moon,
-  Sun,
-  Calculator,
+  Zap,
+  Droplets
 } from "lucide-react";
 import Navigation from "./components/Navigation";
 import ContactForm from "./components/ContactForm";
 import { Helmet } from "react-helmet-async";
 import OptimizedImage from "./components/OptimizedImage";
 
-
-interface LayoutContext {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-}
 
 const beforeImage = "/before17.jpg";
 const afterImage = "/after17.jpg";
@@ -50,7 +32,7 @@ function App() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-  const [selectedSurface, setSelectedSurface] = useState("driveway");
+  const [selectedSurface] = useState("driveway");
   const [squareFootage, setSquareFootage] = useState(500);
   const [quoteEstimate, setQuoteEstimate] = useState(150);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -592,7 +574,7 @@ function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <Shield className="h-6 w-6 text-blue-200" />
+                    <ShieldCheck className="h-6 w-6 text-blue-200" />
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">
@@ -607,7 +589,7 @@ function App() {
 
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <Droplet className="h-6 w-6 text-blue-200" />
+                    <Droplets className="h-6 w-6 text-blue-200" />
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">Eco-Friendly</h3>
@@ -620,7 +602,7 @@ function App() {
 
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <ThumbsUp className="h-6 w-6 text-blue-200" />
+                    <Trophy className="h-6 w-6 text-blue-200" />
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">
@@ -634,7 +616,7 @@ function App() {
 
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <MapPin className="h-6 w-6 text-blue-200" />
+                    <ArrowRight className="h-6 w-6 text-blue-200" />
                   </div>
                   <div>
                     <h3 className="font-bold text-xl mb-2">Locally Owned</h3>

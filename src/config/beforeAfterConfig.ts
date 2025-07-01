@@ -1,5 +1,3 @@
-import { GalleryImage } from "./galleryConfig";
-
 export interface BeforeAfterImage {
   id: number;
   before: {

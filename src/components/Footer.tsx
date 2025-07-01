@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
 import OptimizedImage from "./OptimizedImage";
 
 interface FooterProps {
@@ -46,7 +45,7 @@ export default function Footer({ darkMode }: FooterProps) {
     coreCall.integrity = 'sha512-TcsprTlCCE0u/G5TN3zikzkynCEIRcfd96+RejMcyd2HFPnTpVUDxumXmFb/rSJ3ogQM+b/yvYWLwV6duAuJQg==';
     coreCall.crossOrigin = 'anonymous';
     coreCall.setAttribute('data-cfasync', 'true');
-    
+
     document.body.appendChild(coreCall);
   };
 

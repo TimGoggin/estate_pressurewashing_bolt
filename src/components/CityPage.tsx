@@ -1,9 +1,7 @@
-
-import React from "react";
-import { useParams, useOutletContext } from "react-router-dom";
+import { useParams, useOutletContext, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
-import { cities, CityData } from "../config/cityConfig";
+import { Phone, MapPin, CheckCircle } from "lucide-react";
+import { cities } from "../config/cityConfig";
 import OptimizedImage from "./OptimizedImage";
 
 interface LayoutContext {
@@ -13,9 +11,9 @@ interface LayoutContext {
 export default function CityPage() {
   const { citySlug } = useParams<{ citySlug: string }>();
   const { darkMode } = useOutletContext<LayoutContext>();
-  
+
   const city = cities.find(c => c.slug === citySlug);
-  
+
   if (!city) {
     return (
       <div className={`min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"}`}>

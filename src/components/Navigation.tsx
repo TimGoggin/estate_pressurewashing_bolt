@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   Droplet,
   Home,
   Info,
   Image,
-  Star,
   MessageSquare,
   Phone,
   Menu,
   X,
-  ChevronDown,
   Moon,
   Sun,
 } from "lucide-react";
@@ -42,13 +40,6 @@ export default function Navigation({
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const toggleDropdown = (dropdown: string) => {
-    if (activeDropdown === dropdown) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(dropdown);
-    }
-  };
 
   return (
     <header
