@@ -43,8 +43,7 @@ export default function Terms() {
       <div className="container mx-auto px-6 py-12">
         <div
           id="policy"
-          width="640"
-          height="480"
+          style={{ border: "none", width: "640px", height: "480px" }}
           data-policy-key="YkVwSFprMXJNbkJqT1dkR1QyYzlQUT09"
         >
           Please wait while the terms are loaded. If they do not load, please{" "}

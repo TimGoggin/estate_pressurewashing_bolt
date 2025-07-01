@@ -75,9 +75,7 @@ export default function Privacy() {
       <div className="container mx-auto px-6 py-12">
         <div
           id="policy"
-          width="640"
-          height="480"
-          data-policy-key="YkVwSFprMXJNbkJqT1dkR1QyYzlQUT09"
+          style={{ border: "none", width: "100%", height: "315px" }}
         >
           Please wait while the policy is loaded. If it does not load, please{" "}
           <a

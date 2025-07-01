@@ -3,12 +3,13 @@ import React from "react";
 interface OptimizedImageProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
   quality?: number;
-  format?: "webp" | "jpg" | "png" | "auto";
-  className?: string;
   loading?: "lazy" | "eager";
+  fit?: string;
+  format?: "webp" | "jpg" | "png" | "auto";
   sizes?: string;
 }
 

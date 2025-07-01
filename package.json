@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/updateSitemap.js && vite build && mkdir -p dist && cp public/sitemap.xml dist/sitemap.xml && echo 'Build complete. Sitemap location:' && ls -la dist/sitemap.xml && echo 'Sitemap content preview:' && head -5 dist/sitemap.xml",
+    "build": "node scripts/updateSitemap.js && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
