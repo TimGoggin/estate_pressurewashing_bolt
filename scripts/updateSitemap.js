@@ -1,42 +1,41 @@
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 // Get the directory name for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Import city data (you might need to adjust this path based on your build setup)
-const cityConfigPath = path.join(__dirname, '../src/config/cityConfig.ts');
+const cityConfigPath = path.join(__dirname, "../src/config/cityConfig.ts");
 
 // Read the city config file and extract city data
 function extractCitiesFromConfig() {
   try {
-    const configContent = fs.readFileSync(cityConfigPath, 'utf8');
-    
+    const configContent = fs.readFileSync(cityConfigPath, "utf8");
+
     // Simple regex to extract city slugs (this could be more robust)
     const slugMatches = configContent.match(/slug:\s*["']([^"']+)["']/g);
-    
+
     if (!slugMatches) {
-      console.log('No city slugs found in config');
+      console.log("No city slugs found in config");
       return [];
     }
-    
-    return slugMatches.map(match => {
+
+    return slugMatches.map((match) => {
       const slug = match.match(/["']([^"']+)["']/)[1];
       return slug;
     });
   } catch (error) {
-    console.error('Error reading city config:', error);
+    console.error("Error reading city config:", error);
     return [];
   }
 }
 
 function generateSitemap() {
   const baseUrl = "https://www.estatespresswash.com";
-  const currentDate = new Date().toISOString().split('T')[0];
-  
+  const currentDate = new Date().toISOString().split("T")[0];
+
   // Static pages
   const staticPages = [
     { path: "/", priority: "1.0", changefreq: "weekly" },
@@ -51,22 +50,26 @@ function generateSitemap() {
 
   // Get city pages
   const citySlugs = extractCitiesFromConfig();
-  const cityPages = citySlugs.map(slug => ({
+  const cityPages = citySlugs.map((slug) => ({
     path: `/cities/${slug}`,
     priority: "0.8",
-    changefreq: "monthly"
+    changefreq: "monthly",
   }));
 
   const allPages = [...staticPages, ...cityPages];
 
   const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages.map(page => `  <url>
+${allPages
+  .map(
+    (page) => `  <url>
     <loc>${baseUrl}${page.path}</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+  </url>`,
+  )
+  .join("\n")}
 </urlset>`;
 
   return sitemapContent;
@@ -76,13 +79,13 @@ ${allPages.map(page => `  <url>
 function updateSitemap() {
   try {
     const sitemapContent = generateSitemap();
-    const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
-    
+    const sitemapPath = path.join(__dirname, "../dist/sitemap.xml");
+
     fs.writeFileSync(sitemapPath, sitemapContent);
-    console.log('Sitemap updated successfully!');
+    console.log("Sitemap updated successfully!");
     console.log(`Updated: ${sitemapPath}`);
   } catch (error) {
-    console.error('Error updating sitemap:', error);
+    console.error("Error updating sitemap:", error);
   }
 }
 
