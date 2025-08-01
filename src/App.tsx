@@ -166,6 +166,22 @@ function App() {
           name="keywords"
           content="pressure washing, soft washing, roof cleaning, driveway cleaning, paver sealing, gutter cleaning, graffiti removal, residential cleaning, commercial cleaning, Bucks County, Montgomery County, Philadelphia"
         />
+        
+        {/* Open Graph / Social Media Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Estates Pressure Washing | Expert Residential & Commercial Cleaning in PA" />
+        <meta property="og:description" content="Estates Pressure Washing provides eco-friendly residential, commercial, and specialty pressure washing services across Bucks, Montgomery, and Philadelphia Counties. Licensed, insured, and trusted since 2017." />
+        <meta property="og:url" content="https://www.estatespresswash.com/" />
+        <meta property="og:image" content="https://www.estatespresswash.com/hero_images/home_hero_1.jpg" />
+        <meta property="og:image:alt" content="Professional pressure washing services" />
+        <meta property="og:site_name" content="Estates Pressure Washing" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Estates Pressure Washing | Expert Residential & Commercial Cleaning in PA" />
+        <meta name="twitter:description" content="Estates Pressure Washing provides eco-friendly residential, commercial, and specialty pressure washing services across Bucks, Montgomery, and Philadelphia Counties." />
+        <meta name="twitter:image" content="https://www.estatespresswash.com/hero_images/home_hero_1.jpg" />
+        <meta name="twitter:image:alt" content="Professional pressure washing services" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -89,3 +89,21 @@
   [headers.values]
     Content-Type = "application/xml"
     Cache-Control = "public, max-age=86400"
+
+# Security Headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent XSS attacks
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    
+    # Referrer policy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Content Security Policy (allowing Google Tag Manager and Netlify)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.netlify.app; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-src 'none';"
+    
+    # Permissions policy  
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

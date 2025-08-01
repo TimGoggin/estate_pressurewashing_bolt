@@ -1,6 +1,0 @@
----
-version: 1
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/estatespresswash/public_html
-    - /bin/cp -R dist/* $DEPLOYPATH

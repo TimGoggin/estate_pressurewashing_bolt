@@ -27,6 +27,21 @@ export default function Contact() {
           name="keywords"
           content="contact Estates Pressure Washing, free quote, pressure washing estimate, exterior cleaning contact, residential cleaning contact, commercial cleaning contact, Bucks County, Montgomery County, Philadelphia"
         />
+        
+        {/* Open Graph / Social Media Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Estates Pressure Washing | Get Your Free Quote Today" />
+        <meta property="og:description" content="Contact Estates Pressure Washing for expert residential, commercial, and specialty exterior cleaning services across Bucks, Montgomery, and Philadelphia Counties." />
+        <meta property="og:url" content="https://www.estatespresswash.com/contact-us" />
+        <meta property="og:image" content="https://www.estatespresswash.com/AboutHero.jpeg" />
+        <meta property="og:image:alt" content="Contact Estates Pressure Washing" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Estates Pressure Washing | Get Your Free Quote Today" />
+        <meta name="twitter:description" content="Contact Estates Pressure Washing for expert residential, commercial, and specialty exterior cleaning services." />
+        <meta name="twitter:image" content="https://www.estatespresswash.com/AboutHero.jpeg" />
+        <meta name="twitter:image:alt" content="Contact Estates Pressure Washing" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

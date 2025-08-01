@@ -52,6 +52,21 @@ export default function Services() {
           name="keywords"
           content="pressure washing services, house washing, roof cleaning, commercial cleaning, paver sealing, gutter services, graffiti removal, residential pressure washing, commercial pressure washing, Bucks County, Montgomery County, Philadelphia"
         />
+        
+        {/* Open Graph / Social Media Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Estates Pressure Washing Services | Residential, Commercial & Specialty Cleaning" />
+        <meta property="og:description" content="Discover Estates Pressure Washing's full range of eco-friendly services: house washing, roof cleaning, paver sealing, gutter cleaning, graffiti removal, and more across Bucks, Montgomery, and Philadelphia Counties." />
+        <meta property="og:url" content="https://www.estatespresswash.com/services" />
+        <meta property="og:image" content="https://www.estatespresswash.com/service_cards/houseCard.jpg" />
+        <meta property="og:image:alt" content="Pressure washing services" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Estates Pressure Washing Services | Residential, Commercial & Specialty Cleaning" />
+        <meta name="twitter:description" content="Discover Estates Pressure Washing's full range of eco-friendly services: house washing, roof cleaning, paver sealing, gutter cleaning, graffiti removal, and more." />
+        <meta name="twitter:image" content="https://www.estatespresswash.com/service_cards/houseCard.jpg" />
+        <meta name="twitter:image:alt" content="Pressure washing services" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

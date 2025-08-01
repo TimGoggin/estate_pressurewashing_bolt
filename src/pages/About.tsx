@@ -41,6 +41,21 @@ export default function About() {
           name="keywords"
           content="about Estates Pressure Washing, exterior cleaning, professional pressure washing, soft washing, residential cleaning, commercial cleaning, licensed, insured, Bucks County, Montgomery County, Philadelphia"
         />
+        
+        {/* Open Graph / Social Media Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About Estates Pressure Washing | Trusted Exterior Cleaning Experts in PA" />
+        <meta property="og:description" content="Learn about Estates Pressure Washing, a licensed and insured company delivering expert residential and commercial exterior cleaning services since 2017 across Bucks, Montgomery, and Philadelphia Counties." />
+        <meta property="og:url" content="https://www.estatespresswash.com/about-us" />
+        <meta property="og:image" content="https://www.estatespresswash.com/AboutHero.jpeg" />
+        <meta property="og:image:alt" content="About Estates Pressure Washing team" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Estates Pressure Washing | Trusted Exterior Cleaning Experts in PA" />
+        <meta name="twitter:description" content="Learn about Estates Pressure Washing, a licensed and insured company delivering expert residential and commercial exterior cleaning services since 2017." />
+        <meta name="twitter:image" content="https://www.estatespresswash.com/AboutHero.jpeg" />
+        <meta name="twitter:image:alt" content="About Estates Pressure Washing team" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

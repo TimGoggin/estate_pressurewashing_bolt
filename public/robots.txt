@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://estatespresswash.com/sitemap.xml
+
+# Disallow crawling of any admin or private areas (if they exist)
+Disallow: /admin/
+Disallow: /.netlify/
+
+# Allow crawling of all public content
+Allow: /public/
+Allow: /assets/
+Allow: /src/
